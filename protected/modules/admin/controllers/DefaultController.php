@@ -1,9 +1,10 @@
 <?php
 
-class DefaultController extends Controller
+class DefaultController extends AdminController
 {
 	public function actionIndex()
 	{
+        echo "Hello World!";
 		$this->render('index');
 	}
 }

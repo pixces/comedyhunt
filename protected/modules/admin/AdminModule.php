@@ -20,6 +20,9 @@ class AdminModule extends CWebModule
                 'errorAction'  => 'dashboard/default/error',
             )
         ));
+
+        /* Make sure we run the init function */
+        parent::init();
 	}
 
 	public function beforeControllerAction($controller, $action)
