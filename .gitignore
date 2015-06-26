@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+*.iml
+protected/runtime
+protected/tests
+css.old
+assets
+htmls
