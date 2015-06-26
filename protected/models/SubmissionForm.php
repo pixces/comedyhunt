@@ -10,6 +10,8 @@ class SubmissionForm extends CFormModel
     public $username;
     public $email;
     public $url;
+    public $phone;
+    public $accept;
 
     /**
      * Declares the validation rules.
@@ -18,11 +20,21 @@ class SubmissionForm extends CFormModel
     {
         return array(
             // name, email, url are required
-            array('username, email, url', 'required'),
+            array('username, email, url,phone', 'required', 'message' => 'Please enter a value for {attribute}.'),
             // email has to be a valid email address
             array('email', 'email'),
+            array('accept', 'required', 'requiredValue' => 1, 'message' => 'You should accept term to use our service'),
+            array('url', 'validateUrl'),
+            array('phone', 'numerical', 'integerOnly' => true,),
+            array('phone', 'length', 'min'=>7, 'max'=>10),
         );
     }
 
+    public function validateUrl()
+    {
 
+        if (filter_var($this->url, FILTER_VALIDATE_URL) === FALSE) {
+            $this->addError('url', 'Please check invalid url.');
+        }
+    }
 }

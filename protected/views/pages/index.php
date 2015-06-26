@@ -49,33 +49,89 @@
                         </ul>
                     </div>
                 </div>
-                <form class="CH-HorizontalForm">
-                    <div class="CH-FormGroup">
-                        <label for="name">Your Name</label>
-                        <input type="text" placeholder="Enter your name" class="CH-FormInput" id="name" name="name" />
-                    </div>
-                    <div class="CH-FormGroup">
-                        <label for="email">Your Email</label>
-                        <input type="text" placeholder="Enter your email id" class="CH-FormInput" id="email" name="email" />
-                    </div>
-                    <div class="CH-FormGroup">
-                        <label for="video">Your Video</label>
-                        <input type="text" placeholder="Paste your video url here" class="CH-FormInput" id="video" name="video" />
-                    </div>
-                    <div class="CH-FormGroup">
-                        <label for="phone">Your Phone Number</label>
-                        <input type="text" placeholder="Enter your phone number" class="CH-FormInput" id="phone" name="phone" />
-                    </div>
-                    <div class="CH-FormGroupSubmit">
-                        <div class="CH-Terms">
-                            <span><input type="checkbox" />I agree to the terms and conditions</span>
-                            <span class="CH-TermsLinks"><a href="javascript:void(0)">Privacy policy</a>   |   <a href="javascript:void(0)">Terms &amp; Conditions</a></span>
+                <div class="CH-HorizontalForm">
+
+                    <?php if (Yii::app()->user->hasFlash('videoInformationSubmitted')): ?>
+                        <div class="info">
+                            <?php echo Yii::app()->user->getFlash('videoInformationSubmitted'); ?>
                         </div>
-                        <div class="CH-FormSubmit">
-                            <input type="submit" value="Submit" />
+
+                    <?php else: ?>
+
+                        <?php
+                        $form = $this->beginWidget('CActiveForm',
+                            [
+                            'id' => 'my-form',
+                            'enableAjaxValidation' => true,
+                            'clientOptions' => [
+                                'validateOnSubmit' => true
+                            ],
+                            'focus' => [$model, 'username'],
+                        ]);
+                        ?>
+                        <div class="CH-FormGroup">
+                            <?php echo $form->labelEx($model, 'Your Name',
+                                array('for' => 'name'));
+                            ?>
+                            <?php
+                            echo $form->textField($model, 'username',
+                                array('placeholder' => "Enter your name", 'class' => "CH-FormInput",
+                                'id' => "name", 'class' => 'CH-FormInput'));
+                            ?>
+                        <?php echo $form->error($model, 'username');?>
                         </div>
-                    </div>
-                </form>
+                        <div class="CH-FormGroup">
+                            <?php echo $form->labelEx($model, 'Your Email',
+                                array('for' => 'email'));
+                            ?>
+                            <?php
+                            echo $form->textField($model, 'email',
+                                array('placeholder' => "Enter your email id", 'class' => "CH-FormInput",
+                                'id' => "email", 'class' => 'CH-FormInput'));
+                            ?>
+                            <?php echo $form->error($model, 'email'); ?>
+                        </div>
+                        <div class="CH-FormGroup">
+                            <?php echo $form->labelEx($model,
+                                'Your Video', array('for' => 'video'));
+                            ?>
+                            <?php
+                            echo $form->textField($model, 'url',
+                                array('placeholder' => "Paste your video url here",
+                                'class' => "CH-FormInput",
+                                'id' => "video", 'class' => 'CH-FormInput'));
+                            ?>
+                            <?php echo $form->error($model, 'url'); ?>
+                        </div>
+                        <div class="CH-FormGroup">
+    <?php echo $form->labelEx($model, 'Your Phone Number',
+        array('for' => 'phone'));
+    ?>
+                                <?php
+                                echo $form->textField($model, 'phone',
+                                    array('placeholder' => "Enter your phone number",
+                                    'class' => "CH-FormInput",
+                                    'id' => "phone", 'class' => 'CH-FormInput'));
+                                ?>
+                        <?php echo $form->error($model, 'phone'); ?>
+                        </div>
+                        <div class="CH-FormGroupSubmit">
+                            <div class="CH-Terms">
+                                <span<?php echo $form->checkBox($model, 'accept'); ?>I agree to the terms and conditions</span>
+                                <span class="CH-TermsLinks"><a href="javascript:void(0)">Privacy policy</a>   |   <a href="javascript:void(0)">Terms &amp; Conditions</a></span>
+                    <?php echo $form->error($model, 'accept'); ?>
+                                            </div>
+                                            <div class="CH-FormSubmit">
+                    <?php echo CHtml::submitButton('Submit'); ?>
+                                            </div>
+                                        </div>
+                    <?php $this->endWidget(); ?>
+
+<?php endif; ?>
+
+
+                </div>
+
             </div>
         </div>
     </div>
