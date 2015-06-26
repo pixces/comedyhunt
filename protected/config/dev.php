@@ -26,7 +26,6 @@ return CMap::mergeArray(
             's3Bucket' => "cnkugc",
         ),
         'modules' => array(
-            'admin',
             'gii' => array(
                 'class' => 'system.gii.GiiModule',
                 'password' => 'position2',
