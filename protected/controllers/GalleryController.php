@@ -206,7 +206,7 @@ class GalleryController extends Controller
      * @param int $limit
      * @return Object /protected/models/Content
      */
-    protected function loadGalleryVideos($paramObject, $page = 1, $limit = 12)
+    protected function loadGalleryVideos($paramObject, $page = 1)
     {
 
         $columns     = [];
@@ -222,16 +222,16 @@ class GalleryController extends Controller
          */
         $Criteria            = new CDbCriteria;
         $Criteria->condition = 'is_ugc=:ugc AND status=:status';
-        $Criteria->params    = array(':ugc' => $paramObject->ugc, 'status' => $paramObject->status);
-        $Criteria->order     ='date_created DESC';
+        $Criteria->params    = array(':ugc' => $paramObject->ugc,'status' => $paramObject->status);
+        $Criteria->order     ='date_created ASC';
         $Criteria->limit     = $this->gallerylimit;
-        $Criteria->offset    = (($page - 1) * $limit);
+        $Criteria->offset    = (($page - 1) * $this->gallerylimit);
         
         if (Content::model()->count($Criteria)) {
             $GalleryVideos = Content::model()->findAll($Criteria);
             foreach ($GalleryVideos as $videoRow) {
                 $row = [];
-                foreach ($columns as $column) {
+                foreach($columns as $column) {
                     $row[$column] = $videoRow->$column;
                 }
                 $galleryData[] = $row;

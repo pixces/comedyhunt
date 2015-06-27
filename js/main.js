@@ -109,7 +109,8 @@ $(document).ready(function() {
                                     data: data,
                                     success: function(data) {
                                         if (data.count > 0) {
-                                            $("#gallerieVideoContent").html(data.content);
+                                           // $("#gallerieVideoContent").append(data.content);
+                                           $(data.content).insertAfter("#gallerieVideoContent");
                                             $("#loadCounter").val(loadCounter);
                                         }
                                         
