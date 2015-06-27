@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Phosphate-Inline';
+  src: url('../fonts/Phosphate-Inline.eot'); /* IE9+ Compat Modes */
+  src: url('../fonts/Phosphate-Inline.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Phosphate-Inline.woff') format('woff'), /* Modern browsers */
+       url('../fonts/Phosphate-Inline.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Phosphate-Inline.svg#Phosphate-Inline') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Phosphate-Solid';
+  src: url('../fonts/Phosphate-Solid.eot'); /* IE9+ Compat Modes */
+  src: url('../fonts/Phosphate-Solid.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Phosphate-Solid.woff') format('woff'), /* Modern browsers */
+       url('../fonts/Phosphate-Solid.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Phosphate-Solid.svg#Phosphate-Solid') format('svg'); /* Legacy iOS */
+}
+
 ::selection {background:#5E82AE;}
 ::-moz-selection {background:#5E82AE;}
 * {outline: none;-moz-box-sizing: border-box;box-sizing:border-box;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);word-break:break-word;margin:0;padding:0;}
@@ -31,9 +48,10 @@ body{
 	width:100%;
 }
 .CH-Navigation{
-	max-width:1170px;
+	max-width:1060px;
 	min-height:100px;
 	margin:0 auto;
+	padding:0 20px;
 }
 .CH-MainMenu{
 	max-width:430px;
@@ -51,9 +69,10 @@ body{
 .CH-MainMenu ul li a{
 	color:#ffffff;
 	font-size:18px;
-	padding:3px 15px;
+	padding:1px 15px;
 	display:block;
 	text-transform:uppercase;
+	font-family: 'Phosphate-Solid';
 }
 .CH-MainMenu ul li a.active,
 .CH-MainMenu ul li a:hover{
@@ -70,7 +89,7 @@ body{
 	height:30px;
 }
 .CH-SocialIcons{
-	width:153px;
+	width:96px;
 	min-height:100px;
 	float:right;
 	overflow:hidden;
@@ -81,30 +100,30 @@ body{
 }
 .CH-SocialIcons ul li{
 	float:left;
-	width:41px;
-	height:41px;
-	margin:0 5px;
+	width:26px;
+	height:26px;
+	margin:0 3px;
 }
 .CH-SocialIcons ul li a{
-	width:41px;
-	height:41px;
+	width:26px;
+	height:26px;
 	display:block;
 	background:url(../images/social-icons.png) no-repeat;
 }
 .CH-SocialIcons ul li a:hover{
-	background-position:0 -51px;
+	background-position:0 -32px;
 }
 .CH-SocialIcons ul li.facebook a{
-	background-position:-50px 0;
+	background-position:-31px 0;
 }
 .CH-SocialIcons ul li.facebook a:hover{
-	background-position:-50px -51px;
+	background-position:-31px -32px;
 }
 .CH-SocialIcons ul li.twitter a{
-	background-position:-100px 0;
+	background-position:-62px 0;
 }
 .CH-SocialIcons ul li.twitter a:hover{
-	background-position:-100px -51px;
+	background-position:-62px -32px;
 }
 .CH-Submissions{
 	width:auto;
@@ -113,12 +132,12 @@ body{
 }
 .CH-SubmissionsText,
 .CH-SubmissionsFormContainer{
-	max-width:1170px;
+	max-width:1060px;
 	height:auto;
 	margin:0 auto;
 }
 .CH-SubmissionsVideo{
-	width:512px;
+	width:490px;
 	height:auto;
 	background:url(../images/video-background.png) no-repeat;
 	min-height:393px;
@@ -145,7 +164,7 @@ body{
 .CH-SubmissionsContent .CH-SubmissionsText{
 	background:#28394e;
 	overflow:hidden;
-	padding-bottom:20px;
+	padding-bottom:5px;
 }
 .CH-SubmissionsContent .CH-SubmissionsContentBG{
 	background:url(../images/submisson-background.jpg) no-repeat;
@@ -161,25 +180,32 @@ body{
 .CH-SubmissionsTextContainer{
 	width:50%;
 	float:right;
+	padding-right:20px;
 }
 .CH-SubmissionsTextContainer .CH-Head{
 	font-size:32px;
 	color:#fff;
 	text-transform:uppercase;
-	font-weight:bold;
+	font-family:"Phosphate-Solid";
+	line-height:30px;
+	margin-bottom:10px;
 }
 .CH-SubmissionsTextContainer .CH-SubHead{
 	font-size:32px;
 	color:#eb2842;
 	text-transform:uppercase;
-	font-weight:bold;
+	font-family:"Phosphate-Solid";
+	line-height:25px;
+	margin-bottom:10px;
 }
 .CH-SubmissionsTextContainer .CH-Text{
-	color:#fff5e9;
+	color:#fff5e9;    
+	margin-bottom:35px;
+	line-height:20px;
 }
 .CH-SubmissionsTextContainer .CH-Text ul{
 	margin-left:16px;    
-	max-width:300px;
+	max-width:320px;
 }
 .CH-SubmissionsTextContainer .CH-Text ul li{
 	margin:8px 0 0;
@@ -202,7 +228,8 @@ body{
 	font-size:18px;
 	display:block;
 	text-transform:uppercase;
-	margin-bottom:5px;
+	margin:0 0 0 15px;
+	font-family: 'Phosphate-Solid';
 }
 .CH-SubmissionsFormContainer .CH-HorizontalForm .CH-FormGroup input.CH-FormInput{
 	font-size:14px;
@@ -219,6 +246,7 @@ body{
 	width:65%;
 	float:left;
 	color:#fff5e8;
+	margin-left:15px;
 }
 .CH-SubmissionsFormContainer .CH-HorizontalForm .CH-FormGroupSubmit .CH-Terms input{
 	background:#eb2842;
@@ -240,7 +268,6 @@ body{
 .CH-SubmissionsFormContainer .CH-HorizontalForm .CH-FormGroupSubmit .CH-FormSubmit input{
 	color:#fff5e8;
 	font-size:24px;
-	font-weight:bold;
 	text-transform:uppercase;
 	background:#28394e;
 	border:1px solid #28394e;
@@ -250,6 +277,8 @@ body{
 	padding:3px 15px;
 	float:right;
 	margin-right:15px;
+	font-family: 'Phosphate-Solid';
+	cursor:pointer;
 }
 .CH-VideoCarousel{
 	width:auto;
@@ -267,13 +296,13 @@ body{
 }
 .CH-SubmissionsVideoPlay span{
 	position:absolute;
-	height:58px;
+	height:61px;
 	top:42%;
 }
 .CH-VideoCarouselContent{
-	max-width:1170px;
+	max-width:1060px;
 	margin:0 auto;
-	padding:40px 20px;
+	padding:40px 20px 0;
 	color:#fff5e9;
 	position:relative;
 }
@@ -286,7 +315,7 @@ body{
 .CH-VideoCarouselContent .CH-VideoCarouselHead{
 	color:#fff5e9;
 	font-size:36px;
-	font-weight:bold;
+	font-family: 'Phosphate-Solid';
 	text-transform:uppercase;
 	line-height:35px;
 }
@@ -295,43 +324,63 @@ body{
 	display:block;
 	margin:10px 0;
 }
+
+.CH-VideoCarouselContent p{
+	font-size:18px;	
+}
 .CH-WorkshopDate{
 	width:auto;
 	overflow:hidden;
 	color:#fff5e9;
+	padding-bottom:10px;
 }
 .CH-WorkshopDate p{
-	font-size:28px;
-	font-weight:700;
-	margin-bottom:30px;
+	font-size:26px;
+	font-family: 'Phosphate-Solid';
+	line-height::30px;
 }
 .CH-WorkshopDate .CH-WorkshopCity{
 	width:auto;
 	overflow:hidden;
 	margin:0 auto;
-	text-align:center;
 }
 .CH-WorkshopDate .CH-WorkshopCity div{
 	display:inline-block;
-	border:2px solid #fff5e9;
+	/*border:2px solid #fff5e9;
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
-	border-radius:10px;
-	text-align:center;
-	margin:0 10px 20px;
-	padding:5px 15px;
-	width:210px;
+	border-radius:10px;*/
+	text-align:left;
+	margin-top:35px;
+	/*margin:0 10px 20px;
+	padding:5px 15px;*/
+	width:250px;
 }
 .CH-WorkshopDate .CH-WorkshopCity div span{
 	display:block;
-	font-size:24px;
+	font-size:28px;
 	line-height:30px;
+	font-weight:bold;
 }
 .CH-WorkshopDate .CH-WorkshopCity div span.CH-City{
 	color:#eb2842;
 	font-size:28px;
-	text-transform:uppercase;
 	font-weight:bold;
+	margin-bottom:15px;
+}
+.CH-WorkshopDate .CH-WorkshopCity div span.CH-Register{
+	font-family: 'Phosphate-Solid';
+	font-size:16px;
+	background:#fff5e9;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	display:inline;
+	color:#eb2842;
+}
+.CH-WorkshopDate .CH-WorkshopCity div span.CH-Register a{
+	color:#eb2842;
+	padding:1px 10px;
 }
 .CH-TimeLine{
 	width:auto;
@@ -357,10 +406,11 @@ body{
 	position:relative;
 }
 #CH-VideoCarousel .CH-VideoCarouselItem{
-	margin:10px 35px;
+	/*margin:10px 35px;*/
+	margin:10px 20px;
 }
 #CH-VideoCarousel .CH-VideoCarouselItem .CH-Description{
-	text-align:center;
+	text-align:left;
 	color:#fff5e9;
 	padding:5px 0 0 0;
 }
@@ -378,7 +428,7 @@ body{
 	padding:0;
 	text-indent:-99999px;
 	top:20%;
-	left:-10px;
+	left:-20px;
 }
 #CH-VideoCarousel .owl-next{
 	position:absolute;
@@ -389,13 +439,13 @@ body{
 	padding:0;
 	text-indent:-99999px;
 	top:20%;
-	right:-10px;
+	right:-20px;
 }
 #CH-VideoCarousel .owl-theme .owl-controls{
 	margin:30px 0 15px;
 }
 .CH-CompetitionTimeline{
-	max-width:1170px;
+	max-width:1060px;
 	overflow:hidden;
 	position:relative;
 	padding:0 20px;
@@ -403,8 +453,8 @@ body{
 	margin:0 auto;
 }
 .CH-TimelineContent{
-	padding:30px 20px 30px 100px;
-	margin:40px 0 0;
+	padding:90px 20px 90px 100px;
+	margin:80px 0 0;
 }
 .CH-CompetitionTimeline .CH-TimelineContent{
 	float:left;
@@ -416,14 +466,16 @@ body{
 	display:block;
 }
 .CH-TimelineContent .CH-Head{
-	font-size:32px;
-	font-weight:bold;
+	font-size:36px;
+	font-family: 'Phosphate-Solid';
 	text-transform:uppercase;
 	margin-bottom:15px;
-	line-height:35px;
+	line-height:30px;
+	color:#fff5e9;
 }
 .CH-TimelineContent  .CH-Description{
 	line-height:20px;
+	color:#fff5e9;	
 }
 .CH-CompetitionTimeline .CH-TimelineRules{
 	width:50%;
@@ -448,7 +500,7 @@ body{
 }
 .CH-TimelineRules .CH-Phase1 span.CH-Title{
 	font-size:18px;
-	font-weight:bold;
+	font-family: 'Phosphate-Solid';
 	text-transform:uppercase;
 	line-height:17px;
 	margin-bottom:5px;
@@ -458,11 +510,11 @@ body{
 }
 .CH-TimelineRules .CH-Phase2{
 	position:absolute;
-	top:38%;
+	top:40%;
 	color:#333366;
 	width:165px;
 	padding:0 10px;
-	left:239px;
+	left:235px;
 }
 .CH-TimelineRules .CH-Phase2 span{
 	display:block;
@@ -470,7 +522,7 @@ body{
 }
 .CH-TimelineRules .CH-Phase2 span.CH-Title{
 	font-size:18px;
-	font-weight:bold;
+	font-family: 'Phosphate-Solid';
 	text-transform:uppercase;
 	line-height:17px;
 	margin-bottom:5px;
@@ -492,7 +544,7 @@ body{
 }
 .CH-TimelineRules .CH-Phase3 span.CH-Title{
 	font-size:18px;
-	font-weight:bold;
+	font-family: 'Phosphate-Solid';
 	text-transform:uppercase;
 	line-height:17px;
 	margin-bottom:5px;
@@ -512,7 +564,7 @@ body{
 }
 .CH-ClientLogo .CH-ClientLogoBlk{
 	padding:30px 20px;
-	max-width:1170px;
+	max-width:1060px;
 	overflow:hidden;
 	margin:0 auto;
 }
@@ -536,10 +588,11 @@ body{
 	opacity:0.8;
 }
 .CH-ClientLogo .CH-Links{
-	max-width:1170px;
+	max-width:1060px;
 	overflow:hidden;
 	margin:0 auto;
 	padding:0px 20px;
+	clear:both;
 }
 .CH-ClientLogo .CH-Links ul{
 	width:auto;
@@ -553,31 +606,32 @@ body{
 .CH-ClientLogo .CH-Links li a{
 	display:block;
 	text-transform:uppercase;
-	font-weight:bold;
+	font-size:12px;
 }
 .CH-ClientLogo .CH-CopyRight{
 	font-size:12px;
-	color:#fff5e9;
-	margin:0 15px;
+	color:#fff5e9;	
 	padding-bottom:20px;
+	margin:0 15px;
 }
 .CH-SubmissionsVideoImage img{
 	height:100%;
+	display:none;
 }
 .CH-MobileDisplay{
 	display:none;
-	max-width:1170px;
+	max-width:1060px;
 	margin:0 auto;
 }
 .CH-SubmissionsFormContainer .CH-SubmissionsTextContainer{
 	display:none;
 }
 .CH-Video .CH-VideoThumb{
-	height:135px;
+	height:150px;
     margin:0 auto;
     position:relative;
-    top:10px;
-    width:200px;
+    top:5px;
+    width:95%;
 	-webkit-border-radius:35px;
 	-moz-border-radius:35px;
 	border-radius:35px;
@@ -587,14 +641,39 @@ body{
     height:100%;
 }
 .CH-VideoCarouselItem .CH-Video .CH-VideoThumbPlay{
-	width:55px;
-	height:55px;
+	width:68px;
+	height:49px;
 	position:absolute;
-	top:30%;
-	left:38%;
+	top:34%;
+	left:35%;
+}
+.CH-VideoCarouselItem .CH-Video .CH-VideoThumbPlay a{
+	display:block;
 }
 .CH-ClientLogo .CH-SocialIcons{
-	display:none;
+	display:block;
+	float:none;
+    margin:0 auto;
+    max-width:1060px;
+    padding:0 20px;
+    width:auto;
+	min-height:inherit;
+}
+.CH-ClientLogo .CH-SocialIcons{
+	overflow:initial;
+}
+.CH-ClientLogo .CH-SocialIcons ul{
+	margin:-26px 0 0;
+	color:#f7eee3;
+    font-size:17px;
+	position:relative;
+    top:45px;
+	float:right;
+}
+.CH-ClientLogo .CH-SocialIcons ul li.sharetext {
+    line-height:26px;
+    margin-right:20px;
+    width: auto;
 }
 
 /* POPUP CSS Starts Here */
@@ -666,7 +745,7 @@ body{
     color:#fff5e8;
     float:right;
     font-size:24px;
-    font-weight:bold;
+	font-family: "Phosphate-Solid";
     margin-right:50px;
 	margin-top: 60px;
     padding:3px 15px;
@@ -718,43 +797,56 @@ body{
 }
 /* Video Overlay Ends Here */
 
-.CH-GalleryBG{
+.CH-GalleryBG,
+.CH-FaqBG,
+.CH-RulesBG{
 	background:url(../images/gallery-background.jpg) no-repeat;
 	background-size:100% 100%;
 	min-height:11px;
 	overflow:hidden;
 }
-.CH-GalleryContent{
-	max-width:1170px;
+.CH-GalleryContent,
+.CH-FaqContent,
+.CH-RulesContent{
+	max-width:1060px;
 	margin:0 auto;
 	padding:20px;
 }
-.CH-GalleryContent .CH-GalleryIcon{
+.CH-GalleryContent .CH-GalleryIcon,
+.CH-FaqContent .CH-FaqIcon,
+.CH-RulesContent .CH-RulesIcon{
 	width:141px;
 	height:56px;
 	overflow:hidden;
 	margin-bottom:5px;
 }
-.CH-GalleryContent .CH-GalleryHead{
+.CH-GalleryContent .CH-GalleryHead,
+.CH-FaqContent .CH-FaqHead,
+.CH-RulesContent .CH-RulesHead{
 	color:#fff5e9;
 	font-size:36px;
-	font-weight:bold;
+	font-family: 'Phosphate-Solid';
 	text-transform:uppercase;
 	line-height:35px;
 }
-.CH-GalleryContent .CH-GalleryHead span{
+.CH-GalleryContent .CH-GalleryHead span,
+.CH-FaqContent .CH-FaqHead span,
+.CH-RulesContent .CH-RulesHead span{
 	color:#eb2842;
 	display:block;
 	margin:10px 0;
 }
-.CH-GalleryList{
+.CH-GalleryList,
+.CH-FaqList,
+.CH-RulesList{
 	width:100%;
 	overflow:hidden;
 	margin:40px 0 20px;
 	font-size:14px;
 	color:#fff;
 }
-.CH-GalleryList .scroll-pane{
+.CH-GalleryList .scroll-pane,
+.CH-RulesList .scroll-pane{
 	width:100%;
 	height:420px;
 	overflow:auto;
@@ -766,12 +858,24 @@ body{
 }
 .CH-GalleryList .CH-GalleryVideoTitle{
 	font-weight:bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  	overflow: hidden;
 }
-.CH-GalleryList .jspVerticalBar{
+.CH-GalleryList .CH-GalleryName{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  	overflow: hidden;
+}
+.CH-GalleryList .jspVerticalBar,
+.CH-FaqList .jspVerticalBar,
+.CH-RulesList .jspVerticalBar{
 	background:none;
 	width:10px;
 }
-.CH-GalleryList .jspTrack{
+.CH-GalleryList .jspTrack,
+.CH-FaqList .jspTrack,
+.CH-RulesList .jspTrack{
 	background:#536171;
 	border:1px solid #3a495d;
 	-webkit-border-radius:20px;
@@ -779,9 +883,36 @@ body{
 	border-radius:20px;
 	width:10px;
 }
-.CH-GalleryList .jspDrag{
+.CH-GalleryList .jspDrag,
+.CH-FaqList .jspDrag,
+.CH-RulesList .jspDrag{
 	background:#fff;
 	-webkit-border-radius:20px;
 	-moz-border-radius:20px;
 	border-radius:20px;
+}
+.CH-RulesBlk{
+	background:#fff5e9;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:50px;
+	padding:30px;
+	color:#28394e;
+}
+.CH-RulesBlk p{
+	margin-bottom:15px;
+}
+.CH-RulesBlk p.CH-Head{
+	font-weight:bold;
+}
+.CH-RulesBlk p.CH-UpperItalic{
+	font-style:italic;
+	text-transform:uppercase;
+}
+.CH-RulesBlk ul{
+	list-style:none;
+	overflow:hidden;
+}
+.CH-RulesBlk ul li{
+	list-style:inside;
 }

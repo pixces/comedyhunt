@@ -4,48 +4,42 @@ class GalleryController extends Controller
 {
     protected $gallerylimit = 10;
 
-    /**
-     * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
-     * using two-column layout. See 'protected/views/layouts/column2.php'.
-     */
-    //public $layout='//layouts/column1';
+	/**
+	 * @return array action filters
+	 */
+	public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+			'postOnly + delete', // we only allow deletion via POST request
+		);
+	}
 
-    /**
-     * @return array action filters
-     */
-    public function filters()
-    {
-        return array(
-            'accessControl', // perform access control for CRUD operations
-            'postOnly + delete', // we only allow deletion via POST request
-        );
-    }
-
-    /**
-     * Specifies the access control rules.
-     * This method is used by the 'accessControl' filter.
-     * @return array access control rules
-     */
-    public function accessRules()
-    {
-        return array(
-            array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view'),
-                'users' => array('*'),
-            ),
-            array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update'),
-                'users' => array('@'),
-            ),
-            array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
-                'users' => array('admin'),
-            ),
-            array('deny', // deny all users
-                'users' => array('*'),
-            ),
-        );
-    }
+	/**
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
+	 * @return array access control rules
+	 */
+	public function accessRules()
+	{
+		return array(
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index','view'),
+				'users'=>array('*'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update'),
+				'users'=>array('@'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete'),
+				'users'=>array('admin'),
+			),
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
+		);
+	}
 
     /**
      * Lists all content.
@@ -187,56 +181,18 @@ class GalleryController extends Controller
         return $model;
     }
 
-    /**
-     * Performs the AJAX validation.
-     * @param Content $model the model to be validated
-     */
-    protected function performAjaxValidation($model)
-    {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'content-form') {
-            echo CActiveForm::validate($model);
-            Yii::app()->end();
-        }
-    }
-
-    /**
-     *
-     * @param Object $paramObject
-     * @param int $offset
-     * @param int $limit
-     * @return Object /protected/models/Content
-     */
-    protected function loadGalleryVideos($paramObject, $page = 1, $limit = 12)
-    {
-
-        $columns     = [];
-        $galleryData = [];
-        if (isset($paramObject->fields)) {
-            $columns = array_merge(Content::$defaultSelectableFields,
-                $paramObject->fields);
-        } else {
-            $columns = Content::$defaultSelectableFields;
-        }
-        /**
-         * Criteria Conditions
-         */
-        $Criteria            = new CDbCriteria;
-        $Criteria->condition = 'is_ugc=:ugc AND status=:status';
-        $Criteria->params    = array(':ugc' => $paramObject->ugc, 'status' => $paramObject->status);
-        $Criteria->order     ='date_created DESC';
-        $Criteria->limit     = $this->gallerylimit;
-        $Criteria->offset    = (($page - 1) * $limit);
-        
-        if (Content::model()->count($Criteria)) {
-            $GalleryVideos = Content::model()->findAll($Criteria);
-            foreach ($GalleryVideos as $videoRow) {
-                $row = [];
-                foreach ($columns as $column) {
-                    $row[$column] = $videoRow->$column;
-                }
-                $galleryData[] = $row;
-            }
-        }
-        return json_encode($galleryData);
-    }
+	/**
+	 * Performs the AJAX validation.
+	 * @param Content $model the model to be validated
+	 */
+	protected function performAjaxValidation($model)
+	{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='content-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+	}
+    
+    
 }

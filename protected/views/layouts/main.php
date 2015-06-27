@@ -13,13 +13,8 @@
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/vendor/owl.carousel.css" type='text/css' />
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/vendor/owl.theme.css" type='text/css' />
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/vendor/owl.transitions.css" type='text/css' />
-    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/vendor/jquery.jscrollpane.css" type='text/css' />
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" type='text/css' />
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/media-queries.css" type='text/css' />
-    <script>
-        var HOST='<?php echo Yii::app()->request->baseUrl; ?>';
-        var globalLoadCounter = 0;
-    </script>
     <!-- Style Ends Here -->
 </head>
 <body>
@@ -127,7 +122,6 @@
 <!-- Overlay Ends Here -->
 
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery.jscrollpane.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/owl.carousel.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
 </body>
