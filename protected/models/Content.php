@@ -24,6 +24,7 @@
 class Content extends CActiveRecord
 {
 
+    public static $defaultSelectableFields = ['id', 'user_name', 'title', 'thumb_image'];
     /**
      * @return string the associated database table name
      */

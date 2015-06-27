@@ -17,186 +17,21 @@
         <div class="CH-GalleryHead">All videos</div>
         <div class="CH-GalleryList">
             <div class="scroll-pane">
+                <?php if (!empty($galleries)) { ?>
+                    <?php foreach ($galleries as $gallery) { ?>
+                        <div class="CH-GalleryListItems">
+
+                            <div class="CH-GalleryImage"><img src="<?php echo $gallery['thumb_image'] ?>" /></div>
+                            <div class="CH-GalleryVideoTitle"><?php echo $gallery['title']; ?></div>
+                            <div class="CH-GalleryName"><?php echo $gallery['user_name']; ?></div>
+
+                        </div>
+                    <?php } ?>
+                <?php } else{ ?>
                 <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb1.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
+                    <span>Empty Gallery.</span>
                 </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb2.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb3.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb4.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb5.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb6.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb7.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb8.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb9.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb10.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb11.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb12.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb1.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb2.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb3.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb4.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb5.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb6.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb7.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb8.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb9.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb10.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb11.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb12.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb1.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb2.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb3.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb4.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb5.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb6.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb7.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb8.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb9.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb10.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb11.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
-                <div class="CH-GalleryListItems">
-                    <div class="CH-GalleryImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-thumb12.jpg" /></div>
-                    <div class="CH-GalleryVideoTitle">Video title will come here</div>
-                    <div class="CH-GalleryName">User name</div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
