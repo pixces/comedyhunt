@@ -2,8 +2,7 @@
 
 class GalleryController extends Controller
 {
-    protected $gallerylimit            = 10;
-    
+    protected $gallerylimit = 10;
 
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -60,9 +59,30 @@ class GalleryController extends Controller
         $param->ugc        = 1;
         $param->status     = "pending";
         $param->fields     = ['description', 'source'];
-        $galleryVideosJson = $this->loadGalleryVideos($param);
+        $page              = Yii::app()->getRequest()->getParam('page', 1);
+        $ajaxRequest       = Yii::app()->getRequest()->getParam('isAjaxRequest',
+            0);
+        $galleryVideosJson = $this->loadGalleryVideos($param, $page);
         $galleryVideos     = json_decode($galleryVideosJson, true);
-        $this->render('index', array('galleries' => $galleryVideos));
+
+        /**
+         * Load the Partial View as a String.
+         */
+        $videoContent = $this->renderPartial('_partialGalleryVideos',
+            array('galleries' => $galleryVideos), true
+        );
+        /**
+         * Check If the Request is Ajax and return the partial view as json object
+         */
+        if ($ajaxRequest && Yii::app()->request->isAjaxRequest) {
+            echo json_encode(['content' => $videoContent, 'count' => count($galleryVideos),
+                'page' => $page]);
+            Yii::app()->end();
+        }
+        /**
+         * Normal Loading of the view ,and pass the partial view as String
+         */
+        $this->render('index', array('videoContent' => $videoContent));
     }
 
     /**
@@ -186,22 +206,27 @@ class GalleryController extends Controller
      * @param int $limit
      * @return Object /protected/models/Content
      */
-    protected function loadGalleryVideos($paramObject, $offset = 0, $limit = 12)
+    protected function loadGalleryVideos($paramObject, $page = 1, $limit = 12)
     {
 
         $columns     = [];
         $galleryData = [];
         if (isset($paramObject->fields)) {
-           $columns = array_merge(Content::$defaultSelectableFields,$paramObject->fields);
+            $columns = array_merge(Content::$defaultSelectableFields,
+                $paramObject->fields);
         } else {
-           $columns = Content::$defaultSelectableFields;
+            $columns = Content::$defaultSelectableFields;
         }
-
+        /**
+         * Criteria Conditions
+         */
         $Criteria            = new CDbCriteria;
         $Criteria->condition = 'is_ugc=:ugc AND status=:status';
         $Criteria->params    = array(':ugc' => $paramObject->ugc, 'status' => $paramObject->status);
+        $Criteria->order     ='date_created DESC';
         $Criteria->limit     = $this->gallerylimit;
-        $Criteria->offset    = $offset;
+        $Criteria->offset    = (($page - 1) * $limit);
+        
         if (Content::model()->count($Criteria)) {
             $GalleryVideos = Content::model()->findAll($Criteria);
             foreach ($GalleryVideos as $videoRow) {
