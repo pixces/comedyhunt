@@ -19,8 +19,8 @@ class PagesController extends Controller
                     $contentModel                   = new Content();
                     $contentModel->isNewRecord      = true;
                     $contentModel->primaryKey       = NULL;
-                    $contentModel->user_name        = $model->attributes['username'];
-                    $contentModel->user_email       = $model->attributes['username'];
+                    $contentModel->username        = $model->attributes['username'];
+                    $contentModel->email       = $model->attributes['username'];
                     $contentModel->title            = $videoDetails['items'][0]['snippet']['title'];
                     $contentModel->description      = $videoDetails['items'][0]['snippet']['description'];
                     $contentModel->media_id         = $videoDetails['items'][0]['id'];
@@ -31,9 +31,7 @@ class PagesController extends Controller
                     $contentModel->thumb_image      = Utility::getThumbnails($videoDetails['items'][0]['snippet']['thumbnails']);
                     $contentModel->alternate_image  = Utility::getThumbnails($videoDetails['items'][0]['snippet']['thumbnails'],'medium');
                     $contentModel->status       = 'pending';
-                    $contentModel->source       = "youtube";
                     $contentModel->media_url    = $model->url;
-                    $contentModel->notes        = $videoDetails['items'][0]['snippet']['localized']['description'];
                     if ($contentModel->save()) {
                         Yii::app()->user->setFlash('videoInformationSubmitted','<span>Thank you.<a href="">Reload form</a>');
                         unset($_POST['SubmissionForm']);

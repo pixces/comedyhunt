@@ -231,7 +231,7 @@ class GalleryController extends Controller
             $GalleryVideos = Content::model()->findAll($Criteria);
             foreach ($GalleryVideos as $videoRow) {
                 $row = [];
-                foreach ($columns as $column) {
+                foreach($columns as $column) {
                     $row[$column] = $videoRow->$column;
                 }
                 $galleryData[] = $row;

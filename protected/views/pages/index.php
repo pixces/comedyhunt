@@ -38,7 +38,7 @@
                         live alongside your comedy coaches. So what are you waiting for? Show us the funny.
                     </div>
                 </div>
-                <form class="CH-HorizontalForm">
+                <div class="CH-HorizontalForm">
 
                     <?php if (Yii::app()->user->hasFlash('videoInformationSubmitted')): ?>
                         <div class="info">
@@ -48,8 +48,8 @@
                         <?php
                         $form = $this->beginWidget('CActiveForm',
                             [
-                                'id' => 'my-form',
-                                'enableAjaxValidation' => true,
+                                'id' => 'register-form',
+                                'enableAjaxValidation' => false,
                                 'clientOptions' => [
                                     'validateOnSubmit' => true
                                 ],
@@ -205,26 +205,26 @@
                 Learn some laugh-logic on these dates.</p>
 
             <div class="CH-WorkshopCity">
-                <div>
-                    <span>9th July</span>
-                    <span class="CH-City">Mumbai</span>
-                    <span class="CH-Register"><a href="javascript:void(0)">Register</a></span>
-                </div>
-                <div>
-                    <span>10th July</span>
-                    <span class="CH-City">Bangalore</span>
-                    <span class="CH-Register"><a href="javascript:void(0)">Register</a></span>
-                </div>
-                <div>
-                    <span>16th July</span>
-                    <span class="CH-City">Hyderabad</span>
-                    <span class="CH-Register"><a href="javascript:void(0)">Register</a></span>
-                </div>
-                <div>
-                    <span>17th July</span>
-                    <span class="CH-City">Delhi</span>
-                    <span class="CH-Register"><a href="javascript:void(0)">Register</a></span>
-                </div>
+               <div>
+					<span>4th July</span>
+					<span class="CH-City">Mumbai</span>
+					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
+				</div>
+				<div>
+					<span>8th July</span>
+					<span class="CH-City">Delhi</span>
+					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
+				</div>
+				<div>
+					<span>16th July</span>
+					<span class="CH-City">Hyderabad</span>
+					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
+				</div>
+				<div>
+					<span>17th July</span>
+					<span class="CH-City">Bangalore</span>
+					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
+				</div>
             </div>
         </div>
 
