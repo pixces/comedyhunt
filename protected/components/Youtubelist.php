@@ -42,7 +42,7 @@ class Youtubelist
 	public function __construct($type)
 	{
 		$this->curlinit = function_exists('curl_init');
-		$this->type = $type;
+        $this->type = $type;
 	}
 
 	protected function truncate($string, $length = '', $replacement = ' ..', $start = 75) //alternative substr

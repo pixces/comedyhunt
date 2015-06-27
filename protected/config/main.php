@@ -98,12 +98,15 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 
         //youtube playlist configuration
-        'YT_PLAYLIST' => array(
+        'YT_PlayList' => array(
             'maxSize' => 50,
             'isCache' => true,
             'cacheLifetime' => 86400,
             'cachePath' => dirname(__FILE__)."/../runtime/cache/",
             'apiKey' => 'AIzaSyA4iw6xE5VRXg5c7s7JFcmlTO65gQIMjnE',
          ),
+        'YT_Faq_PlayListID' => array(
+            'PL548A047B9D0B4A7C'
+        ),
 	),
 );
