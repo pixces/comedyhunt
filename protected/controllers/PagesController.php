@@ -30,10 +30,10 @@ class PagesController extends Controller
                     $contentModel->is_ugc           = 1;
                     $contentModel->thumb_image      = Utility::getThumbnails($videoDetails['items'][0]['snippet']['thumbnails']);
                     $contentModel->alternate_image  = Utility::getThumbnails($videoDetails['items'][0]['snippet']['thumbnails'],'medium');
-                    $contentModel->status       = 'pending';
+                    $contentModel->status       = 'approved';
                     $contentModel->media_url    = $model->url;
                     if ($contentModel->save()) {
-                        Yii::app()->user->setFlash('videoInformationSubmitted','<span>Thank you.<a href="">Reload form</a>');
+                        Yii::app()->user->setFlash('videoInformationSubmitted','<div class="CH-SubmissionsTextContainer"><div class="CH-Head acenter">Thank you for <br/>your submission</div> </div> <div class="CH-SubmitButton"><a href="'.Yii::app()->createUrl('/').'">Submit another video</a></div>');
                         unset($_POST['SubmissionForm']);
                         $this->redirect(array('pages/index'));
                         Yii::app()->end();
