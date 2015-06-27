@@ -31,7 +31,7 @@
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('/'); ?>" class="active transition">Home</a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('/gallery/'); ?>" class="transition">Gallery</a></li>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('/site/faq/'); ?>" class="transition">Faq's</a></li>
-                        <li class="no-border"><a href="<?=Yii::app()->createAbsoluteUrl('/site/pages/?view=rules'); ?>" class="transition">Rules</a></li>
+                        <li class="no-border"><a href="<?=Yii::app()->createAbsoluteUrl('/site/page/?view=rules'); ?>" class="transition">Rules</a></li>
 					</ul>
 				</div>
 				<!-- Main Menu Ends Here -->
