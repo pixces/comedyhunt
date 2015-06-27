@@ -18,29 +18,30 @@ class PagesController extends Controller
                 $videoInfo        = json_decode($youtubeVideoInfo, true);
                 if ($videoInfo['error'] == false) {
                     $videoDetails = json_decode($videoInfo['result'], true);
-                    $contentModel = new Content();
-                    $contentModel->isNewRecord = true;
-                    $contentModel->primaryKey  = NULL;
-                    $contentModel->user_name  = $model->attributes['username'];
-                    $contentModel->user_email = $model->attributes['username'];
-                    $contentModel->title      = $videoDetails['title'];
-                    $contentModel->description      = $videoDetails['title'];
-                    $contentModel->media_id      = $videoInfo['videoId'];
-                    $contentModel->type      = "video";
-                    $contentModel->author      = $videoDetails['author_name'];
-                    $contentModel->channel_name      = $videoDetails['provider_name'];
-                    $contentModel->is_ugc      =1;
-                    $contentModel->thumb_image = $videoDetails['thumbnail_url'];
-                    $contentModel->status = 'pending';
-                    $contentModel->source = $videoDetails['provider_name'];
-                    $contentModel->media_url =$model->url;
-                    if($contentModel->save()){
+                    $contentModel                   = new Content();
+                    $contentModel->isNewRecord      = true;
+                    $contentModel->primaryKey       = NULL;
+                    $contentModel->user_name        = $model->attributes['username'];
+                    $contentModel->user_email       = $model->attributes['username'];
+                    $contentModel->title            = $videoDetails['items'][0]['snippet']['title'];
+                    $contentModel->description      = $videoDetails['items'][0]['snippet']['description'];
+                    $contentModel->media_id         = $videoDetails['items'][0]['id'];
+                    $contentModel->type             = "video";
+                    $contentModel->author           = $videoDetails['items'][0]['snippet']['channelTitle'];
+                    $contentModel->channel_name     = $videoDetails['items'][0]['kind'];
+                    $contentModel->is_ugc           = 1;
+                    $contentModel->thumb_image      = Utility::getThumbnails($videoDetails['items'][0]['snippet']['thumbnails']);
+                    $contentModel->alternate_image  = Utility::getThumbnails($videoDetails['items'][0]['snippet']['thumbnails'],'medium');
+                    $contentModel->status       = 'pending';
+                    $contentModel->source       = "youtube";
+                    $contentModel->media_url    = $model->url;
+                    $contentModel->notes        = $videoDetails['items'][0]['snippet']['localized']['description'];
+                    if ($contentModel->save()) {
                         Yii::app()->user->setFlash('videoInformationSubmitted','<span>Thank you.<a href="">Reload form</a>');
                         unset($_POST['SubmissionForm']);
                         $this->redirect(array('pages/index'));
                         Yii::app()->end();
                     }
-                    
                 }
             }
         }
