@@ -1,5 +1,5 @@
 @media screen and (min-width: 300px) and (max-width: 767px){
-	.CH-SocialIcons{
+	.CH-SocialIcons{ 
 		display:none;
 	}
 	.CH-MainMenu{
@@ -37,7 +37,7 @@
 		margin:0;
 	}
 	.CH-MainMenu ul li a{
-		color:#FFF;
+		color:#fff5e9;
 		line-height:30px;
 	}
 	.CH-MainMenu ul li a.active,
@@ -91,7 +91,7 @@
 		right:auto;
 		top:auto;
 		padding:0;
-		background:#ffffff;
+		background:#fff5e9;
 		padding:10px;
 		margin:15px 0 0 0;
 		-webkit-border-radius:10px;
@@ -121,7 +121,7 @@
 	}
 	.CH-MobileDisplay .CH-MobileText .CH-SubHead{
 		font-size:22px;
-		color:#ffffff;
+		color:#fff5e9;
 		text-align:center;
 		text-transform:uppercase;
 		margin-top:10px;
@@ -209,6 +209,9 @@
 	.CH-FaqList,
 	.CH-RulesList{
 		text-align:center;
+	}
+	.CH-RulesList{
+		text-align:left;
 	}
 	#ytvideo, #ytvideo2, #ytvideo3, #ytvideo4,
 	div.ytplayerright{
