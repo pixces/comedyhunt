@@ -938,3 +938,9 @@ body{
 	text-decoration:underline;
 	color:#28394e;
 }
+.CH-FormGroup .errorMessage{
+	font-size:13px;
+	color:#28394E;
+	font-weight:700;
+	margin:0 0 0 15px;
+}
