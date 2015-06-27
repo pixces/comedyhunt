@@ -1,6 +1,17 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
 
+    <!-- Mobile Logo Starts Here -->
+    <div class="CH-MobileDisplay">
+        <div class="CH-MobileLogo"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/mobile-logo.png" class="img-responsive" /></div>
+        <div class="CH-MobileText">
+            <span class="CH-Head">You can be the next Comedy Super Star</span>
+            <span class="CH-SubHead">Submit your entry video below</span>
+        </div>
+
+    </div>
+    <!-- Mobile Logo Ends Here -->
+
     <!-- Content Starts !-->
     <?php echo $content; ?>
     <!-- Content Ends !-->
@@ -31,4 +42,5 @@
         </div>
     </div>
     <!-- TimeLine Ends Here -->
+
 <?php $this->endContent(); ?>

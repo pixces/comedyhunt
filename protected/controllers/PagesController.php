@@ -2,13 +2,6 @@
 
 class PagesController extends Controller
 {
-
-    /**
-     * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
-     * using two-column layout. See 'protected/views/layouts/column2.php'.
-     */
-    public $layout='//layouts/default';
-
     /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.
