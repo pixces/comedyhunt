@@ -13,7 +13,6 @@ class PagesController extends Controller
 
         $model = new SubmissionForm();
         if (isset($_POST['SubmissionForm']) || !empty(Yii::app()->session['SubmissionForm'])) {
-            echo "test";
             $model->attributes = isset($_POST['SubmissionForm']) ? $_POST['SubmissionForm']
                     : Yii::app()->session['SubmissionForm'];
             if (!isset(Yii::app()->session['SubmissionForm'])) {
