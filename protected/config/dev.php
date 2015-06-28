@@ -19,11 +19,19 @@ return CMap::mergeArray(
                 'charset' => 'utf8',
                 'enableParamLogging' => true,
             ),
-        ),
-        'params' => array(
-            's3AccessKey' => "AKIAI4PTFQAGUMKSMN3Q",
-            's3SecretKey' => "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",
-            's3Bucket' => "cnkugc",
+            'log'=>array(
+                'class'=>'CLogRouter',
+                'routes'=>array(
+                    array(
+                        'class'=>'CFileLogRoute',
+                        'levels'=>'error, warning',
+                    ),
+                    // comment the following to show log messages on web pages
+                    array(
+                        'class'=>'CWebLogRoute',
+                    ),
+                ),
+            ),
         ),
         'modules' => array(
             'gii' => array(
@@ -32,23 +40,21 @@ return CMap::mergeArray(
                 'ipFilters' => array('127.0.0.1', '::1'),
             ),
         ),
-        /*
-        'log'=>array(
-            'class'=>'CLogRouter',
-            'routes'=>array(
-                array(
-                    'class'=>'CFileLogRoute',
-                    'levels'=>'error, warning,trace, info',
-                ),
-                // uncomment the following to show log messages on web pages
-                array(
-                    'class' => 'CWebLogRoute',
-                    'enabled' => YII_DEBUG,
-                    'levels' => 'error, warning, trace, notice',
-                    'categories' => 'application',
-                    'showInFireBug' => false,
-                ),
+        'params' => array(
+            's3AccessKey' => "AKIAI4PTFQAGUMKSMN3Q",
+            's3SecretKey' => "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",
+            's3Bucket' => "cnkugc",
+            //youtube playlist configuration
+            'YT_PlayList' => array(
+                'maxSize' => 50,
+                'isCache' => true,
+                'cacheLifetime' => 86400,
+                'cachePath' => dirname(__FILE__)."/../runtime/cache/",
+                'apiKey' => 'AIzaSyA4iw6xE5VRXg5c7s7JFcmlTO65gQIMjnE',
             ),
-        ),*/
+            'YT_Faq_PlayListID' => array(
+                'PL548A047B9D0B4A7C'
+            ),
+        ),
     )
 );

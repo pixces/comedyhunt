@@ -29,12 +29,29 @@ class SiteController extends Controller
         $this->layout = '//layouts/default';
 
         //baisc youtube playlist params
-        $ytConfig = Yii::app()->params['YT_PLAYLIST'];
+        $ytConfig = Yii::app()->params['YT_PlayList'];
 
+        $ytParams = array(
+            'api' => $ytConfig['apiKey'],
+            'max' => $ytConfig['maxSize'],
+            'cachexml' => $ytConfig['isCache'],
+            'cachelife' => $ytConfig['cacheLifetime'],
+            'xmlpath' => $ytConfig['cachePath'],
+            'start' => 1,
+            'descriptionlength' => 40,
+            'titlelength' => 20
+        );
+
+        $videoPlayList = array();
+
+        foreach(Yii::app()->params['YT_Faq_PlayListID'] as $id){
+            $obj = new CHPlaylist('playlist',$id,$ytParams);
+            array_push($videoPlayList, $obj->getInstance() );
+        }
+
+        /*
         $playListId = array('PL548A047B9D0B4A7C','RDRb0UmrCXxVA');
-
         $video = new Youtubelist('playlist');
-
         $video->set_api($ytConfig['apiKey']);
         $video->set_max($ytConfig['maxSize']);
         $video->set_cachexml($ytConfig['isCache']);
@@ -51,17 +68,22 @@ class SiteController extends Controller
         $video->set_playlist($playListId[0]);
         $video2->set_playlist($playListId[1]);
 
+
+        //print_r($videoPlayList);
+        //exit;
+        */
+
         //include the playlist js and css files
         //Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/path/to/your/javascript/file',CClientScript::POS_END);
         Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/vendor/youtubeplaylist.css');
         Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/vendor/youtubeplaylist-right-with-thumbs.css');
 
-
-
         $this->render('faq', array(
-            'video' => $video,
-            'video2' => $video2,
-        ));
+            //'video' => $video,
+            //'video2' => $video2,
+            'aVideoList' => $videoPlayList
+            )
+        );
     }
 
     /**

@@ -12,7 +12,8 @@ class PagesController extends Controller
 
 
         $model = new SubmissionForm();
-        if (isset($_POST['SubmissionForm']) || isset(Yii::app()->session['SubmissionForm'])) {
+        if (isset($_POST['SubmissionForm']) || !empty(Yii::app()->session['SubmissionForm'])) {
+            echo "test";
             $model->attributes = isset($_POST['SubmissionForm']) ? $_POST['SubmissionForm']
                     : Yii::app()->session['SubmissionForm'];
             if (!isset(Yii::app()->session['SubmissionForm'])) {
@@ -92,12 +93,39 @@ class PagesController extends Controller
             }
         }
 
+        //fetch all the videos for the first page
+        $brandVideos = $this->getCarouselContent();
+
         $pageName = 'index';
         //render the page
         $this->render(
             $pageName, array(
-            'model' => $model
+            'model' => $model,
+            'gallery' => $brandVideos,
             )
         );
+    }
+
+    public function getCarouselContent($params=null){
+
+        $galleryData=[];
+        $columns = Content::$defaultSelectableFields;
+
+        $Criteria            = new CDbCriteria;
+        $Criteria->condition = 'is_ugc=:ugc AND status=:status';
+        $Criteria->params    = array(':ugc' => 0, 'status' => 'approved');
+        $Criteria->order     ='date_created DESC';
+
+        if (Content::model()->count($Criteria)) {
+            $content = Content::model()->findAll($Criteria);
+            foreach ($content as $video) {
+                $row = new stdClass();
+                foreach($columns as $column) {
+                    $row->$column = $video->$column;
+                }
+                $galleryData[] = $row;
+            }
+        }
+        return $galleryData;
     }
 }

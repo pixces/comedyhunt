@@ -8,4 +8,6 @@ assets
 htmls
 /nbproject/private/
 /protected/config/dev.php
+/protected/config/production.php
 /nbproject
+old

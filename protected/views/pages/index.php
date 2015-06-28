@@ -109,95 +109,19 @@
 
         <div class="CH-VideoCarouselBlk">
             <div id="CH-VideoCarousel">
+                <?php if ($gallery){
+                    foreach($gallery as $video){ ?>
+
                 <div class="CH-VideoCarouselItem">
                     <div class="CH-Video">
-                        <div class="CH-VideoThumb"><img src="images/video-image1.png"/></div>
+                        <div class="CH-VideoThumb"><img src="<?=$video->thumb_image; ?>"/></div>
                         <div class="CH-VideoThumbPlay">
-                            <!--a href="javascript:void(0)" data-CHVideoTitle="Royal Turds - Worst Ads (Tanmay Bhat, Gursimran Khamba)" data-CHVideoURL="uG3RlN_zMRE"><img src="images/video-thumb-play.png" /></a-->
-                            <a href="javascript:void(0)" data-showpopup="1" class="show-popup"
-                               data-videoTitle="THE BIG BANG THEORY SEASON 8 - PROMO" data-videoURL="sehlQGZi16w"><img
-                                    src="images/video-thumb-play.png"/></a>
+                            <a href="javascript:void(0)" data-showpopup="1" class="show-popup" data-videoTitle="<?=$video->title; ?>" data-videoURL="<?=$video->media_id; ?>"><img src="images/video-thumb-play.png"/></a>
                         </div>
                     </div>
-                    <div class="CH-Description">Proin rutrum nisi nec scelerisque dictum</div>
+                    <div class="CH-Description"><?=$video->title; ?></div>
                 </div>
-                <div class="CH-VideoCarouselItem">
-                    <div class="CH-Video">
-                        <div class="CH-VideoThumb"><img src="images/video-thumb-image.png"/></div>
-                        <div class="CH-VideoThumbPlay"><a href="javascript:void(0)" data-showpopup="1"
-                                                          class="show-popup"
-                                                          data-videoTitle="Royal Turds - Worst Ads (Tanmay Bhat, Gursimran Khamba)"
-                                                          data-videoURL="uG3RlN_zMRE"><img
-                                    src="images/video-thumb-play.png"/></a></div>
-                    </div>
-                    <div class="CH-Description">Aenean eu libero sit amet leo aliquam facilisis</div>
-                </div>
-                <div class="CH-VideoCarouselItem">
-                    <div class="CH-Video">
-                        <div class="CH-VideoThumb"><img src="images/video-image1.png"/></div>
-                        <div class="CH-VideoThumbPlay"><a href="javascript:void(0)" data-showpopup="1"
-                                                          class="show-popup"
-                                                          data-videoTitle="THE BIG BANG THEORY SEASON 8 - PROMO"
-                                                          data-videoURL="sehlQGZi16w"><img
-                                    src="images/video-thumb-play.png"/></a></div>
-                    </div>
-                    <div class="CH-Description">Etiam mollis est eget facilisis convallis</div>
-                </div>
-                <div class="CH-VideoCarouselItem">
-                    <div class="CH-Video">
-                        <div class="CH-VideoThumb"><img src="images/video-thumb-image.png"/></div>
-                        <div class="CH-VideoThumbPlay"><a href="javascript:void(0)" data-showpopup="1"
-                                                          class="show-popup"
-                                                          data-videoTitle="Royal Turds - Worst Ads (Tanmay Bhat, Gursimran Khamba)"
-                                                          data-videoURL="uG3RlN_zMRE"><img
-                                    src="images/video-thumb-play.png"/></a></div>
-                    </div>
-                    <div class="CH-Description">Sed vel dui a nulla venenatis laoreet</div>
-                </div>
-                <div class="CH-VideoCarouselItem">
-                    <div class="CH-Video">
-                        <div class="CH-VideoThumb"><img src="images/video-image1.png"/></div>
-                        <div class="CH-VideoThumbPlay"><a href="javascript:void(0)" data-showpopup="1"
-                                                          class="show-popup"
-                                                          data-videoTitle="THE BIG BANG THEORY SEASON 8 - PROMO"
-                                                          data-videoURL="sehlQGZi16w"><img
-                                    src="images/video-thumb-play.png"/></a></div>
-                    </div>
-                    <div class="CH-Description">Proin rutrum nisi nec scelerisque dictum</div>
-                </div>
-                <div class="CH-VideoCarouselItem">
-                    <div class="CH-Video">
-                        <div class="CH-VideoThumb"><img src="images/video-thumb-image.png"/></div>
-                        <div class="CH-VideoThumbPlay"><a href="javascript:void(0)" data-showpopup="1"
-                                                          class="show-popup"
-                                                          data-videoTitle="Royal Turds - Worst Ads (Tanmay Bhat, Gursimran Khamba)"
-                                                          data-videoURL="uG3RlN_zMRE"><img
-                                    src="images/video-thumb-play.png"/></a></div>
-                    </div>
-                    <div class="CH-Description">Aenean eu libero sit amet leo aliquam facilisis</div>
-                </div>
-                <div class="CH-VideoCarouselItem">
-                    <div class="CH-Video">
-                        <div class="CH-VideoThumb"><img src="images/video-image1.png"/></div>
-                        <div class="CH-VideoThumbPlay"><a href="javascript:void(0)" data-showpopup="1"
-                                                          class="show-popup"
-                                                          data-videoTitle="THE BIG BANG THEORY SEASON 8 - PROMO"
-                                                          data-videoURL="sehlQGZi16w"><img
-                                    src="images/video-thumb-play.png"/></a></div>
-                    </div>
-                    <div class="CH-Description">Etiam mollis est eget facilisis convallis</div>
-                </div>
-                <div class="CH-VideoCarouselItem">
-                    <div class="CH-Video">
-                        <div class="CH-VideoThumb"><img src="images/video-thumb-image.png"/></div>
-                        <div class="CH-VideoThumbPlay"><a href="javascript:void(0)" data-showpopup="1"
-                                                          class="show-popup"
-                                                          data-videoTitle="Royal Turds - Worst Ads (Tanmay Bhat, Gursimran Khamba)"
-                                                          data-videoURL="uG3RlN_zMRE"><img
-                                    src="images/video-thumb-play.png"/></a></div>
-                    </div>
-                    <div class="CH-Description">Sed vel dui a nulla venenatis laoreet</div>
-                </div>
+                <?php } } ?>
             </div>
         </div>
         <div class="CH-WorkshopDate">
@@ -205,26 +129,26 @@
                 Learn some laugh-logic on these dates.</p>
 
             <div class="CH-WorkshopCity">
-                <div>
-                    <span>9th July</span>
-                    <span class="CH-City">Mumbai</span>
-                    <span class="CH-Register"><a href="javascript:void(0)">Register</a></span>
-                </div>
-                <div>
-                    <span>10th July</span>
-                    <span class="CH-City">Bangalore</span>
-                    <span class="CH-Register"><a href="javascript:void(0)">Register</a></span>
-                </div>
-                <div>
-                    <span>16th July</span>
-                    <span class="CH-City">Hyderabad</span>
-                    <span class="CH-Register"><a href="javascript:void(0)">Register</a></span>
-                </div>
-                <div>
-                    <span>17th July</span>
-                    <span class="CH-City">Delhi</span>
-                    <span class="CH-Register"><a href="javascript:void(0)">Register</a></span>
-                </div>
+               <div>
+					<span>4th July</span>
+					<span class="CH-City">Mumbai</span>
+					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
+				</div>
+				<div>
+					<span>8th July</span>
+					<span class="CH-City">Delhi</span>
+					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
+				</div>
+				<div>
+					<span>16th July</span>
+					<span class="CH-City">Hyderabad</span>
+					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
+				</div>
+				<div>
+					<span>17th July</span>
+					<span class="CH-City">Bangalore</span>
+					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
+				</div>
             </div>
         </div>
 
