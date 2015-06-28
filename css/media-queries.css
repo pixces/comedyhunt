@@ -227,7 +227,9 @@
 	.CH-WorkshopDate .CH-WorkshopCity div,
 	#CH-VideoCarousel .CH-VideoCarouselItem .CH-Description,
 	.CH-WorkshopDate .CH-WorkshopCity,
-	.CH-WorkshopDate .CH-WorkshopCity div{
+	.CH-WorkshopDate .CH-WorkshopCity div,
+	.CH-TimelineContent .CH-Head,
+	.CH-TimelineContent .CH-Description{
 		text-align:center;
 	}
 	.CH-GalleryList .CH-GalleryImage, 
