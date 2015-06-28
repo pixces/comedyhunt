@@ -210,7 +210,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=199;
 -- Constraints for table `content_views`
 --
 ALTER TABLE `content_views`
-ADD CONSTRAINT `content_views_ibfk_1` FOREIGN KEY (`content_id`) REFERENCES `contentold` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `content_views_ibfk_1` FOREIGN KEY (`content_id`) REFERENCES `content` (`id`) ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

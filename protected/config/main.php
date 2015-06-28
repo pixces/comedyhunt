@@ -23,15 +23,6 @@ return array(
 
 	'modules'=>array(
         'admin'
-		// uncomment the following to enable the Gii tool
-		/*
-		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
-			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
-		),
-		*/
 	),
 
 	// application components
@@ -81,12 +72,13 @@ return array(
 			'routes'=>array(
 				array(
 					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
+					'levels'=>'error, warning, debug',
 				),
 				// comment the following to show log messages on web pages
+                /*
 				array(
 					'class'=>'CWebLogRoute',
-				),
+				),*/
 			),
 		),
 	),
@@ -96,17 +88,5 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
-
-        //youtube playlist configuration
-        'YT_PlayList' => array(
-            'maxSize' => 50,
-            'isCache' => true,
-            'cacheLifetime' => 86400,
-            'cachePath' => dirname(__FILE__)."/../runtime/cache/",
-            'apiKey' => 'AIzaSyA4iw6xE5VRXg5c7s7JFcmlTO65gQIMjnE',
-         ),
-        'YT_Faq_PlayListID' => array(
-            'PL548A047B9D0B4A7C'
-        ),
 	),
 );
