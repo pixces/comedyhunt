@@ -93,6 +93,9 @@ CREATE TABLE `content` (
   `thumb_image` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `alternate_image` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `status` enum('pending','active','inactive','deleted','rejected','approved','under_review','processing','error') CHARACTER SET utf8 NOT NULL DEFAULT 'pending',
+  `google_id` bigint(20) DEFAULT NULL,
+  `google_displayname` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `google_profilepicture` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `date_created` datetime NOT NULL,
   `date_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=199 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
