@@ -98,9 +98,9 @@
                             <div class="CH-Terms">
                                 <span<?php echo $form->checkBox($model, 'accept'); ?>I agree to the terms and conditions</span>
                                 <span class="CH-TermsLinks">
-                                    <a href="<?= Yii::app()->createAbsoluteUrl('/site/pages/?view=privacy-policy'); ?>"
+                                    <a href="https://www.google.co.uk/intl/en-GB/policies/privacy/"
                                        target="_blank">Privacy policy</a>   |   <a
-                                        href="<?= Yii::app()->createAbsoluteUrl('/site/pages/?view=terms-conditions'); ?>"
+                                        href="<?=Yii::app()->createAbsoluteUrl('/site/page/?view=rules'); ?>"
                                         target="_blank">Terms &amp; Conditions</a>
                                 </span>
                                 <?php echo $form->error($model, 'accept'); ?>

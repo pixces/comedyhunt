@@ -80,7 +80,7 @@
 				<ul>
 					<li><a href="https://youtube.com" target="_blank">Youtube</a></li>
 					<li><a href="https://www.google.co.uk/intl/en-GB/policies/privacy/" target="_blank">Privacy</a></li>
-					<li><a href="https://www.youtube.com/t/terms" target="_blank">Terms &amp; Conditions</a></li>
+					<li><a href="<?=Yii::app()->createAbsoluteUrl('/site/page/?view=rules'); ?>" target="_blank">Terms &amp; Conditions</a></li>
 				</ul>
 				<div class="CH-CopyRight">&copy; copyright 2015. All rights reserved</div>
 			</div>
