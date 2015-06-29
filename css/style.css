@@ -205,7 +205,8 @@ body{
 }
 .CH-SubmissionsTextContainer .CH-Text ul{
 	margin-left:16px;    
-	max-width:320px;
+	/*max-width:320px;*/
+	width:100%;
 }
 .CH-SubmissionsTextContainer .CH-Text ul li{
 	margin:8px 0 0;
@@ -939,7 +940,8 @@ body{
 	color:#28394e;
 }
 .CH-FormGroup .errorMessage,
-.errorMessage{
+.errorMessage,
+.CH-HorizontalForm .error .acenter{
 	font-size:13px;
 	color:#28394E;
 	font-weight:700;
@@ -947,4 +949,10 @@ body{
 }
 .CH-FormInput.error{
 	border:2px solid #28394e !important;
+}
+.CH-SubmissionsTextContainer a{
+	text-decoration:underline;
+}
+.CH-HorizontalForm .error .acenter{
+	margin-bottom:15px;
 }
