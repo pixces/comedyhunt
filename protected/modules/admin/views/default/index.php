@@ -50,7 +50,7 @@ $this->widget('zii.widgets.grid.CGridView',
         array(
             'name' => 'Status',
             'type' => 'text',
-            'value' => '$data->status',
+            'value' => 'ucwords($data->status)',
         ),
         array(
             'class' => 'CButtonColumn',
