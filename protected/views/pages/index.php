@@ -86,6 +86,8 @@
                         </div>
                         <div class="CH-FormGroup">
                             <?php echo $form->labelEx($model, 'Your Video', array('for' => 'video')); ?>
+							<span class="CH-Tooltip">?</span>
+							<span class="CH-TooltipMessage">The YouTube URL shown in the browser for your video. Example - https://www.youtube.com/watch?v=DPTB4D28eQA <i></i></span>
                             <?php echo $form->textField($model, 'url', array('placeholder' => "Paste your video url here", 'class' => "CH-FormInput", 'id' => "video", 'class' => 'CH-FormInput')); ?>
                             <?php echo $form->error($model, 'url'); ?>
                         </div>

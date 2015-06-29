@@ -122,4 +122,9 @@ $(document).ready(function(){
 		showInfo: false
 	});
 	
+	$(".CH-Tooltip").on({
+        mouseover: function() { $(".CH-TooltipMessage").show(); },
+        mouseout:  function() { $(".CH-TooltipMessage").hide(); }
+    });
+	
 });
