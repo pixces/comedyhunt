@@ -238,7 +238,7 @@ body{
 	-moz-border-radius:80px;
 	border-radius:80px;
 	background:#fff5e9;
-	border:1px solid #fff5e9;
+	border:2px solid #fff5e9;
 	padding:15px;
 	width:95%;
 }
@@ -630,8 +630,8 @@ body{
 	height:150px;
     margin:0 auto;
     position:relative;
-    top:5px;
-    width:95%;
+    top:4px;
+    width:93%;
 	-webkit-border-radius:35px;
 	-moz-border-radius:35px;
 	border-radius:35px;
@@ -938,12 +938,13 @@ body{
 	text-decoration:underline;
 	color:#28394e;
 }
-.CH-FormGroup .errorMessage{
+.CH-FormGroup .errorMessage,
+.errorMessage{
 	font-size:13px;
 	color:#28394E;
 	font-weight:700;
 	margin:0 0 0 15px;
 }
 .CH-FormInput.error{
-	border:2px solid #28394e;
+	border:2px solid #28394e !important;
 }
