@@ -20,10 +20,11 @@ class SubmissionForm extends CFormModel
     {
         return array(
             // name, email, url are required
-            array('username, email, url,phone', 'required', 'message' => 'Please enter a value for {attribute}.'),
+            array('username, email, phone', 'required', 'message' => 'Please enter your {attribute}.'),
+            array('url', 'required', 'message' => 'Please enter your Video Url.'),
             // email has to be a valid email address
             array('email', 'email'),
-            array('accept', 'required', 'requiredValue' => 1, 'message' => 'You should accept term to use our service'),
+            array('accept', 'required', 'requiredValue' => 1, 'message' => 'You should accept terms to use our service'),
             array('url', 'validateUrl'),
             array('phone', 'numerical', 'integerOnly' => true,),
             array('phone', 'length', 'min'=>7, 'max'=>10),

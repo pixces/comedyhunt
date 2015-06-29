@@ -13,30 +13,42 @@
                 </div>
             </div>
             <div class="CH-SubmissionsTextContainer">
-                <div class="CH-SubHead">We’re on talent’s trail...</div>
-                <div class="CH-Text">We’re on a mission to find India’s next generation of funny folks and give them the
-                    stage they deserve. Think you’re funny? You’re in the right place.
-                </div>
-                <div class="CH-SubHead">Your route to stardom</div>
-                <div class="CH-Text no-margin">First off, submit your video to our panel of top comedy creators. Give
-                    them a giggle and you’ll be set a series of challenges. Ace those and you’ll be performing live
-                    alongside your comedy coaches. So what are you waiting for? Show us the funny.
-                </div>
+                <?php if (Yii::app()->user->hasFlash('videoInformationSubmitted')) { ?>
+				<div class="CH-Head acenter">Thank you for <br/>your submission</div>
+                <?php } else { ?>
+				<div>
+					<div class="CH-SubHead">Your Route to Stardom</div>
+					<div class="CH-Text">
+						<ul>
+							<li>Set up your own YouTube channel</li>
+							<li>Shoot your entry video using the Creative Toolkit provided in the links below</li>
+							<li>Upload your entry video on to your YouTube channel with the title in this format: "Comedy Hunt – entry video title"</li>
+							<li>Read the terms and conditions and enter your details below</li>
+							<li>Submit and keep checking this channel and our social handles for updates!</li>
+						</ul>
+					</div>
+					<div class="CH-Text no-margin"><a href="javascript:void(0)" target="_blank">Download Creative Toolkit</a></div>
+				</div>
+                <?php } ?>
             </div>
         </div>
         <div class="CH-SubmissionsContentBG"></div>
         <div class="CH-SubmissionsForm">
             <div class="CH-SubmissionsFormContainer">
                 <div class="CH-SubmissionsTextContainer">
-                    <div class="CH-SubHead">We’re on talent’s trail...</div>
-                    <div class="CH-Text">We’re on a mission to find India’s next generation of funny folks and give them
-                        the stage they deserve. Think you’re funny? You’re in the right place.
-                    </div>
-                    <div class="CH-SubHead">Your route to stardom</div>
-                    <div class="CH-Text no-margin">First off, submit your video to our panel of top comedy creators.
-                        Give them a giggle and you’ll be set a series of challenges. Ace those and you’ll be performing
-                        live alongside your comedy coaches. So what are you waiting for? Show us the funny.
-                    </div>
+					<div>
+						<div class="CH-SubHead">Your Route to Stardom</div>
+						<div class="CH-Text">
+							<ul>
+								<li>Set up your own YouTube channel</li>
+								<li>Shoot your entry video using the Creative Toolkit provided in the links below</li>
+								<li>Upload your entry video on to your YouTube channel with the title in this format: "Comedy Hunt – entry video title"</li>
+								<li>Read the terms and conditions and enter your details below</li>
+								<li>Submit and keep checking this channel and our social handles for updates!</li>
+							</ul>
+						</div>
+						<div class="CH-Text no-margin"><a href="javascript:void(0)" target="_blank">Download Creative Toolkit</a></div>
+					</div>
                 </div>
                 <div class="CH-HorizontalForm">
 

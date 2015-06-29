@@ -28,10 +28,10 @@
 				<div class="CH-MainMenu">
 					<a id="CH-MobileMenu" href="javascript:void(0)"></a>
 					<ul>
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('/'); ?>" class="active transition">Home</a></li>
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('/gallery/'); ?>" class="transition">Gallery</a></li>
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('/site/faq/'); ?>" class="transition">Faq's</a></li>
-                        <li class="no-border"><a href="<?=Yii::app()->createAbsoluteUrl('/site/page/?view=rules'); ?>" class="transition">Rules</a></li>
+                        <li><a href="<?=Yii::app()->createAbsoluteUrl('/'); ?>" class="<?=($this->pagename == 'index') ? 'active ':''; ?> transition">Home</a></li>
+                        <!--<li><a href="<?=Yii::app()->createAbsoluteUrl('/gallery/'); ?>" class="<?=($this->pagename == 'gallery') ? 'active ':''; ?>transition">Gallery</a></li>
+                        <li><a href="<?=Yii::app()->createAbsoluteUrl('/site/faq/'); ?>" class="<?=($this->pagename == 'faq') ? 'active ':''; ?>transition">Faq's</a></li> -->
+                        <li class="no-border"><a href="<?=Yii::app()->createAbsoluteUrl('/site/page/?view=rules'); ?>" class="<?=($this->pagename == 'page') ? 'active ':''; ?>transition">Rules</a></li>
 					</ul>
 				</div>
 				<!-- Main Menu Ends Here -->
@@ -39,9 +39,9 @@
 				<!-- Social Icons Starts Here -->
 				<div class="CH-SocialIcons">
 					<ul>
-						<li class="googleplus"><a href="javascript:void(0)" class="transition"></a></li>
-						<li class="facebook"><a href="javascript:void(0)" class="transition"></a></li>
-						<li class="twitter"><a href="javascript:void(0)" class="transition"></a></li>
+						<!--li class="googleplus"><a href="javascript:void(0)" class="transition"></a></li-->
+						<li class="facebook"><a href="https://www.facebook.com/ComedyHunt?fref=ts" target="_blank" class="transition"></a></li>
+						<li class="twitter"><a href="https://twitter.com/comedyhunt" target="_blank" class="transition"></a></li>
 					</ul>
 				</div>
 				<!-- Social Icons Ends Here -->
@@ -71,16 +71,16 @@
 			<div class="CH-SocialIcons">
 				<ul>
 					<li class="sharetext">Follow Us</li>
-					<li class="googleplus"><a class="transition" href="javascript:void(0)"></a></li>
-					<li class="facebook"><a class="transition" href="javascript:void(0)"></a></li>
-					<li class="twitter"><a class="transition" href="javascript:void(0)"></a></li>
+					<!--li class="googleplus"><a href="javascript:void(0)" class="transition"></a></li-->
+					<li class="facebook"><a href="https://www.facebook.com/ComedyHunt?fref=ts" target="_blank" class="transition"></a></li>
+					<li class="twitter"><a href="https://twitter.com/comedyhunt" target="_blank" class="transition"></a></li>
 				</ul>
 			</div>
 			<div class="CH-Links">
 				<ul>
-					<li><a href="javascript:void(0)">Youtube</a></li>
-					<li><a href="javascript:void(0)">Privacy</a></li>
-					<li><a href="javascript:void(0)">Terms &amp; Conditions</a></li>
+					<li><a href="https://youtube.com" target="_blank">Youtube</a></li>
+					<li><a href="https://www.google.co.uk/intl/en-GB/policies/privacy/" target="_blank">Privacy</a></li>
+					<li><a href="https://www.youtube.com/t/terms" target="_blank">Terms &amp; Conditions</a></li>
 				</ul>
 				<div class="CH-CopyRight">&copy; copyright 2015. All rights reserved</div>
 			</div>

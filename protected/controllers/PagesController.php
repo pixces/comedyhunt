@@ -109,10 +109,11 @@ class PagesController extends Controller
         //fetch all the videos for the first page
         $brandVideos = $this->getCarouselContent();
 
-        $pageName = 'index';
         //render the page
+        $this->pagename = 'index';
+
         $this->render(
-            $pageName, array(
+            $this->pagename, array(
             'model' => $model,
             'gallery' => $brandVideos,
             )
