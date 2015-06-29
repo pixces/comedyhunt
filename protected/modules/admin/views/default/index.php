@@ -1,17 +1,74 @@
+<?php if(Yii::app()->user->hasFlash('message')):?>
+    <div class="info">
+        <?php echo Yii::app()->user->getFlash('message'); ?>
+    </div>
+<?php endif; ?>
+<h3>Video Listing</h3>
 <?php
-/* @var $this DefaultController */
-
-$this->breadcrumbs=array(
-	$this->module->id,
-);
-?>
-<h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
-
-<p>
-This is the view content for action "<?php echo $this->action->id; ?>".
-The action belongs to the controller "<?php echo get_class($this); ?>"
-in the "<?php echo $this->module->id; ?>" module.
-</p>
-<p>
-You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
-</p>
+$this->widget('zii.widgets.grid.CGridView',
+    array(
+    'id' => 'banner-grid',
+    'rowCssClassExpression' => '( $row%2 ? $this->rowCssClass[1] : $this->rowCssClass[0] )." content[]_{$data->id}"',
+    'dataProvider' => $dataProvider,
+    'columns' => array(
+        array(
+            'name' => 'Media Id',
+            'type' => 'text',
+            'value' => '$data->media_id',
+        ),
+        
+        array(
+            'name' => 'Username',
+            'type' => 'text',
+            'value' => '$data->username'
+        ),
+        array(
+            'name' => 'Email',
+            'type' => 'text',
+            'value' => '$data->email',
+        ),
+        array(
+            'name' => 'Title',
+            'type' => 'text',
+            'value' => '$data->title',
+        ),
+        array(
+            'name' => 'Thumbnail',
+            'type' => 'raw',
+            'value' => 'CHtml::link(CHtml::image($data->thumb_image,"",array("style"=>"width:100px;height:100px;margin-left:48px;border: 1px solid #ccc;")),$data->media_url)',
+        ),
+        array(
+            'name' => 'Media Url',
+            'type' => 'raw',
+            'value' => 'CHtml::link($data->media_url)',
+        ),
+        array(
+            'name' => 'Author',
+            'type' => 'text',
+            'value' => '$data->author',
+        ),
+        array(
+            'name' => 'Status',
+            'type' => 'text',
+            'value' => '$data->status',
+        ),
+        array(
+            'class' => 'CButtonColumn',
+            'template' => '{delete}{approve}{disable}',
+            'buttons' => array(
+                'approve' => array(
+                    'label' => 'Approve',
+                    'url'=>'Yii::app()->createUrl("admin/default/toggleVideoStatus",array("id"=>$data->primaryKey,"status"=>1))',
+                   // 'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                    'visible' => '$data->status=="pending"',
+                ),
+                'disable' => array(
+                    'label' => 'Disable',
+                    'url'=>'Yii::app()->createUrl("admin/default/toggleVideoStatus",array("id"=>$data->primaryKey,"status"=>0))',
+                   // 'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+                    'visible' => '$data->status!="pending"',
+                ),
+            ),
+        ),
+    ),
+));
