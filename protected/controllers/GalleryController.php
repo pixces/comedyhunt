@@ -76,7 +76,14 @@ class GalleryController extends Controller
         /**
          * Normal Loading of the view ,and pass the partial view as String
          */
-        $this->render('index', array('videoContent' => $videoContent));
+        $this->pagename = 'gallery';
+        $this->render(
+            'index',
+            array(
+                'videoContent' => $videoContent,
+                'pageName' => 'gallery'
+            )
+        );
     }
 
     /**

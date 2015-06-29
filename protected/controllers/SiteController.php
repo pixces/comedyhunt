@@ -10,6 +10,8 @@ class SiteController extends Controller
      */
     public function actions()
     {
+        $this->pagename = 'page';
+
         return array(
             // captcha action renders the CAPTCHA image displayed on the contact page
             'captcha'=>array(
@@ -26,8 +28,6 @@ class SiteController extends Controller
 
     public function actionFaq()
     {
-        $this->layout = '//layouts/default';
-
         //baisc youtube playlist params
         $ytConfig = Yii::app()->params['YT_PlayList'];
 
@@ -49,39 +49,17 @@ class SiteController extends Controller
             array_push($videoPlayList, $obj->getInstance() );
         }
 
-        /*
-        $playListId = array('PL548A047B9D0B4A7C','RDRb0UmrCXxVA');
-        $video = new Youtubelist('playlist');
-        $video->set_api($ytConfig['apiKey']);
-        $video->set_max($ytConfig['maxSize']);
-        $video->set_cachexml($ytConfig['isCache']);
-        $video->set_cachelife($ytConfig['cacheLifetime']);
-        $video->set_xmlpath($ytConfig['cachePath']);
-        $video->set_start(1);
-        // --Set text and description length
-        $video->set_descriptionlength(40);
-        $video->set_titlelength(20);
-
-        $video2 = clone $video;
-
-        //set the playlistId
-        $video->set_playlist($playListId[0]);
-        $video2->set_playlist($playListId[1]);
-
-
-        //print_r($videoPlayList);
-        //exit;
-        */
-
         //include the playlist js and css files
         //Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/path/to/your/javascript/file',CClientScript::POS_END);
         Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/vendor/youtubeplaylist.css');
         Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/vendor/youtubeplaylist-right-with-thumbs.css');
 
-        $this->render('faq', array(
+        $this->pagename = 'faq';
+        $this->render($this->pagename, array(
             //'video' => $video,
             //'video2' => $video2,
-            'aVideoList' => $videoPlayList
+            'aVideoList' => $videoPlayList,
+            'pageName' => 'faq'
             )
         );
     }
