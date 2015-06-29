@@ -7,7 +7,7 @@ css.old
 assets
 htmls
 /nbproject/private/
-/protected/config/dev.php
 /protected/config/production.php
+/protected/config/dev.php
 /nbproject
 old

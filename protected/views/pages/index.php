@@ -45,6 +45,12 @@
                             <?php echo Yii::app()->user->getFlash('videoInformationSubmitted'); ?>
                         </div>
                     <?php else: ?>
+                        <!--show that this is an invalid video url -->
+                        <?php if (Yii::app()->user->hasFlash('invalidVideoUrl')) : ?>
+                            <div class="error">
+                                <?php echo Yii::app()->user->getFlash('invalidVideoUrl'); ?>
+                            </div>
+                        <?php endif; ?>
                         <?php
                         $form = $this->beginWidget('CActiveForm',
                             [

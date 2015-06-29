@@ -116,4 +116,10 @@ class Utility
         }
         return $thumbImage;
     }
+
+    public static function isValidYoutubeUrl($url){
+        $parts = parse_url($url);
+        return  stristr($parts['host'], 'youtube');
+    }
+
 }
