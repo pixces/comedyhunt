@@ -220,6 +220,7 @@ body{
 	width:50%;
 	float:left;
 	margin-bottom:20px;
+	position:relative;
 }
 .CH-SubmissionsFormContainer .CH-HorizontalForm .CH-FormGroupSubmit{
 	clear:both;
