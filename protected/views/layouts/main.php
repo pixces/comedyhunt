@@ -29,8 +29,8 @@
 					<a id="CH-MobileMenu" href="javascript:void(0)"></a>
 					<ul>
                         <li><a href="<?=Yii::app()->createAbsoluteUrl('/'); ?>" class="<?=($this->pagename == 'index') ? 'active ':''; ?> transition">Home</a></li>
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('/gallery/'); ?>" class="<?=($this->pagename == 'gallery') ? 'active ':''; ?>transition">Gallery</a></li>
-                        <li><a href="<?=Yii::app()->createAbsoluteUrl('/site/faq/'); ?>" class="<?=($this->pagename == 'faq') ? 'active ':''; ?>transition">Faq's</a></li>
+                        <!--<li><a href="<?=Yii::app()->createAbsoluteUrl('/gallery/'); ?>" class="<?=($this->pagename == 'gallery') ? 'active ':''; ?>transition">Gallery</a></li>
+                        <li><a href="<?=Yii::app()->createAbsoluteUrl('/site/faq/'); ?>" class="<?=($this->pagename == 'faq') ? 'active ':''; ?>transition">Faq's</a></li> -->
                         <li class="no-border"><a href="<?=Yii::app()->createAbsoluteUrl('/site/page/?view=rules'); ?>" class="<?=($this->pagename == 'page') ? 'active ':''; ?>transition">Rules</a></li>
 					</ul>
 				</div>

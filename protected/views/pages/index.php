@@ -13,7 +13,9 @@
                 </div>
             </div>
             <div class="CH-SubmissionsTextContainer">
-				<div class="CH-Head acenter hide">Thank you for <br/>your submission</div>
+                <?php if (Yii::app()->user->hasFlash('videoInformationSubmitted')) { ?>
+				<div class="CH-Head acenter">Thank you for <br/>your submission</div>
+                <?php } else { ?>
 				<div>
 					<div class="CH-SubHead">Your Route to Stardom</div>
 					<div class="CH-Text">
@@ -27,6 +29,7 @@
 					</div>
 					<div class="CH-Text no-margin"><a href="javascript:void(0)" target="_blank">Download Creative Toolkit</a></div>
 				</div>
+                <?php } ?>
             </div>
         </div>
         <div class="CH-SubmissionsContentBG"></div>
