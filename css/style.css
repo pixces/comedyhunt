@@ -204,9 +204,10 @@ body{
 	line-height:20px;
 }
 .CH-SubmissionsTextContainer .CH-Text ul{
-	margin-left:16px;    
+	margin-left:35px;    
 	/*max-width:320px;*/
-	width:100%;
+	width:auto;
+	margin-bottom:10px;
 }
 .CH-SubmissionsTextContainer .CH-Text ul li{
 	margin:8px 0 0;
@@ -955,4 +956,24 @@ body{
 }
 .CH-HorizontalForm .error .acenter{
 	margin-bottom:15px;
+}
+.CH-HomeFaq{
+	background:#fff5e9;
+}
+.CH-HomeFaq .CH-FaqHead{
+	color:#28394e;
+}
+.CH-HomeFaq .yt_holder,
+.CH-HomeFaq div.youplayer ul.videoyou li a{
+	background:#ccc4ba;
+}
+.CH-HomeFaq div.youplayer ul.videoyou li a:hover{
+	background:#a39d95;
+}
+.CH-HomeFaq div.youplayer ul.videoyou li a.currentvideo{
+	background:#a39d95!important;
+}
+.CH-HomeFaq .CH-FaqList .jspTrack{
+	background:#9a9a99;
+	border:1px solid #9a9a99;
 }

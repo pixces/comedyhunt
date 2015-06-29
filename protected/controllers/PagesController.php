@@ -108,6 +108,33 @@ class PagesController extends Controller
 
         //fetch all the videos for the first page
         $brandVideos = $this->getCarouselContent();
+		
+		
+		//baisc youtube playlist params
+        $ytConfig = Yii::app()->params['YT_PlayList'];
+
+        $ytParams = array(
+            'api' => $ytConfig['apiKey'],
+            'max' => $ytConfig['maxSize'],
+            'cachexml' => $ytConfig['isCache'],
+            'cachelife' => $ytConfig['cacheLifetime'],
+            'xmlpath' => $ytConfig['cachePath'],
+            'start' => 1,
+            'descriptionlength' => 40,
+            'titlelength' => 20
+        );
+
+        $videoPlayList = array();
+
+        foreach(Yii::app()->params['YT_Faq_PlayListID'] as $id){
+            $obj = new CHPlaylist('playlist',$id,$ytParams);
+            array_push($videoPlayList, $obj->getInstance() );
+        }
+		
+		//include the playlist js and css files
+        //Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/path/to/your/javascript/file',CClientScript::POS_END);
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/vendor/youtubeplaylist.css');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/vendor/youtubeplaylist-right-with-thumbs.css');
 
         //render the page
         $this->pagename = 'index';
@@ -116,6 +143,7 @@ class PagesController extends Controller
             $this->pagename, array(
             'model' => $model,
             'gallery' => $brandVideos,
+			'aVideoList' => $videoPlayList
             )
         );
     }
