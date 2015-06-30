@@ -41,6 +41,7 @@ return array(
                 '/admin/<controller:\w+>/<action:\w+>' => '/admin/<controller>/<action>',
                 '/login/' => '/login/index',
                 '/logout/' => '/login/logout',
+                '/authenticate/' => '/pages/authenticate'
             ),
         ),
         'errorHandler' => array(

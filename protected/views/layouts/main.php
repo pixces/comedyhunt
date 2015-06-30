@@ -190,11 +190,11 @@
 					</div>
 				</div>
 			</div>
-			<input type="hidden" class="YouTubeVideoID" value="" /> 
-			<input type="hidden" class="YouTubeVideoThumbURL" value=""  /> 
+			<input type="hidden" class="YouTubeVideoID" value="" />
+			<input type="hidden" class="YouTubeVideoThumbURL" value=""  />
 			<input type="hidden" class="YouTubeVideoTitle" value=""  />
 			<input type="submit" value="submit" class="CH-YouTubeVideoSubmit" />
-			<div class="CH-YouTubeNote">* Please make sure your video is authorized to the public.</div>			
+			<div class="CH-YouTubeNote">* Please make sure your video is authorized to the public.</div>
 		</form>
 	</div>
     <!-- Overlay Ends Here -->
