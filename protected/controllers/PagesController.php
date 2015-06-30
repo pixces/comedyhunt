@@ -138,6 +138,8 @@ class PagesController extends Controller
      */
     public function actionVideos(){
 
+        /*
+
         if(isset(Yii::app()->session['auth_token'])){
             try {
                 $client = $this->getGoogle();
@@ -188,7 +190,9 @@ class PagesController extends Controller
             // Redirect the user to authenticate page
             echo "Authentication expired";
             exit;
-        }
+        }*/
+        $this->layout = false;
+        $this->render('videos');
     }
 
     /**
@@ -221,8 +225,38 @@ class PagesController extends Controller
     }
 
 
+    public function getGoogle(){
+        if (is_null($this->oGoogle)){
+            Yii::import(Yii::getPathOfAlias("application.vendor.Google.Client", true));
+            $client_id = Yii::app()->params['GOOGLE']['CLIENT_ID'];
+            $client_secret = Yii::app()->params['GOOGLE']['SECRET'];
+            $redirect_uri = YII::app()->params['GOOGLE']['CALLBACK_URL'];
+            $this->oGoogle = new Google_Client();
+            $gg = $this->oGoogle;
+            $gg->setClientId($client_id);
+            $gg->setClientSecret($client_secret);
+            $gg->setRedirectUri($redirect_uri);
+        }
+        return $this->oGoogle;
+    }
 
 
+    public function getGooglePlus(){
+        if(is_null($this->oGooglePlus)){
+            Yii::import(Yii::getPathOfAlias("application.vendor.Google.Service.Plus"),true);
+            $this->oGooglePlus = new Google_Service_Plus($this->oGoogle);
+        }
+        return $this->oGooglePlus;
+    }
+
+
+    public function getYoutube(){
+        if(is_null($this->oYoutube)){
+            Yii::import(Yii::getPathOfAlias("application.vendor.Google.Service.YouTube"),true);
+            $this->oYoutube = new Google_Service_YouTube($this->oGoogle);
+        }
+        return $this->oYoutube;
+    }
 
     public function actionTmpIndex()
     {
@@ -249,7 +283,7 @@ class PagesController extends Controller
 
                     try {
                         if (!isset(Yii::app()->session['auth_token']) || is_null(Yii::app()->session['auth_token']))
-                                Yii::app()->session['auth_token'] = $client->authenticate();
+                            Yii::app()->session['auth_token'] = $client->authenticate();
                         else $activities = '';
 
                         if (isset(Yii::app()->session['auth_token'])) {
@@ -319,14 +353,14 @@ class PagesController extends Controller
                         throw $e;
                     }
                 } else {
-                        //unset post | unset session
-                        //set flash message & redirect
-                        unset(Yii::app()->session['SubmissionForm']);
-                        unset($_POST['SubmissionForm']);
-                        Yii::app()->user->setFlash('invalidVideoUrl','<div class="acenter">Invalid or wrong Video Url. Only Youtube urls accepted.</div>');
-                        $this->redirect(Yii::app()->createUrl("/"));
-                        Yii::app()->end();
-                    }
+                    //unset post | unset session
+                    //set flash message & redirect
+                    unset(Yii::app()->session['SubmissionForm']);
+                    unset($_POST['SubmissionForm']);
+                    Yii::app()->user->setFlash('invalidVideoUrl','<div class="acenter">Invalid or wrong Video Url. Only Youtube urls accepted.</div>');
+                    $this->redirect(Yii::app()->createUrl("/"));
+                    Yii::app()->end();
+                }
             }
         }
 
@@ -334,7 +368,7 @@ class PagesController extends Controller
         $brandVideos = $this->getCarouselContent();
 
 
-		//baisc youtube playlist params
+        //baisc youtube playlist params
         $ytConfig = Yii::app()->params['YT_PlayList'];
 
         $ytParams = array(
@@ -355,7 +389,7 @@ class PagesController extends Controller
             array_push($videoPlayList, $obj->getInstance() );
         }
 
-		//include the playlist js and css files
+        //include the playlist js and css files
         //Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/path/to/your/javascript/file',CClientScript::POS_END);
         Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/vendor/youtubeplaylist.css');
         Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/vendor/youtubeplaylist-right-with-thumbs.css');
@@ -365,51 +399,11 @@ class PagesController extends Controller
 
         $this->render(
             $this->pagename, array(
-            'model' => $model,
-            'gallery' => $brandVideos,
-			'aVideoList' => $videoPlayList
+                'model' => $model,
+                'gallery' => $brandVideos,
+                'aVideoList' => $videoPlayList
             )
         );
     }
-
-
-
-
-
-
-
-    public function getGoogle(){
-        if (is_null($this->oGoogle)){
-            Yii::import(Yii::getPathOfAlias("application.vendor.Google.Client", true));
-            $client_id = Yii::app()->params['GOOGLE']['CLIENT_ID'];
-            $client_secret = Yii::app()->params['GOOGLE']['SECRET'];
-            $redirect_uri = YII::app()->params['GOOGLE']['CALLBACK_URL'];
-            $this->oGoogle = new Google_Client();
-            $gg = $this->oGoogle;
-            $gg->setClientId($client_id);
-            $gg->setClientSecret($client_secret);
-            $gg->setRedirectUri($redirect_uri);
-        }
-        return $this->oGoogle;
-    }
-
-
-    public function getGooglePlus(){
-        if(is_null($this->oGooglePlus)){
-            Yii::import(Yii::getPathOfAlias("application.vendor.Google.Service.Plus"),true);
-            $this->oGooglePlus = new Google_Service_Plus($this->oGoogle);
-        }
-        return $this->oGooglePlus;
-    }
-
-
-    public function getYoutube(){
-        if(is_null($this->oYoutube)){
-            Yii::import(Yii::getPathOfAlias("application.vendor.Google.Service.YouTube"),true);
-            $this->oYoutube = new Google_Service_YouTube($this->oGoogle);
-        }
-        return $this->oYoutube;
-    }
-
 
 }

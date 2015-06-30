@@ -33,15 +33,16 @@ return array(
             'rules' => array(
                 '/' => 'pages/index',
                 '/pages/index/<code:\w+>'=>'pages/index',
+                '/authenticate/' => '/pages/authenticate',
+                '/videos'   => '/pages/videos',
+                '/login/' => '/login/index',
+                '/logout/' => '/login/logout',
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '/admin/<controller:\w+>/<id:\d+>' => '/admin/<controller>/view',
                 '/admin/<controller:\w+>/<action:\w+>/<id:\d+>' => '/admin/<controller>/<action>',
                 '/admin/<controller:\w+>/<action:\w+>' => '/admin/<controller>/<action>',
-                '/login/' => '/login/index',
-                '/logout/' => '/login/logout',
-                '/authenticate/' => '/pages/authenticate'
             ),
         ),
         'errorHandler' => array(
