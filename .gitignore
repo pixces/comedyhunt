@@ -11,3 +11,4 @@ htmls
 /protected/config/dev.php
 /nbproject
 old
+/protected/views/pages/index.php.*

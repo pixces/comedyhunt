@@ -50,13 +50,12 @@
                 </div>
 				<div class="CH-SubmitButton">
 					<div>
-						<a href="javascript:void(0)">Authenticate with youtube <br/>to submit video.</a>
-						<a class="show-popup" data-showpopup="2" href="javascript:void(0)">Select your video</a>
+						<a href="<?=Yii::app()->baseUrl."/pages/authenticate?media=youtube"; ?>">Authenticate with youtube <br/>to submit video.</a>
+						<a class="show-popup" data-showpopup="2" href="<?=Yii::app()->baseUrl."/pages/videos?media=youtube"; ?>">Select your video</a>
 						<div class="CH-SubmitButton no-margin "><a href="'.Yii::app()->createUrl('/').'">Submit another video</a></div>
 					</div>
 					<div class="CH-Disclaimer"><span>Disclaimer:</span> This data is collected by OML, and stored at OML's 3rd party servers for contest administration purpose only, and will not be used for any other purpose</div>
 				</div>
-
         </div>
     </div>
 </div>
