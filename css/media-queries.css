@@ -112,7 +112,7 @@
 	}
 	.CH-MobileDisplay .CH-MobileText .CH-Head{
 		font-size:36px;
-		color:#ff3333;
+		color:#eb2842;
 		text-transform:uppercase;
 		text-align:center;
 		font-family: 'Phosphate-Solid';
@@ -184,13 +184,21 @@
 	}
 	.CH-SubmitButton{
 		min-height:inherit;
-		width:285px;
-		margin:0 auto;
+		width:auto;
+		margin:0 15px 15px;
 	}
 	.CH-SubmitButton a{
 		width:330px;
 		margin:0 auto;
 		float:none;
+		right:auto;
+	}
+	.CH-Disclaimer{
+		right:auto;
+		width:auto;
+		float:none;
+		max-width:inherit;
+		margin-left:15px;
 	}
 	.CH-GalleryBG, .CH-FaqBG, .CH-RulesBG{
 		margin-top:20px;

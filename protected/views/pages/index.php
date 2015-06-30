@@ -21,13 +21,12 @@
 					<div class="CH-Text no-margin">
 						<ul>
 							<li>Set up your own YouTube channel</li>
-							<li>Shoot your entry video using the Creative Toolkit provided in the links below</li>
-							<li>Upload your entry video on to your YouTube channel with the title in this format: "Comedy Hunt – entry video title"</li>
-							<li>Read the terms and conditions and enter your details below</li>
-							<li>Submit and keep checking this channel and our social handles for updates!</li>
+							<li>Shoot your entry video</li>
+							<li>Upload your entry video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
+							<li>Read the terms and conditions on this page,  and enter your details below</li>
+							<li>Click on the check box, press the Submit button, follow the steps after that & and keep checking this channel and our social handles for updates!</li>
 						</ul>
 					</div>
-					<div class="CH-Text no-margin"><a href="javascript:void(0)" target="_blank">Download Creative Toolkit</a></div>
 				</div>
                 <?php } ?>
             </div>
@@ -41,15 +40,19 @@
 						<div class="CH-Text no-margin">
 							<ul>
 								<li>Set up your own YouTube channel</li>
-								<li>Shoot your entry video using the Creative Toolkit provided in the links below</li>
-								<li>Upload your entry video on to your YouTube channel with the title in this format: "Comedy Hunt – entry video title"</li>
-								<li>Read the terms and conditions and enter your details below</li>
-								<li>Submit and keep checking this channel and our social handles for updates!</li>
+								<li>Shoot your entry video</li>
+								<li>Upload your entry video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
+								<li>Read the terms and conditions on this page,  and enter your details below</li>
+								<li>Click on the check box, press the Submit button, follow the steps after that & and keep checking this channel and our social handles for updates!</li>
 							</ul>
 						</div>
-						<div class="CH-Text no-margin"><a href="javascript:void(0)" target="_blank">Download Creative Toolkit</a></div>
 					</div>
                 </div>
+				<div class="CH-SubmitButton">
+					<div><a href="javascript:void(0)">Submit your video NOW!</a></div>
+					<div class="CH-Disclaimer"><span>Disclaimer:</span> This data is collected by OML, and stored at OML's 3rd party servers for contest administration purpose only, and will not be used for any other purpose</div>
+				</div>
+				<div class="CH-SubmitButton"><a class="show-popup" data-showpopup="2" href="javascript:void(0)">Submit</a></div>
                 <div class="CH-HorizontalForm">
 
                     <?php if (Yii::app()->user->hasFlash('videoInformationSubmitted')): ?>
@@ -120,7 +123,7 @@
 <!-- Submissions Ends Here -->
 
 <!-- FAQs Starts Here -->
-<div class="CH-Faq CH-HomeFaq">
+<div class="CH-Faq CH-HomeFaq" style="display:none">
     <div class="CH-FaqBG"></div>
     <div class="CH-FaqContent">
         <div class="CH-FaqIcon"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-image-blue.png" /></div>

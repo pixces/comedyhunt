@@ -29,25 +29,41 @@ $(document).ready(function(){
         var selectedPopup = $(this).data('showpopup');		
         showPopup(selectedPopup); 
 		
-		var VideoURL = $(this).attr('data-videoURL');
-		var VideoTitle = $(this).attr('data-videoTitle');
-		
-		var iframeTemplate = '<iframe width="853" height="480" src="https://www.youtube.com/embed/'+VideoURL+'?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;modestbranding=1;enablejsapi=1" frameborder="0" allowfullscreen id="th-553fed94be2f27b50100729a-video"></iframe>';
-		
-		$(".overlay-content .overlay-title").html(VideoTitle);
-		$(".overlay-content .modalVideo").html(iframeTemplate);
+		if(selectedPopup == 1){
+			var VideoURL = $(this).attr('data-videoURL');
+			var VideoTitle = $(this).attr('data-videoTitle');
+			
+			var iframeTemplate = '<iframe width="853" height="480" src="https://www.youtube.com/embed/'+VideoURL+'?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;modestbranding=1;enablejsapi=1" frameborder="0" allowfullscreen id="th-553fed94be2f27b50100729a-video"></iframe>';
+			
+			$(".overlay-content .overlay-title").html(VideoTitle);
+			$(".overlay-content .modalVideo").html(iframeTemplate);
+		}
     });
 	
 	// hide popup when user clicks on close button or if user clicks anywhere outside the container
     $('.close-btn, .overlay-wrapper').on('click',function(){
 		$(".overlay-content .overlay-title").empty();
 		$(".overlay-content .modalVideo").empty();
+		
+		$('.CH-YouTubeList .scroll-pane').scrollTop(0);
+		$(".CH-YouTubeListItems").removeClass("active");
+		$(".YouTubeVideoID").val("");
+		$(".YouTubeVideoThumbURL").val("");
+		$(".YouTubeVideoTitle").val("");
         closePopup();
     });
      
     // hide the popup when user presses the esc key
     $(document).keyup(function(e) {
         if (e.keyCode == 27) { // if user presses esc key
+			$(".overlay-content .overlay-title").empty();
+			$(".overlay-content .modalVideo").empty();
+			
+			$('.CH-YouTubeList .scroll-pane').scrollTop(0);
+			$(".CH-YouTubeListItems").removeClass("active");
+			$(".YouTubeVideoID").val("");
+			$(".YouTubeVideoThumbURL").val("");
+			$(".YouTubeVideoTitle").val("");
             closePopup();
         }
     });
@@ -126,5 +142,19 @@ $(document).ready(function(){
         mouseover: function() { $(".CH-TooltipMessage").show(); },
         mouseout:  function() { $(".CH-TooltipMessage").hide(); }
     });
+	
+	$(".CH-YouTubeListItems").on("click",function(){
+		$(".CH-YouTubeListItems").removeClass("active");
+		$(this).addClass("active");
+		
+		var YouTubeVideoID, YouTubeVideoThumbURL, YouTubeVideoTitle;
+		YouTubeVideoID = $(this).attr("data-YouTubeVideoID");
+		YouTubeVideoThumbURL = $(this).attr("data-YouTubeVideoThumbURL");
+		YouTubeVideoTitle = $(this).attr("data-YouTubeVideoTitle");
+		
+		$(".YouTubeVideoID").val(YouTubeVideoID);
+		$(".YouTubeVideoThumbURL").val(YouTubeVideoThumbURL);
+		$(".YouTubeVideoTitle").val(YouTubeVideoTitle);
+	});
 	
 });

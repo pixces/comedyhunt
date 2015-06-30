@@ -749,10 +749,12 @@ body{
     float:right;
     font-size:24px;
 	font-family: "Phosphate-Solid";
-    margin-right:50px;
+    /*margin-right:50px;*/
 	margin-top: 60px;
     padding:3px 15px;
     text-transform:uppercase;
+	position:relative;
+	right:12%;
 }
 /* Video Overlay Starts Here 
 .CH-VideoOverlay{
@@ -1014,4 +1016,96 @@ body{
 	top:67px;
 	left:138px;
 	display:none;
+}
+.CH-YouTubeTitle{
+	font-family:"Phosphate-Solid";
+	font-size:36px;
+	line-height:35px;
+	text-transform:uppercase;
+	color:#eb2842;
+	padding:5px 0;
+	border-bottom:1px solid #eb2842;
+}
+.CH-YouTubeNote{
+	color:#eb2842;
+	font-size:11px;
+	margin-top:10px;
+	clear:both;
+}
+.CH-YouTubeList{
+	color:#333366;
+	font-size:14px;
+	overflow:hidden;
+	margin-top:10px;
+}
+.CH-YouTubeList .scroll-pane{
+	height:280px;
+	overflow:auto;
+	width:auto;
+	margin:0 auto;
+}
+/*.CH-YouTubeList .jspVerticalBar{
+	background:none;
+	width:10px;
+}
+.CH-YouTubeList .jspTrack{
+	background:#536171;
+	border:1px solid #3a495d;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	width:10px;
+}
+.CH-YouTubeList .jspDrag{
+	background:#fff5e9;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+}*/
+.CH-YouTubeList .CH-YouTubeListItems{
+	max-width:135px;
+	display:inline-block;
+	margin:5px 3px;
+	padding:5px;
+	border:2px solid #fff5e9;
+	cursor:pointer;
+}
+.CH-YouTubeList .CH-YouTubeListItems.active{
+	border:2px solid #eb2842;
+}
+.CH-YouTubeList .CH-YouTubeThumbImage{
+	width:120px;
+}
+.CH-YouTubeList .CH-YouTubeThumbImage img{
+	width:120px;
+}
+.CH-YouTubeList .CH-YouTubeThumbTitle{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.CH-YouTubeVideoSubmit{
+	background:#28394e;
+    border:1px solid #28394e;
+    border-radius:80px;
+    color:#fff5e8;
+    font-family:"Phosphate-Solid";
+    font-size:24px;
+    margin-right:10px;
+    margin-top:10px;
+    padding:3px 15px;
+    text-transform:uppercase;
+}
+.CH-Disclaimer{
+	font-size:12px;
+    color:#fff5e8;
+	clear:both;
+	position:relative;
+	right:12%;
+	max-width:290px;
+	float:right;
+	margin-top:10px;
+}
+.CH-Disclaimer span{
+	font-weight:bold;
 }
