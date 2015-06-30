@@ -188,10 +188,11 @@
 		margin:0 15px 15px;
 	}
 	.CH-SubmitButton a{
-		width:330px;
-		margin:0 auto;
+		width:350px;
+		margin:0 auto 10px;
 		float:none;
 		right:auto;
+		display:block;
 	}
 	.CH-Disclaimer{
 		right:auto;

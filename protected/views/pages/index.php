@@ -49,122 +49,19 @@
 					</div>
                 </div>
 				<div class="CH-SubmitButton">
-					<div><a href="javascript:void(0)">Submit your video NOW!</a></div>
+					<div>
+						<a href="javascript:void(0)">Authenticate with youtube <br/>to submit video.</a>
+						<a class="show-popup hide" data-showpopup="2" href="javascript:void(0)">Select your video</a>
+						<div class="CH-SubmitButton no-margin hide"><a href="'.Yii::app()->createUrl('/').'">Submit another video</a></div>
+					</div>
 					<div class="CH-Disclaimer"><span>Disclaimer:</span> This data is collected by OML, and stored at OML's 3rd party servers for contest administration purpose only, and will not be used for any other purpose</div>
 				</div>
-				<div class="CH-SubmitButton"><a class="show-popup" data-showpopup="2" href="javascript:void(0)">Submit</a></div>
-                <div class="CH-HorizontalForm">
-
-                    <?php if (Yii::app()->user->hasFlash('videoInformationSubmitted')): ?>
-                        <div class="info">
-                            <?php echo Yii::app()->user->getFlash('videoInformationSubmitted'); ?>
-                        </div>
-                    <?php else: ?>
-                        <!--show that this is an invalid video url -->
-                        <?php if (Yii::app()->user->hasFlash('invalidVideoUrl')) : ?>
-                            <div class="error">
-                                <?php echo Yii::app()->user->getFlash('invalidVideoUrl'); ?>
-                            </div>
-                        <?php endif; ?>
-                        <?php
-                        $form = $this->beginWidget('CActiveForm',
-                            [
-                                'id' => 'register-form',
-                                'enableAjaxValidation' => false,
-                                'clientOptions' => [
-                                    'validateOnSubmit' => true
-                                ],
-                                'focus' => [$model, 'username'],
-                            ]);
-                        ?>
-                        <div class="CH-FormGroup">
-                            <?php echo $form->labelEx($model, 'Your Name', array('for' => 'name')); ?>
-                            <?php echo $form->textField($model, 'username', array('placeholder' => "Enter your name", 'class' => "CH-FormInput", 'id' => "name", 'class' => 'CH-FormInput')); ?>
-                            <?php echo $form->error($model, 'username'); ?>
-                        </div>
-                        <div class="CH-FormGroup">
-                            <?php echo $form->labelEx($model, 'Your Email', array('for' => 'email')); ?>
-                            <?php echo $form->textField($model, 'email', array('placeholder' => "Enter your email id", 'class' => "CH-FormInput", 'id' => "email", 'class' => 'CH-FormInput')); ?>
-                            <?php echo $form->error($model, 'email'); ?>
-                        </div>
-                        <div class="CH-FormGroup">
-                            <?php echo $form->labelEx($model, 'Your Video', array('for' => 'video')); ?>
-							<span class="CH-Tooltip">?</span>
-							<span class="CH-TooltipMessage">The YouTube URL shown in the browser for your video. Example - https://www.youtube.com/watch?v=DPTB4D28eQA <i></i></span>
-                            <?php echo $form->textField($model, 'url', array('placeholder' => "Paste your video url here", 'class' => "CH-FormInput", 'id' => "video", 'class' => 'CH-FormInput')); ?>
-                            <?php echo $form->error($model, 'url'); ?>
-                        </div>
-                        <div class="CH-FormGroup">
-                            <?php echo $form->labelEx($model, 'Your Phone Number', array('for' => 'phone')); ?>
-                            <?php echo $form->textField($model, 'phone', array('placeholder' => "Enter your phone number", 'class' => "CH-FormInput", 'id' => "phone", 'class' => 'CH-FormInput')); ?>
-                            <?php echo $form->error($model, 'phone'); ?>
-                        </div>
-                        <div class="CH-FormGroupSubmit">
-                            <div class="CH-Terms">
-                                <span<?php echo $form->checkBox($model, 'accept'); ?>I agree to the terms and conditions</span>
-                                <span class="CH-TermsLinks">
-                                    <a href="https://www.google.co.uk/intl/en-GB/policies/privacy/"
-                                       target="_blank">Privacy policy</a>   |   <a
-                                        href="<?=Yii::app()->createAbsoluteUrl('/site/page/?view=rules'); ?>"
-                                        target="_blank">Terms &amp; Conditions</a>
-                                </span>
-                                <?php echo $form->error($model, 'accept'); ?>
-                            </div>
-                            <div class="CH-FormSubmit">
-                                <?php echo CHtml::submitButton('Submit'); ?>
-                            </div>
-                        </div>
-                        <?php $this->endWidget(); ?>
-                    <?php endif; ?>
-            </div>
+                
         </div>
     </div>
 </div>
 <!-- Submissions Ends Here -->
 
-<!-- FAQs Starts Here -->
-<div class="CH-Faq CH-HomeFaq" style="display:none">
-    <div class="CH-FaqBG"></div>
-    <div class="CH-FaqContent">
-        <div class="CH-FaqIcon"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-image-blue.png" /></div>
-        <div class="CH-FaqHead">latest entries</div>
-
-        <!-- dynamic playlist start -->
-        <?php foreach($aVideoList as $objVideo) {
-        ?>
-        <div class="CH-FaqList">
-            <!-- Needed for the youtube player example 3 -->
-            <div class="youtubeplayer">
-                <div class="yt_holder yt_holder_right">
-                    <div id="ytvideo4"></div>
-                    <!--Up and Down arrow -->
-                    <div class="you_up"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/up_arrow.png" alt="+ Slide" title="HIDE" /></div>
-                    <div class="you_down"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/down_arrow.png" alt="- Slide" title="SHOW" /></div>
-                    <!-- END  -->
-                    <div class="youplayer ytplayerright">
-                        <ul class="videoyou videoytright scroll-pane">
-                            <?php
-                            if ( $objVideo->get_videos() !=null ) {
-                                foreach ($objVideo->get_videos() as $yKey => $yValue) {
-                                    echo '<li><p>' . $yValue['title'] . '</p><a class="videoThumb4" href="http://www.youtube.com/watch?v=' . $yValue['videoid'] . '">' . $yValue['description'] . '</a></li>';
-                                }
-                            }else{
-                                echo '<li>Sorry, no video\'s found</li>';
-                            }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- END youtube player -->
-        </div>
-        <?php } ?>
-        <!-- dynamic playlist ends -->
-
-
-    </div>
-</div>
-<!-- FAQs Ends Here -->
 
 <!-- Videos Carousel Starts Here -->
 <div class="CH-VideoCarousel">

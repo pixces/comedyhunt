@@ -744,7 +744,7 @@ body{
 .CH-SubmitButton a{
 	background:#28394e none repeat scroll 0 0;
     border:1px solid #28394e;
-    border-radius:80px;
+    border-radius:15px;
     color:#fff5e8;
     float:right;
     font-size:24px;
@@ -755,6 +755,8 @@ body{
     text-transform:uppercase;
 	position:relative;
 	right:12%;
+	text-align:center;
+	clear:both;
 }
 /* Video Overlay Starts Here 
 .CH-VideoOverlay{
@@ -1102,7 +1104,7 @@ body{
 	clear:both;
 	position:relative;
 	right:12%;
-	max-width:290px;
+	max-width:325px;
 	float:right;
 	margin-top:10px;
 }
