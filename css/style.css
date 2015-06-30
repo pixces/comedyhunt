@@ -89,7 +89,7 @@ body{
 	height:30px;
 }
 .CH-SocialIcons{
-	width:96px;
+	width:65px;
 	min-height:100px;
 	float:right;
 	overflow:hidden;
@@ -994,15 +994,16 @@ body{
 	position:absolute; 
 	left:-30px; 
 	border-radius:10px; 
-	background:#eb2842; 
+	background:url(../images/help-text-bg.png) no-repeat; 
 	color:#fff5e9; 
-	border:1px solid #fff5e9; 
+	/*border:1px solid #fff5e9; */
 	top:-80px; 
 	z-index:99; 
 	font-size:12px; 
 	padding:8px; 
 	width:300px;
 	display:none;
+	min-height:82px;
 }
 .CH-TooltipMessage i{
 	background:url(../images/arrow-down.png) no-repeat;
@@ -1012,4 +1013,5 @@ body{
 	display:block;
 	top:67px;
 	left:138px;
+	display:none;
 }
