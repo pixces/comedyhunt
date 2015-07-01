@@ -40,6 +40,9 @@ $(document).ready(function(){
     }
 	
     $('.show-popup').on('click',function(event){
+
+        var VideoUrl = "http://localhost:8888/comedyhunt/videos/";
+
         event.preventDefault();
         var selectedPopup = $(this).data('showpopup');		
         showPopup(selectedPopup); 
@@ -53,7 +56,7 @@ $(document).ready(function(){
 			$(".overlay-content .overlay-title").html(VideoTitle);
 			$(".overlay-content .modalVideo").html(iframeTemplate);
 		}else if(selectedPopup == 2){
-			$.get( "http://localhost/projects/ComedyHuntServer/videos", function( data ) {
+			$.get( VideoUrl, function( data ) {
 				$('#CH-YouTubeListContainer').html(data);
 			});
 		}		
@@ -209,7 +212,7 @@ $(document).ready(function(){
 		$.ajax(
 		{
 			url : formURL,
-			type: "GET",
+			type: "POST",
 			contentType: "application/json; charset=utf-8",
 			dataType: "jsonp",
 			data : {

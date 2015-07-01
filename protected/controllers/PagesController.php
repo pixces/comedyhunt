@@ -109,11 +109,11 @@ class PagesController extends Controller
                 $oImage = $user_profile->getImage();
 
                 $profile = array(
-                    'identifier' => $user_profile->getId(),
-                    'display_name' => $user_profile->getDisplayName(),
-                    'profile_url' => $user_profile->getUrl(),
-                    'profile_photo' => $oImage->getUrl(),
+                    'username' => $user_profile->getDisplayName(),
                     'email' => $oEmail[0]->getValue(),
+                    'google_id' => $user_profile->getId(),
+                    'google_profile_url' => $user_profile->getUrl(),
+                    'google_profile_image' => $oImage->getUrl(),
                 );
 
                 $session['user_info'] = $profile;
@@ -404,7 +404,13 @@ class PagesController extends Controller
             )
         );
     }
-	
-	public function actionSave(){ return true; }
+
+    /**
+     * Saves the Content information
+     * @return bool
+     */
+    public function actionSave(){
+        return true;
+    }
 
 }

@@ -101,7 +101,7 @@
 	<div class="overlay-content popup2">
     	<div class="close-btn"><img src="images/close-icon-black.png" /></div>
 		<div class="CH-YouTubeTitle">Your Videos</div>
-		<form id="YouTubeForm" novalidate name="YouTubeForm" action="http://localhost/projects/ComedyHuntServer/pages/Save">
+		<form id="YouTubeForm" novalidate name="YouTubeForm" action="<?=Yii::app()->createUrl('/pages/Save/'); ?>">
 			<div id="CH-YouTubeListContainer">
 				<div class="CH-YouTubeList">
 					<div class="scroll-pane">
