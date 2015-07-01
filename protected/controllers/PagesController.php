@@ -2,10 +2,6 @@
 
 class PagesController extends Controller
 {
-    private $gg = null;
-    private $gp = null;
-    private $yt = null;
-
     /**
      * @var null
      */
@@ -109,14 +105,17 @@ class PagesController extends Controller
 
             //parse and store the profile in session
             if ($user_profile){
+                $oEmail  = $user_profile->getEmails();
+                $oImage = $user_profile->getImage();
+
                 $profile = array(
-                    'identifier' => $user_profile->id,
-                    'display_name' => $user_profile->displayName,
-                    'profile_url' => $user_profile->url,
-                    'profile_photo' => $user_profile['data']['image']['url'],
-                    'email' => isset($user_profile['data']['emails'][0]['value']) ? $user_profile['data']['emails'][0]['value'] : null,
-                    'location' => isset($user_profile->currentLocation) ? $user_profile->currentLocation : null
+                    'identifier' => $user_profile->getId(),
+                    'display_name' => $user_profile->getDisplayName(),
+                    'profile_url' => $user_profile->getUrl(),
+                    'profile_photo' => $oImage->getUrl(),
+                    'email' => $oEmail[0]->getValue(),
                 );
+
                 $session['user_info'] = $profile;
             }
             $this->redirect(Yii::app()->createUrl('/'));
@@ -137,8 +136,6 @@ class PagesController extends Controller
      * @throws Exception
      */
     public function actionVideos(){
-
-        /*
 
         if(isset(Yii::app()->session['auth_token'])){
             try {
@@ -164,7 +161,7 @@ class PagesController extends Controller
 
                     $videoList = array();
                     foreach ($playlistItemsResponse['items'] as $playlistItem) {
-                        print_r(
+                        array_push($videoList,
                             array(
                                 'channelId' => $playlistItem['snippet']['channelId'],
                                 'title' => $playlistItem['snippet']['title'],
@@ -178,10 +175,6 @@ class PagesController extends Controller
                         );
                     }
                 }
-
-                //echo $htmlBody;
-
-                exit;
             } catch (Exception $e) {
                 Yii::app()->session['auth_token'] = null;
                 throw $e;
@@ -190,9 +183,15 @@ class PagesController extends Controller
             // Redirect the user to authenticate page
             echo "Authentication expired";
             exit;
-        }*/
+        }
+
         $this->layout = false;
-        $this->render('videos');
+        $this->render('videos',
+            array(
+                'videoList' => $videoList,
+                'user_info' => Yii::app()->session['user_info']
+            )
+        );
     }
 
     /**

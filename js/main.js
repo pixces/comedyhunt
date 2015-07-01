@@ -49,7 +49,7 @@ $(document).ready(function(){
 			$(".overlay-content .overlay-title").html(VideoTitle);
 			$(".overlay-content .modalVideo").html(iframeTemplate);
 		}else if(selectedPopup == 2){
-			$.get( "http://localhost/projects/ComedyHuntServer/videos", function( data ) {
+			$.get( "http://localhost:8888/Comedyhunt/videos", function( data ) {
 				$('#CH-YouTubeListContainer').html(data);
 			});
 		}		

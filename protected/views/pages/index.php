@@ -50,14 +50,20 @@
                 </div>
 				<div class="CH-SubmitButton">
 					<div>
-						<a href="<?=Yii::app()->baseUrl."/pages/authenticate?media=youtube"; ?>" class="authenticate">Authenticate with youtube <br/>to submit video.</a>						
+                        <?php if (!$auth){ ?>
+						<a href="<?=Yii::app()->baseUrl."/pages/authenticate?media=youtube"; ?>" class="authenticate">Authenticate with youtube <br/>to submit video.</a>
+                        <?php } else if ($auth && !$submission) { ?>
 						<a class="show-popup" data-showpopup="2" href="<?=Yii::app()->baseUrl."/pages/videos?media=youtube"; ?>">Select your video</a>
-						<div class="CH-SubmitButton no-margin "><a href="'.Yii::app()->createUrl('/').'">Submit another video</a></div>
+                        <?php } else { ?>
+						<div class="CH-SubmitButton no-margin "><a href="<?=Yii::app()->createUrl('/'); ?>">Submit another video</a></div>
+                        <?php } ?>
 					</div>
+                    <?php if (!$auth){ ?>
 					<div class="CH-FormGroupSubmit">
 						<div><input type="checkbox" class="termscheckbox" />I agree to the <a href="<?=Yii::app()->createAbsoluteUrl('/site/page/?view=rules'); ?>" target="_blank">terms and conditions</a></div>
 						<div class="errorterms">You must agree to the terms and conditions before register.</div>
 					</div>
+                    <?php } ?>
 					<div class="CH-Disclaimer"><span>Disclaimer:</span> This data is collected by OML, and stored at OML's 3rd party servers for contest administration purpose only, and will not be used for any other purpose</div>
 					
 				</div>
