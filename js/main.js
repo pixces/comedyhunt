@@ -21,6 +21,17 @@ $(document).ready(function(){
 	
 	// function to close our popups
     function closePopup(){
+		$(".overlay-content .overlay-title").empty();
+		$(".overlay-content .modalVideo").empty();
+		
+		$('.CH-YouTubeList .scroll-pane').scrollTop(0);
+		$(".CH-YouTubeListItems").removeClass("active");
+		$(".YouTubeVideoID").val("");
+		$(".YouTubeVideoThumbURL").val("");
+		$(".YouTubeVideoTitle").val("");
+		
+		document.forms[0].reset();
+		
         $('.overlay-wrapper, .overlay-content').hide(); //hide the overlay
     }
 	
@@ -45,29 +56,13 @@ $(document).ready(function(){
     });
 	
 	// hide popup when user clicks on close button or if user clicks anywhere outside the container
-    $('.close-btn, .overlay-wrapper').on('click',function(){
-		$(".overlay-content .overlay-title").empty();
-		$(".overlay-content .modalVideo").empty();
-		
-		$('.CH-YouTubeList .scroll-pane').scrollTop(0);
-		$(".CH-YouTubeListItems").removeClass("active");
-		$(".YouTubeVideoID").val("");
-		$(".YouTubeVideoThumbURL").val("");
-		$(".YouTubeVideoTitle").val("");
+    $('.close-btn, .overlay-wrapper').on('click',function(){		
         closePopup();
     });
      
     // hide the popup when user presses the esc key
     $(document).keyup(function(e) {
-        if (e.keyCode == 27) { // if user presses esc key
-			$(".overlay-content .overlay-title").empty();
-			$(".overlay-content .modalVideo").empty();
-			
-			$('.CH-YouTubeList .scroll-pane').scrollTop(0);
-			$(".CH-YouTubeListItems").removeClass("active");
-			$(".YouTubeVideoID").val("");
-			$(".YouTubeVideoThumbURL").val("");
-			$(".YouTubeVideoTitle").val("");
+        if (e.keyCode == 27) { // if user presses esc key			
             closePopup();
         }
     });
@@ -159,6 +154,36 @@ $(document).ready(function(){
 		$(".YouTubeVideoID").val(YouTubeVideoID);
 		$(".YouTubeVideoThumbURL").val(YouTubeVideoThumbURL);
 		$(".YouTubeVideoTitle").val(YouTubeVideoTitle);
+	});
+	
+	$("#YouTubeForm").validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 3
+			}
+		},
+		messages: {
+			name: {
+				required: "Please enter your name",
+				minlength: "Your name must be of at least 3 characters"
+			}
+		}
+	});
+	
+	$('.authenticate').on('click',function(){
+		if($('.termscheckbox').prop("checked") == false){
+			$('.errorterms').show();
+			return false;
+		}
+	});
+	
+	$('.termscheckbox').on('click',function(){
+		if($('.termscheckbox').prop("checked") == true){
+			$('.errorterms').hide();
+		}else if($('.termscheckbox').prop("checked") == false){
+			$('.errorterms').show();
+		}
 	});
 	
 });

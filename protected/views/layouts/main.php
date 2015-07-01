@@ -101,13 +101,17 @@
 	<div class="overlay-content popup2">
     	<div class="close-btn"><img src="images/close-icon-black.png" /></div>
 		<div class="CH-YouTubeTitle">Your Videos</div>
-		<form>
+		<form id="YouTubeForm" novalidate name="YouTubeForm">
 			<div id="CH-YouTubeListContainer">
 				<div class="CH-YouTubeList">
 					<div class="scroll-pane">
 						
 					</div>
 				</div>
+			</div>
+			<div class="CH-YouTubeListFormGroup">
+				<label for="name">Your Name</label>
+				<input type="text" name="name" id="name" placeholder="Enter your name" />
 			</div>
 			<input type="hidden" class="YouTubeVideoID" value="" />
 			<input type="hidden" class="YouTubeVideoThumbURL" value=""  />
@@ -122,6 +126,7 @@
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery.validate.min.js"></script>
 
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery.youtubeplaylist.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>

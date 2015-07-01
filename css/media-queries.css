@@ -194,7 +194,8 @@
 		right:auto;
 		display:block;
 	}
-	.CH-Disclaimer{
+	.CH-Disclaimer,
+	.CH-FormGroupSubmit{
 		right:auto;
 		width:auto;
 		float:none;
@@ -357,5 +358,10 @@
 	}
 	div.yt_holder .videoytright p{
 		margin:0 5px -14px;
+	}
+}
+@media screen and (min-width: 300px) and (max-width: 375px){
+	.CH-SubmitButton a{
+		width:290px;
 	}
 }
