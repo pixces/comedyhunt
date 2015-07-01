@@ -404,5 +404,7 @@ class PagesController extends Controller
             )
         );
     }
+	
+	public function actionSave(){ return true; }
 
 }
