@@ -24,6 +24,8 @@ class PagesController extends Controller
     public function actionIndex()
     {
         $model = new SubmissionForm();
+        $auth = false;
+        $submission = false;
 
         //fetch all the videos for the first page
         $brandVideos = $this->getCarouselContent();
@@ -57,20 +59,21 @@ class PagesController extends Controller
         //render the page
         $this->pagename = 'index';
 
-        //check if the userdetails are already set
+        //check if the user details are already set
         //then display the video link
-        if (isset(Yii::app()->session['user_info'])) {
-            $auth = true;
-        } else {
-            $auth = false;
+        if (isset(Yii::app()->session['auth'])){
+            $auth = isset(Yii::app()->session['auth']) ? Yii::app()->session['auth'] : false;
         }
-
-        //validate to check if video submission is set
-        $submission = false;
-
         if (isset(Yii::app()->session['submission'])){
-            $submission = true;
+            $submission = isset(Yii::app()->session['submission']) ? Yii::app()->session['submission'] : false;
         }
+
+        //when both are true reset the session
+        if ($auth && $submission){
+            Yii::app()->session->remove('auth');
+            Yii::app()->session->remove('submission');
+        }
+
 
         $this->render(
             $this->pagename,
@@ -124,8 +127,16 @@ class PagesController extends Controller
 
                 $session['user_info'] = $profile;
             }
+
+            Yii::app()->session['auth'] = true;
+
             $this->redirect(Yii::app()->createUrl('/'));
         } else {
+
+            //reset the session so as to do proper authentication
+            Yii::app()->session->remove('auth');
+            Yii::app()->session->remove('submission');
+
             $client->setScopes(array(
                 'https://www.googleapis.com/auth/youtube.readonly',
                 'https://www.googleapis.com/auth/plus.me',
@@ -455,18 +466,22 @@ class PagesController extends Controller
                     if ($contentModel->save()) {
                         $response['status']  = 'success';
                         $response['message'] = 'Content added successfully';
+                        Yii::app()->session['submission'] = true;
                     }
                 } catch (Exception $e) {
                     $response['status']  = 'fail';
                     $response['message'] = $e->getMessage();
+                    Yii::app()->session['submission'] = false;
                 }
             } else {
                 $response['status']  = 'fail';
                 $response['message'] = $contentModel->getErrors();
+                Yii::app()->session['submission'] = false;
             }
        } else {
                 $response['status']  = 'fail';
                 $response['message'] = 'Empty Response.';
+                Yii::app()->session['submission']= false;
        }
 
        echo json_encode($response);

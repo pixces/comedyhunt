@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="CH-SubmissionsTextContainer">
-                <?php if (Yii::app()->user->hasFlash('videoInformationSubmitted')) { ?>
+                <?php if ($auth && $submission) { ?>
 				<div class="CH-Head acenter">Thank you for <br/>your submission</div>
                 <?php } else { ?>
 				<div>

@@ -218,16 +218,21 @@ $(document).ready(function(){
 				url : formURL,
 				type: "GET",
 				contentType: "application/json; charset=utf-8",
-				dataType: "jsonp",
+				//dataType: "jsonp",
 				data : {
 					params: JSON.stringify(postData)
 				},
 				crossDomain: true,
 				success:function(data, jqXHR)
 				{
-					if(data.status === 'success') {
+                    Obj = JSON.parse(data);
+
+                    if(Obj.status == 'success') {
 						closePopup();
-					}
+                        location.reload(true);
+					} else {
+                        $('.YouTubeFormError').html(Obj.message);
+                    }
 				},
 				error: function(jqXHR, textStatus, errorThrown)
 				{
