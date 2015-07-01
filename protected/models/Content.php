@@ -42,7 +42,7 @@ class Content extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('username, email, title, description, type,',
+            array('username, email,google_profile_url,google_profilepicture',
                 'required'),
             array('is_ugc', 'numerical', 'integerOnly' => true),
             array('username, author, channel_name', 'length', 'max' => 150),
@@ -57,7 +57,7 @@ class Content extends CActiveRecord
                 'setOnEmpty' => false, 'on' => 'insert'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('id, username, email, title, description, media_id, media_url, type, author, channel_name, is_ugc, thumb_image, alternate_image, status, date_created, date_modified,google_id,google_displayname,google_profilepicture',
+            array('id, username, email, title, description,channel_id, media_id, media_url, type, author, channel_name, is_ugc, thumb_image, alternate_image, status, date_created, date_modified,google_id,google_displayname,google_profilepicture,google_profile_url',
                 'safe', 'on' => 'search'),
         );
     }
