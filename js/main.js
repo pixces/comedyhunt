@@ -40,9 +40,8 @@ $(document).ready(function(){
     }
 	
     $('.show-popup').on('click',function(event){
-
-        var VideoUrl = "http://localhost:8888/comedyhunt/videos/";
-
+		var VideoUrl = "http://localhost/projects/ComedyHuntServer/videos";
+		
         event.preventDefault();
         var selectedPopup = $(this).data('showpopup');		
         showPopup(selectedPopup); 
@@ -204,32 +203,42 @@ $(document).ready(function(){
 	$("#YouTubeForm").submit(function(e){
 		e.preventDefault();
 		
-		var postData = $(this).serializeArray();
-		var formURL = $(this).attr("action");
+		if($.trim($('#name').val()) == ''){
+			return false;
+		}
 		
-		console.log(JSON.stringify(postData));
-		
-		$.ajax(
-		{
-			url : formURL,
-			type: "POST",
-			contentType: "application/json; charset=utf-8",
-			dataType: "jsonp",
-			data : {
-				params: JSON.stringify(postData)
-			},
-			crossDomain: true,
-			success:function(data, jqXHR)
+		if($('.CH-YouTubeListItems').hasClass('active')){
+			var postData = $(this).serializeArray();
+			var formURL = $(this).attr("action");
+			
+			console.log(JSON.stringify(postData));
+			
+			$.ajax(
 			{
-				if(data.status === 'success') {
-					closePopup();
+				url : formURL,
+				type: "GET",
+				contentType: "application/json; charset=utf-8",
+				dataType: "jsonp",
+				data : {
+					params: JSON.stringify(postData)
+				},
+				crossDomain: true,
+				success:function(data, jqXHR)
+				{
+					if(data.status === 'success') {
+						closePopup();
+					}
+				},
+				error: function(jqXHR, textStatus, errorThrown)
+				{
+					$('.YouTubeFormError').html('Error selecting video, Please submit again.');
 				}
-			},
-			error: function(jqXHR, textStatus, errorThrown)
-			{
-				
-			}
-		});
+			});
+		}else{
+			$('.YouTubeFormError').show();
+		}
+		
+		
 	});
 	
 });
