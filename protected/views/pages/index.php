@@ -23,7 +23,7 @@
 							<li>Set up your own YouTube channel</li>
 							<li>Shoot your entry video</li>
 							<li>Upload your entry video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
-							<li>Read the terms and conditions on this page,  and enter your details below</li>
+							<li>Read the terms and conditions on this page</li>
 							<li>Click on the check box, press the Submit button, follow the steps after that & and keep checking this channel and our social handles for updates!</li>
 						</ul>
 					</div>
@@ -35,6 +35,9 @@
         <div class="CH-SubmissionsForm">
             <div class="CH-SubmissionsFormContainer">
                 <div class="CH-SubmissionsTextContainer">
+					<?php if ($auth && $submission) { ?>
+					<div class="CH-Head acenter">Thank you for <br/>your submission</div>
+					<?php } else { ?>
 					<div>
 						<div class="CH-SubHead">Your Route to Stardom</div>
 						<div class="CH-Text no-margin">
@@ -42,11 +45,12 @@
 								<li>Set up your own YouTube channel</li>
 								<li>Shoot your entry video</li>
 								<li>Upload your entry video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
-								<li>Read the terms and conditions on this page,  and enter your details below</li>
+								<li>Read the terms and conditions on this page</li>
 								<li>Click on the check box, press the Submit button, follow the steps after that & and keep checking this channel and our social handles for updates!</li>
 							</ul>
 						</div>
 					</div>
+					<?php } ?>
                 </div>
 				<div class="CH-SubmitButton">
 					<div>
@@ -55,7 +59,7 @@
                         <?php } else if ($auth && !$submission) { ?>
 						<a class="show-popup" data-showpopup="2" href="<?=Yii::app()->baseUrl."/pages/videos?media=youtube"; ?>">Select your video</a>
                         <?php } else { ?>
-						<div class="CH-SubmitButton no-margin "><a href="<?=Yii::app()->createUrl('/'); ?>">Submit another video</a></div>
+						<div class="no-margin "><a href="<?=Yii::app()->createUrl('/'); ?>">Submit another video</a></div>
                         <?php } ?>
 					</div>
                     <?php if (!$auth){ ?>

@@ -1104,7 +1104,7 @@ body{
 	clear:both;
 	position:relative;
 	right:12%;
-	max-width:325px;
+	max-width:290px;
 	float:right;
 	margin-top:10px;
 }
@@ -1140,7 +1140,7 @@ body{
 }
 .CH-FormGroupSubmit{
 	clear:both;
-	width:325px;
+	width:290px;
 	float:right;
 	right:12%;
 	color:#fff5e8;
