@@ -68,6 +68,10 @@ class PagesController extends Controller
         //validate to check if video submission is set
         $submission = false;
 
+        if (isset(Yii::app()->session['submission'])){
+            $submission = true;
+        }
+
         $this->render(
             $this->pagename,
             array(
@@ -425,14 +429,14 @@ class PagesController extends Controller
             $videoInfoArray[$videoObj->name] = $videoObj->value;
         }
 
-
-        $response=['error'=>'','status'=>'','message'=>''];
+        $response=['status'=>'','message'=>''];
         if (!empty($videoInfoArray)) {
             $contentModel                        = new Content();
             $contentModel->username              = $videoInfoArray['username'];
             $contentModel->email                 = $videoInfoArray['email'];
             $contentModel->google_profile_url    = $videoInfoArray['google_profile_url'];
             $contentModel->google_profilepicture = $videoInfoArray['google_profile_image'];
+            $contentModel->google_displayname    = $videoInfoArray['username'];
             $contentModel->media_id              = $videoInfoArray['YTVideoID'];
             $contentModel->thumb_image           = $videoInfoArray['YTVideoThumbURL'];
             $contentModel->alternate_image       = $videoInfoArray['YTVideoBigURL'];
@@ -441,33 +445,31 @@ class PagesController extends Controller
             $contentModel->channel_id            = $videoInfoArray['YTVideoChannelId'];
             $contentModel->channel_name          = $videoInfoArray['YTVideoChannelId'];
             $contentModel->author                = $videoInfoArray['name'];
+            $contentModel->media_url             = "https://www.youtube.com/watch?v=".$videoInfoArray['YTVideoID'];
+            $contentModel->is_ugc                = 1;
+            $contentModel->status                = 'pending';
+            $contentModel->google_id             = $videoInfoArray['google_id'];
 
             if ($contentModel->validate()) {
                 try {
                     if ($contentModel->save()) {
-                        $response['error']   = 'false';
                         $response['status']  = 'success';
-                        $response['message'] = 'Ok';
+                        $response['message'] = 'Content added successfully';
                     }
                 } catch (Exception $e) {
-                    $response['error']   = 'true';
                     $response['status']  = 'fail';
-                    $response['message'] = 'Failed';
+                    $response['message'] = $e->getMessage();
                 }
             } else {
-                $response['error']   = 'true';
                 $response['status']  = 'fail';
                 $response['message'] = $contentModel->getErrors();
             }
-       }else{
-                $response['error']   = 'true';
+       } else {
                 $response['status']  = 'fail';
                 $response['message'] = 'Empty Response.';
        }
 
        echo json_encode($response);
        exit;
-
-
     }
 }

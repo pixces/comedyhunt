@@ -78,33 +78,29 @@ CREATE TABLE `config` (
 -- Table structure for table `content`
 --
 
-CREATE TABLE IF NOT EXISTS `content` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `content` (
+`id` int(11) NOT NULL,
   `username` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `description` text CHARACTER SET utf8,
-  `channel_id` bigint(20) DEFAULT NULL,
+  `title` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `description` text CHARACTER SET utf8 NOT NULL,
+  `channel_id` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `media_id` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
   `media_url` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `type` enum('video','image','text','ppt','pdf','doc','blog') CHARACTER SET utf8 NOT NULL,
   `author` varchar(150) CHARACTER SET utf8 DEFAULT NULL,
   `channel_name` varchar(150) CHARACTER SET utf8 DEFAULT NULL,
-  `is_ugc` tinyint(1) DEFAULT '0',
+  `is_ugc` tinyint(1) NOT NULL DEFAULT '0',
   `thumb_image` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `alternate_image` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `status` enum('pending','active','inactive','deleted','rejected','approved','under_review','processing','error') CHARACTER SET utf8 NOT NULL DEFAULT 'pending',
   `google_id` bigint(20) DEFAULT NULL,
   `google_displayname` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `google_profile_url` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `google_profilepicture` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `google_profile_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `google_profilepicture` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `date_created` datetime NOT NULL,
-  `date_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `gallery_fast` (`username`,`id`),
-  KEY `gallery_id` (`username`),
-  KEY `user_id` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+  `date_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=199 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `content`

@@ -42,7 +42,7 @@ class Content extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('username, email,google_profile_url,google_profilepicture',
+            array('username, email,google_id,google_profile_url,google_profilepicture',
                 'required'),
             array('is_ugc', 'numerical', 'integerOnly' => true),
             array('username, author, channel_name', 'length', 'max' => 150),
