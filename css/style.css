@@ -1176,3 +1176,6 @@ body{
 	text-decoration:underline;
 	width:auto!important;
 }
+.CH-YouTubeVideoSubmit{
+	cursor:pointer;
+}

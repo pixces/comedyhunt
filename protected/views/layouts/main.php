@@ -101,7 +101,7 @@
 	<div class="overlay-content popup2">
     	<div class="close-btn"><img src="images/close-icon-black.png" /></div>
 		<div class="CH-YouTubeTitle">Your Videos</div>
-		<form id="YouTubeForm" novalidate name="YouTubeForm">
+		<form id="YouTubeForm" novalidate name="YouTubeForm" action="http://localhost/projects/ComedyHuntServer/pages/Save">
 			<div id="CH-YouTubeListContainer">
 				<div class="CH-YouTubeList">
 					<div class="scroll-pane">
@@ -113,9 +113,13 @@
 				<label for="name">Your Name</label>
 				<input type="text" name="name" id="name" placeholder="Enter your name" />
 			</div>
-			<input type="hidden" class="YouTubeVideoID" value="" />
-			<input type="hidden" class="YouTubeVideoThumbURL" value=""  />
-			<input type="hidden" class="YouTubeVideoTitle" value=""  />
+			<input type="hidden" class="YouTubeVideoID" id="YTVideoID" name="YTVideoID" value="" />
+			<input type="hidden" class="YouTubeVideoThumbURL" id="YTVideoThumbURL" name="YTVideoThumbURL" value=""  />
+			<input type="hidden" class="YouTubeVideoBigURL" id="YTVideoBigURL" name="YTVideoBigURL" value=""  />
+			<input type="hidden" class="YouTubeVideoTitle" id="YTVideoTitle" name="YTVideoTitle" value=""  />
+			<input type="hidden" class="YouTubeVideoDescription" id="YTVideoDescription" name="YTVideoDescription" value=""  />
+			<input type="hidden" class="YouTubeVideoChannelId" id="YTVideoChannelId" name="YTVideoChannelId" value=""  />
+			<input type="hidden" class="YouTubeVideoChannelTitle" id="YTVideoChannelTitle" name="YTVideoChannelTitle" value=""  />
 			<input type="submit" value="submit" class="CH-YouTubeVideoSubmit" />
 			<div class="CH-YouTubeNote">* Please make sure your video is authorized to the public.</div>
 		</form>

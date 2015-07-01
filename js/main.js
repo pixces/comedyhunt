@@ -28,7 +28,11 @@ $(document).ready(function(){
 		$(".CH-YouTubeListItems").removeClass("active");
 		$(".YouTubeVideoID").val("");
 		$(".YouTubeVideoThumbURL").val("");
+		$(".YouTubeVideoBigURL").val("");
 		$(".YouTubeVideoTitle").val("");
+		$(".YouTubeVideoDescription").val("");
+		$(".YouTubeVideoChannelId").val("");
+		$(".YouTubeVideoChannelTitle").val("");
 		
 		document.forms[0].reset();
 		
@@ -49,7 +53,7 @@ $(document).ready(function(){
 			$(".overlay-content .overlay-title").html(VideoTitle);
 			$(".overlay-content .modalVideo").html(iframeTemplate);
 		}else if(selectedPopup == 2){
-			$.get( "http://localhost:8888/Comedyhunt/videos", function( data ) {
+			$.get( "http://localhost/projects/ComedyHuntServer/videos", function( data ) {
 				$('#CH-YouTubeListContainer').html(data);
 			});
 		}		
@@ -146,14 +150,22 @@ $(document).ready(function(){
 		$(".CH-YouTubeListItems").removeClass("active");
 		$(this).addClass("active");
 		
-		var YouTubeVideoID, YouTubeVideoThumbURL, YouTubeVideoTitle;
+		var YouTubeVideoID, YouTubeVideoThumbURL, YouTubeVideoBigURL, YouTubeVideoTitle, YouTubeVideoDescription, YouTubeVideoChannelId, YouTubeVideoChannelTitle;
 		YouTubeVideoID = $(this).attr("data-YouTubeVideoID");
 		YouTubeVideoThumbURL = $(this).attr("data-YouTubeVideoThumbURL");
+		YouTubeVideoBigURL = $(this).attr("data-YouTubeVideoBigURL");
 		YouTubeVideoTitle = $(this).attr("data-YouTubeVideoTitle");
+		YouTubeVideoDescription = $(this).attr("data-YouTubeVideoDescription");
+		YouTubeVideoChannelId = $(this).attr("data-YouTubeVideoChannelId");
+		YouTubeVideoChannelTitle = $(this).attr("data-YouTubeVideoChannelTitle");
 		
 		$(".YouTubeVideoID").val(YouTubeVideoID);
 		$(".YouTubeVideoThumbURL").val(YouTubeVideoThumbURL);
+		$(".YouTubeVideoBigURL").val(YouTubeVideoBigURL);
 		$(".YouTubeVideoTitle").val(YouTubeVideoTitle);
+		$(".YouTubeVideoDescription").val(YouTubeVideoDescription);
+		$(".YouTubeVideoChannelId").val(YouTubeVideoChannelId);
+		$(".YouTubeVideoChannelTitle").val(YouTubeVideoChannelTitle);
 	});
 	
 	$("#YouTubeForm").validate({
@@ -184,6 +196,37 @@ $(document).ready(function(){
 		}else if($('.termscheckbox').prop("checked") == false){
 			$('.errorterms').show();
 		}
+	});
+	
+	$("#YouTubeForm").submit(function(e){
+		e.preventDefault();
+		
+		var postData = $(this).serializeArray();
+		var formURL = $(this).attr("action");
+		
+		console.log(JSON.stringify(postData));
+		
+		$.ajax(
+		{
+			url : formURL,
+			type: "GET",
+			contentType: "application/json; charset=utf-8",
+			dataType: "jsonp",
+			data : {
+				params: JSON.stringify(postData)
+			},
+			crossDomain: true,
+			success:function(data, jqXHR)
+			{
+				if(data.status === 'success') {
+					closePopup();
+				}
+			},
+			error: function(jqXHR, textStatus, errorThrown)
+			{
+				
+			}
+		});
 	});
 	
 });
