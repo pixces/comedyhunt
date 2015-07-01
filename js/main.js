@@ -37,7 +37,11 @@ $(document).ready(function(){
 			
 			$(".overlay-content .overlay-title").html(VideoTitle);
 			$(".overlay-content .modalVideo").html(iframeTemplate);
-		}
+		}else if(selectedPopup == 2){
+			$.get( "http://localhost/projects/ComedyHuntServer/videos", function( data ) {
+				$('#CH-YouTubeListContainer').html(data);
+			});
+		}		
     });
 	
 	// hide popup when user clicks on close button or if user clicks anywhere outside the container
@@ -143,7 +147,7 @@ $(document).ready(function(){
         mouseout:  function() { $(".CH-TooltipMessage").hide(); }
     });
 	
-	$(".CH-YouTubeListItems").on("click",function(){
+	$(document).on("click",".CH-YouTubeListItems",function(){
 		$(".CH-YouTubeListItems").removeClass("active");
 		$(this).addClass("active");
 		
