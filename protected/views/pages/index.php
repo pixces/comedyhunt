@@ -55,7 +55,7 @@
 				<div class="CH-SubmitButton">
 					<div>
                         <?php if (!$auth){ ?>
-						<a href="<?=Yii::app()->baseUrl."/pages/authenticate?media=youtube"; ?>" class="authenticate">Submit your video NOW</a>
+						<a href="<?=Yii::app()->baseUrl."/pages/authenticate?media=youtube"; ?>" class="authenticate" onclick="window.open(this.href, '_blank' ,'toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=400, height=400'); return false;">Submit your video NOW</a>
                         <?php } else if ($auth && !$submission) { ?>
 						<a class="show-popup" data-showpopup="2" href="<?=Yii::app()->baseUrl."/pages/videos?media=youtube"; ?>">Select your video</a>
                         <?php } else { ?>

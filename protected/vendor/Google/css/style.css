@@ -357,7 +357,7 @@ body{
 	margin-top:35px;
 	/*margin:0 10px 20px;
 	padding:5px 15px;*/
-	width:235px;
+	width:250px;
 }
 .CH-WorkshopDate .CH-WorkshopCity div span{
 	display:block;
@@ -699,7 +699,7 @@ body{
 	/*width:60%;*/
 	width:768px;
 	position:fixed;
-	/*top:30px;*/
+	top:30px;
 	left:50%;
 	/*margin:0 0 0 -30%; /* add negative left margin for half the width to center the div */
 	margin:0 0 0 -384px;

@@ -14,7 +14,28 @@ $(document).ready(function(){
 	// function to show our popups
     function showPopup(whichpopup){
         var docHeight = $(document).height(); 
-        var scrollTop = $(window).scrollTop(); 
+        var scrollTop = $(window).scrollTop();
+		// var parentDoc = null;
+		
+		
+		if( window.parent.location.hostname.indexOf('youtube') !== -1 ) {
+			// parentDoc = window.parent.document;
+			// var comedyHuntFrame = parentDoc.querySelector('iframe["src*=comedyhunt.position2.com"]');
+			
+			var parentScrollTop = window.parent.scrollY;
+			// var frameOffsetTop = comedyHuntFrame.offsetTop;
+			
+			if( parentScrollTop > 365 ) {
+				$('.overlay-content').css({ top: parentScrollTop - 365 });
+			} else {
+				$('.overlay-content').css({ top: 0 });
+			}
+		}
+		
+		
+		/*alert($(window).height()+'----'+$('.overlay-content').outerHeight()+'---'+$(document).height());*/
+		
+		/*var top = ($(window).height() - $('.overlay-content').outerHeight()) / 2;*/
         $('.overlay-wrapper').show().css({'height' : docHeight}); 
         $('.popup'+whichpopup).show(); 
     }
@@ -40,7 +61,8 @@ $(document).ready(function(){
     }
 	
     $('.show-popup').on('click',function(event){
-		var VideoUrl = "http://localhost/projects/ComedyHuntServer/videos";
+		//var VideoUrl = "http://localhost/projects/ComedyHuntServer/videos/";
+        var VideoUrl = "https://comedyhunt.position2.com/videos/";
 		
         event.preventDefault();
         var selectedPopup = $(this).data('showpopup');		

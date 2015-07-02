@@ -32,7 +32,8 @@ return array(
             'caseSensitive' => false,
             'rules' => array(
                 '/' => 'pages/index',
-                '/pages/index/<code:\w+>'=>'pages/index',
+                '/pages/index/<code:\w+>'=>'/pages/index',
+                '/authenticate/?<code:\w+>'=>'/pages/authenticate',
                 '/authenticate/' => '/pages/authenticate',
                 '/videos'   => '/pages/videos',
                 '/login/' => '/login/index',
