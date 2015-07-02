@@ -2,7 +2,7 @@
 
 class DefaultController extends AdminController
 {
-    protected $recordPerPage = 25;
+    protected $recordPerPage = 20;
 
     public function actionIndex()
     {
