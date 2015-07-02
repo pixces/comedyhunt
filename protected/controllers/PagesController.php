@@ -92,25 +92,19 @@ class PagesController extends Controller
      */
     public function actionAuthenticate()
     {
-
         $client = $this->getGoogle();
 
-        if (isset($_GET['code'])) {
+        if (isset($_GET['code']) && !isset(Yii::app()->session['user_info'])) {
 
             $client->authenticate($_GET['code']);
-
             $token = $client->getAccessToken();
             $client->setAccessToken($token);
-
             $session = Yii::app()->session;
 
-            $session['auth_token'] = $client->getAccessToken();
+            $session['auth_token']  = $client->getAccessToken();
 
             $plus = $this->getGooglePlus();
-
-            //fetch the user profile for later storage
             $user_profile = $plus->people->get('me');
-            Yii::log("Received profile  info ".json_encode($user_profile));
 
             //parse and store the profile in session
             if ($user_profile) {
@@ -130,13 +124,19 @@ class PagesController extends Controller
 
             Yii::app()->session['auth'] = true;
 
-            $this->redirect(Yii::app()->createUrl('/'));
+            $this->redirect('/');
+            Yii::app()->end();
+
         } else {
 
             //reset the session so as to do proper authentication
             Yii::app()->session->remove('auth');
             Yii::app()->session->remove('submission');
 
+            if (isset(Yii::app()->session['user_info'])){
+                Yii::app()->session->remove('user_info');
+            }
+            
             $client->setScopes(array(
                 'https://www.googleapis.com/auth/youtube.readonly',
                 'https://www.googleapis.com/auth/plus.me',
@@ -252,11 +252,14 @@ class PagesController extends Controller
             $client_id     = Yii::app()->params['GOOGLE']['CLIENT_ID'];
             $client_secret = Yii::app()->params['GOOGLE']['SECRET'];
             $redirect_uri  = YII::app()->params['GOOGLE']['CALLBACK_URL'];
+            $developer_key  = YII::app()->params['GOOGLE']['DEVELOPER_KEY'];
             $this->oGoogle = new Google_Client();
-            $gg            = $this->oGoogle;
+            $gg = $this->oGoogle;
+            $gg->setApplicationName('Comedy Hunt');
             $gg->setClientId($client_id);
             $gg->setClientSecret($client_secret);
             $gg->setRedirectUri($redirect_uri);
+            $gg->setDeveloperKey($developer_key);
         }
         return $this->oGoogle;
     }
@@ -435,12 +438,12 @@ class PagesController extends Controller
     {
         $videoInfo       = Yii::app()->getRequest()->getParam('params');
         $videoInfoObject = json_decode($videoInfo);
-        $videoInfoArray  = [];
+        $videoInfoArray  = array();
         foreach ($videoInfoObject as $videoObj) {
             $videoInfoArray[$videoObj->name] = $videoObj->value;
         }
 
-        $response=['status'=>'','message'=>''];
+        $response=array('status'=>'','message'=>'');
         if (!empty($videoInfoArray)) {
             $contentModel                        = new Content();
             $contentModel->username              = $videoInfoArray['username'];
