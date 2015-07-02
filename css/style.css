@@ -346,6 +346,7 @@ body{
 	width:auto;
 	overflow:hidden;
 	margin:0 auto;
+	text-align:center;
 }
 .CH-WorkshopDate .CH-WorkshopCity div{
 	display:inline-block;
