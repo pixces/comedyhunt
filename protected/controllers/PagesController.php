@@ -125,8 +125,8 @@ class PagesController extends Controller
             Yii::app()->session['auth'] = true;
 
             /*$this->redirect('/');*/			
-			echo "<script>location.reload(true);</script>";
 			echo "<script>javascript:window.close();</script>";
+			echo "<script>window.onunload = refreshParent; function refreshParent(){window.opener.location.reload();}</script>";
             exit;
             Yii::app()->end();
 
