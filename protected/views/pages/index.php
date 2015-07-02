@@ -6,7 +6,7 @@
                 <div class="CH-SubmissionsVideo transition">
                     <div class="CH-SubmissionsVideoImage"><img src="images/video-image1.png"/></div>
                     <div class="CH-SubmissionsVideoPlay">
-                        <a href="javascript:void(0)" data-showpopup="1" class="show-popup"
+                        <a href="javascript:void(0)" data-showpopup="1" class="show-popup mainVideo"
                            data-videoTitle="THE BIG BANG THEORY SEASON 8 - PROMO" data-videoURL="sehlQGZi16w"><span><img
                                     src="images/video-play-icon.png"/></span></a>
                     </div>

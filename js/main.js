@@ -15,26 +15,7 @@ $(document).ready(function(){
     function showPopup(whichpopup){
         var docHeight = $(document).height(); 
         var scrollTop = $(window).scrollTop();
-		// var parentDoc = null;
-		
-		
-		if( window.parent.location.hostname.indexOf('youtube') !== -1 ) {
-			// parentDoc = window.parent.document;
-			// var comedyHuntFrame = parentDoc.querySelector('iframe["src*=comedyhunt.position2.com"]');
-			
-			var parentScrollTop = window.parent.scrollY;
-			// var frameOffsetTop = comedyHuntFrame.offsetTop;
-			
-			if( parentScrollTop > 365 ) {
-				$('.overlay-content').css({ top: parentScrollTop - 365 });
-			} else {
-				$('.overlay-content').css({ top: 0 });
-			}
-		}
-		
-		
-		/*alert($(window).height()+'----'+$('.overlay-content').outerHeight()+'---'+$(document).height());*/
-		
+		/*alert($(window).height()+'----'+$('.overlay-content').outerHeight()+'---'+$(document).height());*/		
 		/*var top = ($(window).height() - $('.overlay-content').outerHeight()) / 2;*/
         $('.overlay-wrapper').show().css({'height' : docHeight}); 
         $('.popup'+whichpopup).show(); 
@@ -58,6 +39,8 @@ $(document).ready(function(){
 		document.forms[0].reset();
 		
         $('.overlay-wrapper, .overlay-content').hide(); //hide the overlay
+		
+		$('.overlay-content.popup1').attr('style','top:0px;display:none');
     }
 	
     $('.show-popup').on('click',function(event){
@@ -82,6 +65,10 @@ $(document).ready(function(){
 			});
 		}		
     });
+	
+	$('.mainVideo').on('click',function(){
+		$('.overlay-content.popup1').attr('style','top:30px !important;display:block');
+	});
 	
 	// hide popup when user clicks on close button or if user clicks anywhere outside the container
     $('.close-btn, .overlay-wrapper').on('click',function(){		

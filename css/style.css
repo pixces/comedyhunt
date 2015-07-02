@@ -398,7 +398,7 @@ body{
 }
 .CH-VideoCarouselBlk{
 	width:auto;
-	padding:20px 0;
+	padding:20px;
 }
 .CH-VideoCarouselItem .CH-Video{
 	background:url(../images/video-thumb-background.png) no-repeat;
@@ -698,8 +698,9 @@ body{
 	padding:1% 1% 2%;
 	/*width:60%;*/
 	width:768px;
-	position:fixed;
-	/*top:30px;*/
+	/*position:fixed;*/
+	position:absolute;
+	top:30px;
 	left:50%;
 	/*margin:0 0 0 -30%; /* add negative left margin for half the width to center the div */
 	margin:0 0 0 -384px;
@@ -1185,4 +1186,10 @@ body{
 	font-size:13px;
 	margin-left:10px;
 	margin-top:10px;
+}
+.overlay-content.popup1{
+	top:740px!important;
+}
+.overlay-content.popup2{
+	top:80px!important;
 }
