@@ -1,7 +1,7 @@
 <?php
 class AdminController extends Controller {
 
-    public $layout='default';
+    public $layout='main';
 
     /**
      * admins breadcrumbs

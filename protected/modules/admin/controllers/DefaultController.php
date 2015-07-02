@@ -2,23 +2,21 @@
 
 class DefaultController extends AdminController
 {
-    protected $recordPerPage = 5;
+    protected $recordPerPage = 25;
 
     public function actionIndex()
     {
-
-        $Criteria            = new CDbCriteria;
-        //$Criteria->condition = 'is_ugc=:ugc AND status=:status';
+        $Criteria = new CDbCriteria;
         $Criteria->condition = 'is_ugc=:ugc';
-        //$Criteria->params    = array(':ugc' => 1, 'status' => "pending");
         $Criteria->params    = array(':ugc' => 1);
-        $Criteria->order     = 'date_created,date_modified DESC';
+        $Criteria->order     = 'date_created DESC';
 
         $dataProvider = new CActiveDataProvider('Content',
-            ['criteria' => $Criteria,
-            'pagination' => ['pageSize' => $this->recordPerPage]
-            ]
+            array('criteria' => $Criteria,
+            'pagination' => array('pageSize' => $this->recordPerPage)
+            )
         );
+
         $this->render('index',
             array(
             'dataProvider' => $dataProvider,
