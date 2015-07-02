@@ -340,7 +340,7 @@ body{
 .CH-WorkshopDate p{
 	font-size:26px;
 	font-family: 'Phosphate-Solid';
-	line-height::30px;
+	line-height:30px;
 }
 .CH-WorkshopDate .CH-WorkshopCity{
 	width:auto;
