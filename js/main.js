@@ -196,6 +196,9 @@ $(document).ready(function(){
 		if($('.termscheckbox').prop("checked") == false){
 			$('.errorterms').show();
 			return false;
+		}else{
+			window.open(this.href, '_blank' ,'toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=400, height=400'); 
+			return false;
 		}
 	});
 	
