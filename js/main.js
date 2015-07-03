@@ -14,7 +14,7 @@ $(document).ready(function(){
 	// function to show our popups
     function showPopup(whichpopup){
         var docHeight = $(document).height(); 
-        var scrollTop = $(window).scrollTop();
+        var scrollTop = $(window).scrollTop();		
 		/*alert($(window).height()+'----'+$('.overlay-content').outerHeight()+'---'+$(document).height());*/		
 		/*var top = ($(window).height() - $('.overlay-content').outerHeight()) / 2;*/
         $('.overlay-wrapper').show().css({'height' : docHeight}); 
@@ -182,14 +182,12 @@ $(document).ready(function(){
 	$("#YouTubeForm").validate({
 		rules: {
 			name: {
-				required: true,
-				minlength: 3
+				required: true
 			}
 		},
 		messages: {
 			name: {
-				required: "Please enter your name",
-				minlength: "Your name must be of at least 3 characters"
+				required: "Please enter your name"
 			}
 		}
 	});
