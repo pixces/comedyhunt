@@ -211,6 +211,7 @@ body{
 }
 .CH-SubmissionsTextContainer .CH-Text ul li{
 	margin:8px 0 0;
+	font-size:15px;
 }
 .CH-SubmissionsFormContainer .CH-HorizontalForm{
 	width:50%;

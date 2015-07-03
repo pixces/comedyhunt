@@ -21,10 +21,12 @@
 					<div class="CH-Text no-margin">
 						<ul>
 							<li>Set up your own YouTube channel</li>
-							<li>Shoot your entry video</li>
-							<li>Upload your entry video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
+							<li>Shoot your Entry Video, which should be under 3 minutes.</li>
+							<li>Upload your Entry Video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
 							<li>Read the terms and conditions on this page</li>
 							<li>Click on the check box, press the Submit button, follow the steps after that & and keep checking this channel and our social handles for updates!</li>
+							<li>Contestants can participate in the hunt as individuals or as a team.</li>
+							<li>Entry videos can be in any language. However, subtitles must be added to videos that are in languages other than English or Hindi.</li>
 						</ul>
 					</div>
 				</div>
@@ -43,10 +45,12 @@
 						<div class="CH-Text no-margin">
 							<ul>
 								<li>Set up your own YouTube channel</li>
-								<li>Shoot your entry video</li>
-								<li>Upload your entry video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
+								<li>Shoot your Entry Video, which should be under 3 minutes.</li>
+								<li>Upload your Entry Video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
 								<li>Read the terms and conditions on this page</li>
 								<li>Click on the check box, press the Submit button, follow the steps after that & and keep checking this channel and our social handles for updates!</li>
+								<li>Contestants can participate in the hunt as individuals or as a team.</li>
+								<li>Entry videos can be in any language. However, subtitles must be added to videos that are in languages other than English or Hindi.</li>
 							</ul>
 						</div>
 					</div>
@@ -107,12 +111,12 @@
 
             <div class="CH-WorkshopCity">
                <div>
-					<span>4th July</span>
+					<span>11th July</span>
 					<span class="CH-City">Mumbai</span>
 					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
 				</div>
 				<div>
-					<span>8th July</span>
+					<span>12th July</span>
 					<span class="CH-City">Delhi</span>
 					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
 				</div>

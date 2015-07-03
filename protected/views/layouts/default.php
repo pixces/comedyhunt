@@ -28,7 +28,7 @@
                 <div class="CH-TimelineRulesImage"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/competition-timeline.png" class="img-responsive" /></div>
                 <div class="CH-Phase1">
                     <span class="CH-Title">Audition Phase</span>
-                    <span class="CH-Description">We’re accepting and reviewing all submissions before the 21st of July</b></span>
+                    <span class="CH-Description">We’re accepting and reviewing all submissions before the 26th of July</b></span>
                 </div>
                 <div class="CH-Phase2">
                     <span class="CH-Title">Challenge Phase</span>
