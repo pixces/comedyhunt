@@ -121,12 +121,12 @@
 					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
 				</div>
 				<div>
-					<span>16th July</span>
+					<span>13th July</span>
 					<span class="CH-City">Hyderabad</span>
 					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
 				</div>
 				<div>
-					<span>17th July</span>
+					<span>14th July</span>
 					<span class="CH-City">Bangalore</span>
 					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
 				</div>
