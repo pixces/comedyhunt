@@ -41,7 +41,7 @@ class PagesController extends Controller
             'xmlpath' => $ytConfig['cachePath'],
             'start' => 1,
             'descriptionlength' => 40,
-            'titlelength' => 20
+            'titlelength' => 70
         );
 
         $videoPlayList = array();
