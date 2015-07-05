@@ -7,7 +7,7 @@
                     <div class="CH-SubmissionsVideoImage"><img src="images/video-image1.png"/></div>
                     <div class="CH-SubmissionsVideoPlay">
                         <a href="javascript:void(0)" data-showpopup="1" class="show-popup mainVideo"
-                           data-videoTitle="THE BIG BANG THEORY SEASON 8 - PROMO" data-videoURL="sehlQGZi16w"><span><img
+                           data-videoTitle="Comedy Hunt : Promo" data-videoURL="f13pmAJIoYI"><span><img
                                     src="images/video-play-icon.png"/></span></a>
                     </div>
                 </div>
@@ -88,8 +88,8 @@
         <div class="CH-VideoCarouselHead">Need a little inspiration?</div>
         <p>Our judges all earned their comedy credentials, one video at a time. Watch the masters at work.</p>
 
-        <div class="CH-VideoCarouselBlk">
-            <div id="CH-VideoCarousel">
+        <div class="CH-VideoCarouselBlk no-padding">
+            <!--div id="CH-VideoCarousel">
                 <?php if ($gallery){
                     foreach($gallery as $video){ ?>
 
@@ -103,7 +103,40 @@
                     <div class="CH-Description"><?=$video->title; ?></div>
                 </div>
                 <?php } } ?>
-            </div>
+            </div-->
+			
+			<!-- dynamic playlist start -->
+			<?php foreach($aVideoList as $objVideo) {
+			?>
+			<div class="CH-FaqList">
+				<!-- Needed for the youtube player example 3 -->
+				<div class="youtubeplayer">
+					<div class="yt_holder yt_holder_right">
+						<div id="ytvideo4"></div>
+						<!--Up and Down arrow -->
+						<div class="you_up"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/up_arrow.png" alt="+ Slide" title="HIDE" /></div>
+						<div class="you_down"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/down_arrow.png" alt="- Slide" title="SHOW" /></div>
+						<!-- END  -->
+						<div class="youplayer ytplayerright">
+							<ul class="videoyou videoytright scroll-pane">
+								<?php
+								if ( $objVideo->get_videos() !=null ) {
+									foreach ($objVideo->get_videos() as $yKey => $yValue) {
+										echo '<li><p>' . $yValue['title'] . '</p><a class="videoThumb4" href="http://www.youtube.com/watch?v=' . $yValue['videoid'] . '">' . $yValue['description'] . '</a></li>';
+									}
+								}else{
+									echo '<li>Sorry, no video\'s found</li>';
+								}
+								?>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- END youtube player -->
+			</div>
+			<?php } ?>
+			<!-- dynamic playlist ends -->
+			
         </div>
         <div class="CH-WorkshopDate">
             <p>Want some Comedy coaching? The Comedy Hunt judges will be sharing their smarts with the new generation.
