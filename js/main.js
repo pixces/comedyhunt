@@ -121,6 +121,22 @@ $(document).ready(function(){
 		autoReinitialise:true
 	});
 	
+	$(".ContestEntriesThumb").ytplaylist({
+		holderId: 'ytContestEntries',
+		html5: true,
+		playerWidth: '520',
+		autoPlay: true,
+		sliding: false,
+		listsliding: true,
+		slidingshow: true,
+		social: true,
+		autoHide: false,
+		playfirst: 0,
+		playOnLoad: false,
+		modestbranding: true,
+		showInfo: false
+	});
+	
 	$(".videoThumb4").ytplaylist({
 		holderId: 'ytvideo4',
 		html5: true,
