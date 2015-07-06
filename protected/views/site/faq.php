@@ -12,7 +12,7 @@
             <!-- Needed for the youtube player example 3 -->
             <div class="youtubeplayer">
                 <div class="yt_holder yt_holder_right">
-                    <div id="ytvideo<?php echo $t; ?>"></div>
+                    <div id="ytvideo<?php echo $t; ?>" class="ytvideo"></div>
                     <!--Up and Down arrow -->
                     <div class="you_up"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/up_arrow.png" alt="+ Slide" title="HIDE" /></div>
                     <div class="you_down"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/down_arrow.png" alt="- Slide" title="SHOW" /></div>

@@ -169,6 +169,38 @@ $(document).ready(function(){
 		showInfo: false
 	});
 	
+	$(".videoThumb2").ytplaylist({
+		holderId: 'ytvideo2',
+		html5: true,
+		playerWidth: '520',
+		autoPlay: true,
+		sliding: false,
+		listsliding: true,
+		slidingshow: true,
+		social: true,
+		autoHide: false,
+		playfirst: 0,
+		playOnLoad: false,
+		modestbranding: true,
+		showInfo: false
+	});
+	
+	$(".videoThumb1").ytplaylist({
+		holderId: 'ytvideo1',
+		html5: true,
+		playerWidth: '520',
+		autoPlay: true,
+		sliding: false,
+		listsliding: true,
+		slidingshow: true,
+		social: true,
+		autoHide: false,
+		playfirst: 0,
+		playOnLoad: false,
+		modestbranding: true,
+		showInfo: false
+	});
+	
 	$(".videoThumbgallery1").ytplaylist({
 		holderId: 'ytvideogallery1',
 		html5: true,
