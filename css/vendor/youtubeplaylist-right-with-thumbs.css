@@ -7,13 +7,13 @@
 	width:100%;
 }
 
-#ytvideo, #ytvideo2, #ytvideo3, #ytvideo4 {
+#ytvideo, #ytvideo2, #ytvideo3, #ytvideo4, .ytvideo {
    float: left;
    margin-bottom:-5px;
    width:60%;
 }
 
-#ytvideo iframe, #ytvideo2 iframe, #ytvideo3 iframe, #ytvideo4 iframe{
+#ytvideo iframe, #ytvideo2 iframe, #ytvideo3 iframe, #ytvideo4 iframe, .ytvideo iframe{
 	width:100%;	
 	height:98.9%;
 }

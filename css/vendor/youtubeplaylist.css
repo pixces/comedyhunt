@@ -40,11 +40,11 @@
  */
 
 /** Only set for the page startup height*/
-#ytvideo, #ytvideo2, #ytvideo3, #ytvideo4 {
+#ytvideo, #ytvideo2, #ytvideo3, #ytvideo4,.ytvideo {
   height:440px!important;
 }
 
-#ytvideo4{
+#ytvideo4,.ytvideo{
 	height:440px!important;
 }
 

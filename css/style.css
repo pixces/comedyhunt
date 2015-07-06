@@ -1205,3 +1205,57 @@ body{
 .CH-RulesInstructions a{
 	text-decoration:underline;
 }
+
+/* Home Embed List Css */
+.CH-HomeEmbedList{
+    height:0;
+    padding-bottom:37%;
+    padding-top:40px;
+    position:relative;
+	display:none;
+	margin-bottom:15px;
+}
+.CH-HomeEmbedList iframe {
+    height:100%;
+    left:0;
+    position:absolute;
+    top:0;
+    width:100%;
+}
+.CH-ContestEntries{
+	overflow:hidden;
+	width:auto;
+	background:#FFF5E9;
+}
+.CH-ContestEntriesContent{
+	color:#fff5e9;
+	margin:0 auto;
+	max-width:1060px;
+	position:relative;
+	padding:40px 20px 30px;
+}
+.CH-ContestEntriesContent .CH-ContestEntriesContentIcon{
+	width:141px;
+	height:56px;
+	overflow:hidden;
+	margin-bottom:5px;
+}
+.CH-ContestEntriesContent .CH-ContestEntriesContentHead{
+	color:#27394F;
+	font-size:36px;
+	font-family: 'Phosphate-Solid';
+	text-transform:uppercase;
+	line-height:35px;
+}
+.CH-ContestEntriesContent .CH-ContestEntriesContentHead span{
+	color:#eb2842;
+	display:block;
+	margin:10px 0;
+}
+.CH-ContestEntriesContent p{
+	font-size:18px;
+	color:#27394F;	
+}
+.CH-ContestEntries .CH-FaqList{
+	margin:15px 0 0 0;
+}
