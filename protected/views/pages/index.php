@@ -21,12 +21,12 @@
 					<div class="CH-Text no-margin">
 						<ul>
 							<li>Set up your own YouTube channel</li>
-							<li>Shoot your Entry Video, which should be under 3 minutes.</li>
+							<li>Shoot your Entry Video, which should be under 3 minutes</li>
 							<li>Upload your Entry Video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
 							<li>Read the terms and conditions on this page</li>
 							<li>Click on the check box, press the Submit button, follow the steps after that & and keep checking this channel and our social handles for updates!</li>
-							<li>Contestants can participate in the hunt as individuals or as a team.</li>
-							<li>Entry videos can be in any language. However, subtitles must be added to videos that are in languages other than English or Hindi.</li>
+							<li>Contestants can participate in the hunt as individuals or as a team</li>
+							<li>Entry videos can be in any language. However, subtitles must be added to videos that are in languages other than English or Hindi. Last Date for entries is 26th July 2015</li>
 						</ul>
 					</div>
 				</div>
@@ -45,12 +45,12 @@
 						<div class="CH-Text no-margin">
 							<ul>
 								<li>Set up your own YouTube channel</li>
-								<li>Shoot your Entry Video, which should be under 3 minutes.</li>
-								<li>Upload your Entry Video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
-								<li>Read the terms and conditions on this page</li>
-								<li>Click on the check box, press the Submit button, follow the steps after that & and keep checking this channel and our social handles for updates!</li>
-								<li>Contestants can participate in the hunt as individuals or as a team.</li>
-								<li>Entry videos can be in any language. However, subtitles must be added to videos that are in languages other than English or Hindi.</li>
+							<li>Shoot your Entry Video, which should be under 3 minutes</li>
+							<li>Upload your Entry Video on to your YouTube channel, with the title in this format: "Comedy Hunt – entry video title"</li>
+							<li>Read the terms and conditions on this page</li>
+							<li>Click on the check box, press the Submit button, follow the steps after that & and keep checking this channel and our social handles for updates!</li>
+							<li>Contestants can participate in the hunt as individuals or as a team</li>
+							<li>Entry videos can be in any language. However, subtitles must be added to videos that are in languages other than English or Hindi. Last Date for entries is 26th July 2015</li>
 							</ul>
 						</div>
 					</div>
