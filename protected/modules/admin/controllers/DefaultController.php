@@ -8,7 +8,7 @@ class DefaultController extends AdminController
     {
         $Criteria            = new CDbCriteria;
         $Criteria->condition = 'is_ugc=:ugc';
-        $Criteria->params    = array(':ugc' => 0);
+        $Criteria->params    = array(':ugc' => 1);
         $Criteria->order     = 'date_created DESC';
 
         $dataProvider = new CActiveDataProvider('Content',
