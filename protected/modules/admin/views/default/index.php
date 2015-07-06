@@ -40,6 +40,7 @@ $this->breadcrumbs = array(
         // $(".shortlist-action").live("click",ACTION.shortlistAction);
         // $(".winner-action").live("click",ACTION.winnerAction);
         $(".admin-action").on("click", function(event) {
+
             event.preventDefault();
             var url = {
                 actionUrl:"<?php echo Yii::app()->request->baseUrl; ?>/admin/default/toggleStatus"
@@ -63,8 +64,9 @@ $this->breadcrumbs = array(
 
                   if(data.error==0 && data.status){
                             var rowToUpdateId="#btn-set-"+rowId;
-                            $(rowToUpdateId).closest("span").find(".btn-pending").addClass(data.selector).removeClass("yellow").html(data.message);
-                            $(rowToUpdateId).closest("span").find(".action-btn").hide();
+                            var btnBar = "#btn-bar-"+rowId;
+                            $(rowToUpdateId).closest("span").find(".pill-pending").addClass(data.selector).removeClass("pill-pending").html(data.message);
+                            $(btnBar).hide();
                   }
                     
 

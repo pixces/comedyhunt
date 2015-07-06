@@ -78,7 +78,7 @@ class DefaultController extends AdminController
             $status        = (int) Yii::app()->getRequest()->getParam('status',
                     0);
             $videoStatus   = ($status) ? "approved" : "rejected";
-            $colorSelector = ($status) ? "green" : "red";
+            $colorSelector = ($status) ? "pill-approved" : "pill-rejected";
             if ($videoId > 0 && is_int($videoId)) {
                 try {
                     Content::model()->updateByPk($videoId,

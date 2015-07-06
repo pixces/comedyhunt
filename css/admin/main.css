@@ -272,7 +272,7 @@ div.items{
 
 .media-head{
     float: left;
-    width: 150px;
+    width: 130px;
 }
 
 .image-thumb img{
@@ -305,12 +305,13 @@ blockquote p{
 .media-action{
     font-size: 0.9em;
     float: left;
+    width: 215px;
 }
 
 /* button styles */
-.btn {
-    background-color: #8ac403;
-    border: 1px solid #78a809;
+.btn, .btn:hover {
+    background-color: rgba(159, 159, 159, 0.20);
+    border: 1px solid #62a0c9;
     border-radius: 6px;
     color: #ffffff;
     cursor: pointer;
@@ -318,14 +319,16 @@ blockquote p{
     padding: 4px 20px;
     text-align: center;
     text-transform: capitalize;
-    width: 70px;
+    width: 50px;
     text-decoration: none;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+    background: white url("bg.gif") repeat-x scroll left top;
 }
 
 .green,
-.green:hover {
+.green:hover{
     background-image: -moz-linear-gradient(center top , #8ac403 0%, #78a809 100%);
+    color: #ffffff;
 }
 .red,
 .red:hover {
@@ -337,9 +340,9 @@ blockquote p{
 .yellow,
 .yellow:hover
 {
-    background-color: #ffed64;
-    background-image: -moz-linear-gradient(center top , #ffed64 0%, #fbb450 100%);
-    border: 1px solid #fbb450;
+    background-color: #ffcd4d;
+    background-image: -moz-linear-gradient(center top , #fbcf2d 0%, #fba11d 100%);
+    border: 1px solid #fbb131;
     color: #fff;
 }
 .expiry {
@@ -348,3 +351,40 @@ blockquote p{
 .deleted {
     background-image: -moz-linear-gradient(center top , #9c3522 0%, #7f1d1e 100%);
 }
+
+/** pill style **/
+.pill {
+    padding: 5px 10px;
+    background-color: #cccccc;
+    border-radius: 6px;
+}
+.pill-approved{
+    background-color: #8ac403;
+    border: 1px solid #78a809;
+    color: #FFF;
+}
+.pill-pending{
+    background-color: #fbb621;
+    border: 1px solid #fbb621;
+    color: #FFF;
+}
+.pill-rejected{
+    background-color: #d0451b;
+    border: 1px solid #942911;
+    color: #FFF;
+}
+
+.status-btn{
+    width: 100px;
+    float: left;
+}
+
+.action-btn{
+    width:100px;
+    float: right;
+}
+
+.action-btn a{
+    margin-bottom: 5px;
+}
+

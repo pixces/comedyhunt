@@ -12,33 +12,14 @@
         </blockquote>
     </div>
     <div class="media-action">
-        <div class="list-action">
-            <div>
-
-            </div>
-            <span id="btn-set-<?=$data->id; ?>">
-                <span class="button-bar">
-                    <?php if ($data->status) { ?>
-                        <?php if ($data->status == 'approved') { ?>
-                            <a id="<?=$data->id; ?>" class="btn green"  data-value="<?=$data->status; ?>" data-id="<?=$data->id; ?>"    href="#">Approved</a>
-                        <?php } else if ($data->status == 'rejected') { ?>
-                            <a id="<?=$data->id; ?>" class="btn red"  data-value="<?=$data->status; ?>" data-id="<?=$data->id; ?>"      href="#">Rejected</a>
-                        <?php } else if ($data->status == 'pending') { ?>
-                            <a id="<?=$data->id; ?>" class="btn yellow btn-pending"  data-value="<?=$data->status; ?>" data-id="<?=$data->id; ?>"   href="#" onclick="return false;">Pending</a>
-                        <?php } ?>
-                    <?php } ?>
-                </span>
-                <br/>
-                <span class="button-bar action-btn">
-                    <?php if ($data->status=="pending") { ?>
-                            <a id="<?=$data->id; ?>" class="admin-action btn red"  data-value="0" data-id="<?=$data->id; ?>" data-action="reject" href="#">Reject</a>
-                            &nbsp;
-                             <a id="<?=$data->id; ?>" class="admin-action btn green"  data-value="1" data-id="<?=$data->id; ?>" data-action="approve" href="#">Approve</a>
-
-                    <?php } ?>
-
-                </span>
-            </span>
-        </div>
+        <span class="status-btn" id="btn-set-<?=$data->id; ?>">
+            <span id="<?=$data->id; ?>" class="pill pill-<?=$data->status; ?>"  data-value="<?=$data->status; ?>" data-id="<?=$data->id; ?>"><?=ucfirst($data->status); ?></span>
+        </span>
+        <span id="btn-bar-<?=$data->id; ?>" class="action-btn button-bar">
+            <?php if ($data->status=="pending") { ?>
+                <a id="<?=$data->id; ?>" class="admin-action btn"  data-value="1" data-id="<?=$data->id; ?>" data-action="approve" href="#">Approve</a>
+                <a id="<?=$data->id; ?>" class="admin-action btn red"  data-value="0" data-id="<?=$data->id; ?>" data-action="reject" href="#">Reject</a>
+            <?php } ?>
+        </span>
     </div>
 </div>
