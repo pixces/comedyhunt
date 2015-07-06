@@ -1198,3 +1198,10 @@ body{
 .CH-VideoCarouselBlk .CH-FaqList{
 	margin:20px 0;
 }
+.CH-RulesInstructions{
+	margin-bottom:-20px;
+	margin-top:10px;
+}
+.CH-RulesInstructions a{
+	text-decoration:underline;
+}
