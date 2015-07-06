@@ -73,6 +73,33 @@ class GalleryController extends Controller
             echo json_encode(['content' => $videoContent, 'count' => count($galleryVideos), 'page' => $page]);
             Yii::app()->end();
         }
+		
+		//baisc youtube playlist params
+        $ytConfig = Yii::app()->params['YT_PlayList'];
+
+        $ytParams = array(
+            'api' => $ytConfig['apiKey'],
+            'max' => $ytConfig['maxSize'],
+            'cachexml' => $ytConfig['isCache'],
+            'cachelife' => $ytConfig['cacheLifetime'],
+            'xmlpath' => $ytConfig['cachePath'],
+            'start' => 1,
+            'descriptionlength' => 40,
+            'titlelength' => 20
+        );
+
+        $videoPlayList = array();
+		
+		foreach (Yii::app()->params['YT_PlayListID']['gallery'] as $sPlayListId) {
+            $obj = new CHPlaylist('playlist', $sPlayListId, $ytParams);
+            array_push($videoPlayList, $obj->getInstance());
+        }
+		
+		//include the playlist js and css files
+        //Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/path/to/your/javascript/file',CClientScript::POS_END);
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/vendor/youtubeplaylist.css');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/vendor/youtubeplaylist-right-with-thumbs.css');
+		
         /**
          * Normal Loading of the view ,and pass the partial view as String
          */
@@ -81,7 +108,8 @@ class GalleryController extends Controller
             'index',
             array(
                 'videoContent' => $videoContent,
-                'pageName' => 'gallery'
+                'pageName' => 'gallery',
+				'aVideoList' => $videoPlayList
             )
         );
     }

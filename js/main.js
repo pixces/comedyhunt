@@ -169,6 +169,54 @@ $(document).ready(function(){
 		showInfo: false
 	});
 	
+	$(".videoThumbgallery1").ytplaylist({
+		holderId: 'ytvideogallery1',
+		html5: true,
+		playerWidth: '520',
+		autoPlay: true,
+		sliding: false,
+		listsliding: true,
+		slidingshow: true,
+		social: true,
+		autoHide: false,
+		playfirst: 0,
+		playOnLoad: false,
+		modestbranding: true,
+		showInfo: false
+	});
+	
+	$(".videoThumbgallery2").ytplaylist({
+		holderId: 'ytvideogallery2',
+		html5: true,
+		playerWidth: '520',
+		autoPlay: true,
+		sliding: false,
+		listsliding: true,
+		slidingshow: true,
+		social: true,
+		autoHide: false,
+		playfirst: 0,
+		playOnLoad: false,
+		modestbranding: true,
+		showInfo: false
+	});
+	
+	$(".videoThumbgallery3").ytplaylist({
+		holderId: 'ytvideogallery3',
+		html5: true,
+		playerWidth: '520',
+		autoPlay: true,
+		sliding: false,
+		listsliding: true,
+		slidingshow: true,
+		social: true,
+		autoHide: false,
+		playfirst: 0,
+		playOnLoad: false,
+		modestbranding: true,
+		showInfo: false
+	});
+	
 	$(".CH-Tooltip").on({
         mouseover: function() { $(".CH-TooltipMessage").show(); },
         mouseout:  function() { $(".CH-TooltipMessage").hide(); }

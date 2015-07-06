@@ -1226,6 +1226,7 @@ body{
 	overflow:hidden;
 	width:auto;
 	background:#FFF5E9;
+	display:none;
 }
 .CH-ContestEntriesContent{
 	color:#fff5e9;

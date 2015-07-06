@@ -44,9 +44,14 @@ class SiteController extends Controller
 
         $videoPlayList = array();
 
-        foreach(Yii::app()->params['YT_Faq_PlayListID'] as $id){
+        /*foreach(Yii::app()->params['YT_Faq_PlayListID'] as $id){
             $obj = new CHPlaylist('playlist',$id,$ytParams);
             array_push($videoPlayList, $obj->getInstance() );
+        }*/
+		
+		foreach (Yii::app()->params['YT_PlayListID']['faq'] as $sPlayListId) {
+            $obj = new CHPlaylist('playlist', $sPlayListId, $ytParams);
+            array_push($videoPlayList, $obj->getInstance());
         }
 
         //include the playlist js and css files
