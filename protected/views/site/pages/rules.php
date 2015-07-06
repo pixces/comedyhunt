@@ -4,6 +4,7 @@
     <div class="CH-RulesContent">
         <div class="CH-RulesIcon"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-image.png" /></div>
         <div class="CH-RulesHead">TERMS AND CONDITIONS</div>
+		<div class="CH-RulesInstructions"><a href="javascript:void(0)" data-showpopup="1" class="show-popup mainVideo" data-videoTitle="Comedy Hunt: Rules &amp; Instructions " data-videoURL="Rwr2MTRjn0Y">Rules &amp; Instructions Video</a></div>
         <div class="CH-RulesList">
             <div class="CH-RulesBlk">
                 <div class="scroll-pane">

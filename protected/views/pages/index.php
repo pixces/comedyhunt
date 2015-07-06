@@ -137,6 +137,10 @@
 			<?php } ?>
 			<!-- dynamic playlist ends -->
 			
+			<div class="CH-HomeEmbedList">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/lIsIOsXkID4?list=PLX19kCCkfm1pR0fml9KXZzur6FVU5BiFO" frameborder="0" allowfullscreen></iframe>
+			</div>
+			
         </div>
         <div class="CH-WorkshopDate">
             <p>Want some Comedy coaching? The Comedy Hunt judges will be sharing their smarts with the new generation.

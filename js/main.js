@@ -55,7 +55,8 @@ $(document).ready(function(){
 			var VideoURL = $(this).attr('data-videoURL');
 			var VideoTitle = $(this).attr('data-videoTitle');
 			
-			var iframeTemplate = '<iframe width="853" height="480" src="https://www.youtube.com/embed/'+VideoURL+'?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;modestbranding=1;enablejsapi=1" frameborder="0" allowfullscreen id="th-553fed94be2f27b50100729a-video"></iframe>';
+			//var iframeTemplate = '<iframe width="853" height="480" src="https://www.youtube.com/embed/'+VideoURL+'?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;modestbranding=1;enablejsapi=1" frameborder="0" allowfullscreen id="th-553fed94be2f27b50100729a-video"></iframe>';
+			var iframeTemplate = '<iframe width="853" height="480" src="https://www.youtube.com/embed/'+VideoURL+'?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;modestbranding=1;enablejsapi=1" frameborder="0" allowfullscreen></iframe>';
 			
 			$(".overlay-content .overlay-title").html(VideoTitle);
 			$(".overlay-content .modalVideo").html(iframeTemplate);
