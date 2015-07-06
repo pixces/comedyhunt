@@ -20,14 +20,25 @@
                 <span class="button-bar">
                     <?php if ($data->status) { ?>
                         <?php if ($data->status == 'approved') { ?>
-                            <a id="<?=$data->id; ?>" class="admin-action btn green" title="Click to Change Status" data-value="<?=$data->status; ?>" data-id="<?=$data->id; ?>" data-action="change_status" href="#">Approved</a>
+                            <a id="<?=$data->id; ?>" class="btn green"  data-value="<?=$data->status; ?>" data-id="<?=$data->id; ?>"    href="#">Approved</a>
                         <?php } else if ($data->status == 'rejected') { ?>
-                            <a id="<?=$data->id; ?>" class="admin-action btn red" title="Click to Change Status" data-value="<?=$data->status; ?>" data-id="<?=$data->id; ?>" data-action="change_status" href="#">Rejected</a>
+                            <a id="<?=$data->id; ?>" class="btn red"  data-value="<?=$data->status; ?>" data-id="<?=$data->id; ?>"      href="#">Rejected</a>
                         <?php } else if ($data->status == 'pending') { ?>
-                            <a id="<?=$data->id; ?>" class="admin-action btn yellow" title="Click to Change Status" data-value="<?=$data->status; ?>" data-id="<?=$data->id; ?>" data-action="change_status" href="#">Pending</a>
+                            <a id="<?=$data->id; ?>" class="btn yellow btn-pending"  data-value="<?=$data->status; ?>" data-id="<?=$data->id; ?>"   href="#" onclick="return false;">Pending</a>
                         <?php } ?>
                     <?php } ?>
                 </span>
+                <br/>
+                <span class="button-bar action-btn">
+                    <?php if ($data->status=="pending") { ?>
+                            <a id="<?=$data->id; ?>" class="admin-action btn red"  data-value="0" data-id="<?=$data->id; ?>" data-action="reject" href="#">Reject</a>
+                            &nbsp;
+                             <a id="<?=$data->id; ?>" class="admin-action btn green"  data-value="1" data-id="<?=$data->id; ?>" data-action="approve" href="#">Approve</a>
+
+                    <?php } ?>
+
+                </span>
+            </span>
         </div>
     </div>
 </div>

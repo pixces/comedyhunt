@@ -6,9 +6,9 @@ class DefaultController extends AdminController
 
     public function actionIndex()
     {
-        $Criteria = new CDbCriteria;
+        $Criteria            = new CDbCriteria;
         $Criteria->condition = 'is_ugc=:ugc';
-        $Criteria->params    = array(':ugc' => 1);
+        $Criteria->params    = array(':ugc' => 0);
         $Criteria->order     = 'date_created DESC';
 
         $dataProvider = new CActiveDataProvider('Content',
@@ -65,5 +65,39 @@ class DefaultController extends AdminController
                 throw new CHttpException(404,
             'The requested page does not exist.');
         return $model;
+    }
+
+    /**
+     * ToggleStatus Function 
+     */
+    public function actionToggleStatus()
+    {
+        if (Yii::app()->request->isAjaxRequest) {
+            $aResponse     = ['error' => 0, 'status' => 0, 'message' => ''];
+            $videoId       = (int) Yii::app()->getRequest()->getParam('id', 0);
+            $status        = (int) Yii::app()->getRequest()->getParam('status',
+                    0);
+            $videoStatus   = ($status) ? "approved" : "rejected";
+            $colorSelector = ($status) ? "green" : "red";
+            if ($videoId > 0 && is_int($videoId)) {
+                try {
+                    Content::model()->updateByPk($videoId,
+                        array('status' => $videoStatus));
+                    $message   = $videoStatus;
+                    $aResponse = ['error' => 0, 'status' => 1, 'message' => ucwords($message),
+                        'selector' => $colorSelector];
+                } catch (Exception $e) {
+                    $message   = $e->getMessage();
+                    $aResponse = ['error' => 1, 'status' => 0, 'message' => $message];
+                }
+            } else {
+                $message   = "Invalid Id !";
+                $aResponse = ['error' => 1, 'status' => 0, 'message' => $message];
+            }
+
+
+            echo json_encode($aResponse);
+            exit;
+        }
     }
 }
