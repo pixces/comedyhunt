@@ -10,13 +10,13 @@
                     <p class="CH-Head">Comedy Hunt – Terms and Conditions</p>
 					<p>This Programme is called “Quikr presents Comedy Hunt on YouTube, Laughs powered by Micromax, Bold Moves by Royal Challenge Sports Drink, Wisecracks by Cadbury 5-Star &amp; Garnier Men”, here-in-after referred to as “Comedy Hunt”.</p>
 					<p>Comedy Hunt is property owned, administered and promoted by OML Entertainment Private Limited, herein after referred to as “Promoter”.  Since submission of entry constitutes acceptance of these Entry Rules &amp; Regulations, please review this document carefully.</p>
-					<p>Entry in the Comedy Hunt is open to individuals or group of individuals (referred to as Participants hereon), aged 18 years and over as of 1st June, 2015 and residents of India. This excludes Management, employees, directors and contractors of the Promoters, Sponsors, Partners, its related entities and other agencies, firms or companies associated with the promotion (including suppliers of jobs); and business associates involved in any part of the administration and execution of the programme and his/ her relative, including a spouse, de-facto spouse, parent, guardian, child or sibling of the former. Participants with pre-existing YouTube channels are allowed to submit a video for the Comedy Hunt, as long as their YouTube channel does not have more than 5000 subscribers, as on 1st June 2015. In such cases, videos created &amp; uploaded before 1st June 2015 are not eligible for submission.</p>
-					<p class="CH-UpperItalic">NO PURCHASE IS NECESSARY TO ENTER OR PARTICIPATE IN THE COMEDY HUNT.&nbsp;</p>
+					<p>Entry in the Comedy Hunt is open to individuals or group of individuals (referred to as Participants hereon), aged 18 years and over as of 1st June, 2015 and residents of India. This excludes Management, employees, directors and contractors of the Promoters, Sponsors, Partners, its related entities and other agencies, firms or companies associated with the promotion (including suppliers of jobs); and business associates involved in any part of the administration and execution of the programme and his/ her relative, including a spouse, de-facto spouse, parent, guardian, child or sibling of the former. Participants with pre-existing YouTube channels are allowed to submit a video for the Comedy Hunt, as long as their YouTube channel does not have more than 5000 subscribers, as on 1st June 2015. In such cases, videos created &amp; uploaded before 1st June 2015 are not eligible for submission. </p>
+					<p class="CH-UpperItalic">NO PURCHASE IS NECESSARY TO ENTER OR PARTICIPATE IN THE COMEDY HUNT.</p>
 					<p class="CH-Head">How it  works:</p>
 					<p class="CH-Head">Create  &amp; Submit</p>
 					<p>To participate in the Comedy Hunt, The Participant has to,</p>
 					<ul>
-					  <li>Create a funny entry video, at their own cost, and in strict adherence to the guidelines provided in these Terms &amp; Conditions,</li>
+					  <li>Create  a funny entry video, at their own cost, and in strict adherence to the  guidelines provided in these Terms &amp; Conditions,</li>
 					  <li>Entry  video must be under 3 minutes of length</li>
 					  <li>Register/log-in  through their existing YouTube ID and upload the entry video on their own YouTube  channel.</li>
 					  <li>Participant  should name their entry video as &ldquo;Comedy Hunt – <em>entry video title</em>&rdquo;, where entry video title refers to the unique  name that the participant wishes to give to the entry video. </li>
@@ -27,16 +27,16 @@
 					<p>All  we are looking for is a Comedy a video that is original i.e. independently  created by the participant, and funny – it could be stand-up comedy, or a funny  sketch, or a musical comedy act – just make us laugh.</p>
 					<p>Submissions  start on 6th July, 2015 and the last date for submissions is 26th  July, 2015 midnight (IST).</p>
 					<p class="CH-Head">Shortlisting</p>
-					<p>Upto  60 participants will be shortlisted on the basis of the Quality &amp; Creativity  of submitted entry video, by a Jury of Comedy Creators. The decision of the  Jury of Comedy Creators is final and binding, and not subject to any dispute or  challenge.</p>
+					<p>Upto 40 participants will be shortlisted on the basis of the Quality &amp; Creativity  of submitted entry video, by a Jury of Comedy Creators. The decision of the Jury of Comedy Creators is final and binding, and not subject to any dispute or challenge.</p>
 					<p class="CH-Head">Challenge  Phase</p>
-					<p>The  shortlisted 60 participants will move to the Challenger Round Phase, where they  will be given a unique theme or challenge on which to create a funny video -  one challenge per week for seven weeks back to back. Each week few participants  will be filtered out &amp; the rest will proceed for the next challenge round.</p>
+					<p>The shortlisted 40 participants will move to the Challenger Round Phase, where they will be given a unique theme or challenge on which to create a funny video - one challenge per week for seven weeks back to back. Each week few participants will be filtered out & the rest will proceed for the next challenge round.</p>
 					<p>At  the end of seven weeks 5 Participants will be declared as the Best Participants  of the Comedy Hunt. The decision of the Jury of Comedy Creators is final and  binding, and not subject to any dispute or challenge.</p>
 					<p class="CH-Head">Finale</p>
 					<p>The  5 Best Participants of the Comedy Hunt will then perform or display their  videos on stage in a Finale Event, along with our jury of Comedy creators, at  Mumbai, in front of a Live audience. One Participant among the 5 Best  Participants will be crowned as the winner, by a by a Jury of Comedy Creators.  The decision of the Jury of Comedy Creators is final and binding, and not  subject to any dispute or challenge.</p>
 					<p class="CH-Head">The Detailed  Rules:</p>
 					<p>The  detailed Rules are as follows:</p>
 					<p class="CH-Head">Overview:</p>
-					<p>This  Programme is called &ldquo;Quikr presents Comedy Hunt on YouTube, Laughs powered by  Micromax, Bold Moves by Royal Challenge Sports Drink, Wisecracks by Cadbury  5-Star &amp; Garnier Men&rdquo;, here-in-after referred to as &ldquo;Comedy Hunt&rdquo;.</p>
+					<p>This Programme is  called &ldquo;Quikr presents Comedy Hunt on YouTube, Laughs powered by Micromax, Bold  Moves by Royal Challenge Sports Drink, Wisecracks by Cadbury 5-Star &amp;  Garnier Men&rdquo;, here-in-after referred to as &ldquo;Comedy Hunt&rdquo;.</p>
 					<p>Comedy  Hunt is promoted by OML Entertainment Private Limited, herein after referred to  as &ldquo;Promoter&rdquo;.</p>
 					<p class="CH-Head">Video  Creation:</p>
 					<ul>
@@ -49,7 +49,7 @@
 					 <li>Entry in the Comedy Hunt is open to  individuals or group of individuals (referred to as Participants hereon), aged  18 years and over as of 1st&nbsp;June, 2015 and are residents of  India. </li>
 					  <li>This excludes Management, employees,  directors and contractors of the Promoters, Sponsors, Partners, its related  entities and other agencies, firms or companies associated with the promotion  (including suppliers of jobs); and business associates involved in any part of  the administration and execution of the programme and his/ her relative,  including a spouse, de-facto spouse, parent, guardian, child or sibling of the  former. </li>
 					  <li>All Participants wishing to submit  an entry video for the Comedy Hunt, must have a valid YouTube account where  they will upload their entry video.</li>
-					  <li>Participants with pre-existing  YouTube channels are allowed to submit a video for the Comedy Hunt, as long as  their YouTube channel does not have more than 5000 subscribers, as on 1st  June 2015. In such cases, videos created &amp; uploaded before 1st  June 2015 are not eligible for submission. Participants with Pre-existing  YouTube channels having more than 5000 subscribers can start a new channel for  specific purposes of entering an entry video into Comedy Hunt. </li>
+					  <li>Participants with pre-existing  YouTube channels are allowed to submit a video for the Comedy Hunt, as long as  their YouTube channel does not have more than 5000 subscribers, as on 1st  June 2015. In such cases, videos created &amp; uploaded before 1st  June 2015 are not eligible for submission. </li>
 					
 					 <li>Participants agree to undergo training sessions conducted by experts and also undergo basic media relations briefing.</li>
 					  <li>NO PURCHASE IS NECESSARY TO ENTER OR PARTICIPATE IN THE COMEDY HUNT.&nbsp;</li>
@@ -58,8 +58,8 @@
 					  <li>Participants shall comply with these Terms and Conditions and waive any right to any intellectual property right(s) as provided in these Terms and Conditions and also to claim ambiguity in these Terms and Conditions and release, indemnify and hold harmless Promoter and its respective affiliates, Sponsors and their respective affiliates, YouTube and its respective affiliates, advertising and promotion agencies, and its respective agents, auditors, representatives, officers, directors and employees from and against any injuries, losses, damages, claims, actions, or any liability of any kind resulting from or arising from this Program.</li>
 					</ul>
 					<p class="CH-Head">Legal disclaimer</p>
-					<p>By submitting a video submission to the  competition, the entrant accepts the full terms and conditions of the  competition and in addition grants Promoter full permission to freely use  videos as appropriate, cross-posting on other social media channels, Promoters websites  and by Promoter Partners, or any other use. The Promoter will have the right to  freely use the video material. These terms and conditions are subject to  change.</p>
-					<p>Any and all video footage, music,  photographic images and other creative content used in the videos must be<strong>&nbsp;originally owned and produced</strong>&nbsp;by  the creator.</p>
+					<p>By submitting a video submission to the competition, the entrant accepts the full terms and conditions of the competition and in addition grants Promoter full permission to freely use videos as appropriate, cross-posting on other social media channels, Promoters websites and by Promoter Partners, or any other use. The Promoter will have the right to freely use the video material. These terms and conditions are subject to change.</p>
+					<p>Any  and all video footage, music, photographic images and other creative content  used in the videos must be<strong>&nbsp;originally owned and produced</strong>&nbsp;by the creator.</p>
 					<p class="CH-Head">Data  Capture and Privacy Policy:</p>
 					<ul>
 					  <li>Data &amp; Information collected  during the Comedy Hunt, is solely collected by the Promoter for the purposes of  the Comedy Hunt and will be stored on their local servers for the explicit  purpose of the Comedy Hunt.</li>
@@ -69,7 +69,7 @@
 					<p class="CH-Head">Timelines:</p>
 					<ul>
 					  <li>Spread across 12 weeks, the Contest  submissions will commence from 6th July, 2015 up to 26th July,  2015 midnight (IST). </li>
-					  <li>Thereafter, upto 60 selected  Participants will enter the Challenge Rounds which will last for 7 weeks.</li>
+					  <li>Thereafter, upto 40 selected  Participants will enter the Challenge Rounds which will last for 7 weeks.</li>
 					  <li>5 Best Participants of the Comedy  Hunt will perform or display their videos at a Finale event in the last week of  September</li>
 					  <li>All announcements of the Comedy Hunt  will be made through <a href="http://www.youtube.com/thecomedyhunt" target="_blank">www.youtube.com/thecomedyhunt</a>. </li>
 					  <li>Additional information may be  present on sponsor websites, social media, email communication and online ads. </li>
@@ -82,20 +82,18 @@
 					  <li>User  should name their entry video as &ldquo;Comedy Hunt – <em>entry video title</em>&rdquo;, where entry video title refers to the unique  name that the participant wishes to give to the entry video. </li>
 				
 					  <li>Entry  video must be an original piece of content must not contain any copyrighted  works.</li>
-					
-					  <li>To submit the entry video, the user  must visit <a href="http://www.youtube.com/thecomedyhunt" target="_blank">www.youtube.com/thecomedyhunt</a> and submit the entry video url only during the submission  period 6th July, 2015 up to 26th July, 2015 midnight  (IST).</li>
-					
-					  <li>The User needs to fill the Name, E-mail  address (that is associated with their own YouTube channel), and the YouTube  link to the entry video.</li>
-					
-					  <li>The User needs to click on the  Submit button on the registration form to complete the registration &amp;  submission process.</li>
-					
-					  <li>The User must ensure the  registration form on the campaign website is duly filled in English language,  where it is necessary to fill the same and submit on or before the stipulated  date as mentioned on <a href="http://www.youtube.com/thecomedyhunt" target="_blank">www.youtube.com/thecomedyhunt</a>. </li>
+
+                      <li>The participant needs  to Click on &ldquo;I agree to the terms and conditions&rdquo; at <a href="http://www.youtube.com/thecomedyhunt" target="_blank">www.youtube.com/thecomedyhunt</a>,  declaring that you hold the copyright for or have the right to use this video,  and agree to the video being used as described in the guidelines for this  competition. </li>
+                      
+                      <li>The participant needs  to Click  on the Submit Your Video Now at <a href="http://www.youtube.com/thecomedyhunt" target="_blank">www.youtube.com/thecomedyhunt</a>, login using their  YouTube ID, select the video to be submitted as the Entry Video, provide the  Participants name &amp; click on Submit again. </li>
+                      
+                     <li> The Participant must ensure the registration  form on the campaign website is duly filled in English language, where it is  necessary to fill the same and submit on or before the stipulated date as  mentioned on <a href="http://www.youtube.com/thecomedyhunt" target="_blank">www.youtube.com/thecomedyhunt</a>.</li>
 					
 					  <li>The Promoters shall not be  responsible / liable for any delays, or loss of registration data in transit  because of any technical faults which includes internet / network incapability  or unavailability to the Participant. </li>
 					
-					  <li>The User agrees to provide the  Promoters the current, complete and accurate information and further subject to  proof upon request by the Promoters.</li>
+					  <li>The User Participant agrees to provide the Promoters the current, complete and accurate information and further subject to proof upon request by the Promoters.</li>
 					
-					  <li>An incomplete or incorrect contest entry form by a User or  any entry that violates the terms and conditions shall be rejected, without  assigning any reasons.</li>
+					  <li>An incomplete or incorrect contest entry form by a User Participant or any entry that violates the terms and conditions shall be rejected, without assigning any reasons.</li>
 					
 					  <li>The Promoters reserves the right to reject any entry without  assigning any reason thereof. Any decision taken in this regard shall be final  and binding, and not subject to any dispute or challenge.</li>
 					
@@ -131,7 +129,7 @@
 					</ul>
 					<p class="CH-Head">Shortlisting Phase:</p>
 					<ul>
-					  <li>60  participants will be shortlisted on the basis of the Quality &amp; Creativity  of submitted entry video, by a Jury of Comedy Creators. The decision of the  Jury of Comedy Creators is final and binding, and not subject to any dispute or  challenge. Only a shortlisted participant will  be contacted. If the Participant has not been selected, there will be no  communication from us of this decision by any form including email.</li>
+					  <li>40  participants will be shortlisted on the basis of the Quality &amp; Creativity  of submitted entry video, by a Jury of Comedy Creators. The decision of the  Jury of Comedy Creators is final and binding, and not subject to any dispute or  challenge. Only a shortlisted participant will  be contacted. If the Participant has not been selected, there will be no  communication from us of this decision by any form including email.</li>
 
 					  <li>The list of shortlisted participants  will be sent an email acknowledgement with further terms and conditions, which  will be need to be accepted by the contestants within 48 Hours of receipt of  the email.</li>
 
@@ -143,7 +141,7 @@
 					</ul>
 					<p class="CH-Head">Challenge Round Phase:</strong></p>
 					<ul>
-					 <li>Up to Sixty (60) shortlisted participants  will be invited to take part in 7 Challenge  Rounds spread over 7 weeks, where they will create one video for each of the Challenge  rounds.</li>
+					 <li>40 shortlisted participants  will be invited to take part in 7 Challenge  Rounds spread over 7 weeks, where they will create one video for each of the Challenge  rounds.</li>
 
 					  <li>The jury will give these contestants  7 different challenges in 7 weeks and the contestants need to upload their  entries on their own YouTube channels. </li>
 
@@ -159,17 +157,18 @@
 					</ul>
 					<p class="CH-Head">Finale Phase:</p>
 					<ul>
-					  <li>Five (5) Best Participants of the  Comedy Hunt, will be selected by the Jury of Comedy Creators, at the end of 7th  week of challenge rounds. The decision of the jury would be final and binding,  and not subject to any dispute or challenge.</li>
+					  <li>Five (5) Best Participants of the Comedy Hunt, will be selected by the Jury of Comedy Creators, at the end of 7th week of challenge rounds. The decision of the jury would be final and binding, and not subject to any dispute or challenge.</li>
 
 					  <li>All such selected best contestants  will be required to attend an induction/briefing session at a pre-designated  location wherein they will be informed Finale Performance, where they will get  an opportunity to perform on stage with established comedy creators.</li>
 
-					  <li>All such selected best participant  will be required to travel and stay in Mumbai for the purpose of the Finale  Performance. These  5 Contestants will have to travel to Mumbai for the finale. The Promoters will  cover all travel expenses related to lodging &amp; boarding. </li>
+					  <li>All such selected best participant  will be required to travel and stay in Mumbai for the purpose of the Finale  Performance. These  5 Contestants will have to travel to Mumbai for the finale. The Promoters will  cover all travel expenses related to lodging &amp; boarding, for a maximum of 4 members per team. </li>
 
 					  <li>If a selected best participant does  not confirm they are able to attend the finale within - seven (7) days of being  notified, then such winner shall forfeit his/her Prize (&ldquo;Forfeited Prize&rdquo;) and  it will be at the sole discretion of the Promoters to re-allocate the Forfeited  Prize.</li>
 
 					  <li>All applicable taxes, levies and  duties imposed by respective Government(s) or authorities on the prize will be  solely borne by the participant.</li>
 
 					  <li>In the case of Participants who work  as a team and would like to participate as a team they are eligible to do so.  However only maximum of 4 will be flown down to the finale venue from the team  if they advance to the final.</li>
+                      <li>From the 5 Best participants, 1 will be selected as the winner. </li>
 					</ul>
 					<p class="CH-Head">Other Rules:</p>
 					<ul>
