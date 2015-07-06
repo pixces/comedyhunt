@@ -86,7 +86,8 @@
 		<div class="CH-ContestEntriesContentIcon"><img src="images/gallery-image-blue.png"/></div>
 		<div class="CH-ContestEntriesContentHead">Contest Entries</div>
 		<!-- dynamic playlist start -->
-		<?php foreach($aVideoList as $objVideo) {
+		<?php if ($aVideoList[0]) {
+            $objVideo = $aVideoList[0];
 		?>
 		<div class="CH-FaqList">
 			<!-- Needed for the youtube player example 3 -->
@@ -148,9 +149,10 @@
                 </div>
                 <?php } } ?>
             </div-->
-			
+
 			<!-- dynamic playlist start -->
-			<?php foreach($aVideoList as $objVideo) {
+            <?php if ($aVideoList[1]) {
+                $objVideo = $aVideoList[1];
 			?>
 			<div class="CH-FaqList">
 				<!-- Needed for the youtube player example 3 -->

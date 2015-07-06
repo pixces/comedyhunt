@@ -46,8 +46,8 @@ class PagesController extends Controller
 
         $videoPlayList = array();
 
-        foreach (Yii::app()->params['YT_Faq_PlayListID'] as $id) {
-            $obj = new CHPlaylist('playlist', $id, $ytParams);
+        foreach (Yii::app()->params['YT_PlayListID']['index'] as $sPlayListId) {
+            $obj = new CHPlaylist('playlist', $sPlayListId, $ytParams);
             array_push($videoPlayList, $obj->getInstance());
         }
 
