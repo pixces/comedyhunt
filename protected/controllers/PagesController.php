@@ -40,8 +40,8 @@ class PagesController extends Controller
             'cachelife' => $ytConfig['cacheLifetime'],
             'xmlpath' => $ytConfig['cachePath'],
             'start' => 1,
-            'descriptionlength' => 80,
-            'titlelength' => 33
+            'descriptionlength' => 60,
+            'titlelength' => 28
         );
 
         $videoPlayList = array();
