@@ -40,7 +40,7 @@ class PagesController extends Controller
             'cachelife' => $ytConfig['cacheLifetime'],
             'xmlpath' => $ytConfig['cachePath'],
             'start' => 1,
-            'descriptionlength' => 40,
+            'descriptionlength' => 80,
             'titlelength' => 33
         );
 
