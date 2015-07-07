@@ -717,20 +717,23 @@ body{
 	top:20px;
 	right:20px;
 }
-.modalVideo{
+.modalVideo,
+.modalVideo1{
     height:0;
     padding-bottom:37%;
     padding-top:40px;
     position:relative;
 }
-.modalVideo iframe {
+.modalVideo iframe,
+.modalVideo1 iframe{
     height:100%;
     left:0;
     position:absolute;
     top:0;
     width:100%;
 }
-.overlay-content .overlay-title{
+.overlay-content .overlay-title,
+.overlay-content .overlayTitle{
     line-height:25px;
     margin-bottom:15px;
     padding:10px 35px 10px 0;

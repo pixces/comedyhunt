@@ -124,6 +124,16 @@
 			<div class="CH-YouTubeNote">* Please make sure your video is authorized to the public.</div>
 		</form>
 	</div>
+	
+	<div class="overlay-content popup3">
+    	<div class="close-btn"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/close-icon-black.png" /></div>
+		<div class="overlayTitle">All you need to know about the Comedy Hunt</div>
+		<div class="overlay-description">
+			<div class="modalVideo1">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLX19kCCkfm1q2-4Of5DynRQC-W4AZ-sCy" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
     <!-- Overlay Ends Here -->
 
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery-1.11.1.min.js"></script>

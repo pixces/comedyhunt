@@ -6,8 +6,7 @@
                 <div class="CH-SubmissionsVideo transition">
                     <div class="CH-SubmissionsVideoImage"><img src="images/video-image1.png"/></div>
                     <div class="CH-SubmissionsVideoPlay">
-                        <a href="javascript:void(0)" data-showpopup="1" class="show-popup mainVideo"
-                           data-videoTitle="Comedy Hunt : Promo" data-videoURL="f13pmAJIoYI"><span><img
+                        <a href="javascript:void(0)" data-showpopup="3" class="show-popup mainVideo"><span><img
                                     src="images/video-play-icon.png"/></span></a>
                     </div>
                 </div>
