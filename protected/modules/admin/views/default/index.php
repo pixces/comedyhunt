@@ -14,11 +14,10 @@ $this->breadcrumbs = array(
         </div>
     <?php endif; ?>
     <span class="pull-left">Content List</span>
-    <div style="float:right;">
-        <span><?php echo CHtml::link('All Content',array('/admin/default/downloadCsv','status'=>'all')); ?></span>
-        <span>&nbsp;|&nbsp;</span>
-        <span><?php echo CHtml::link('Approved Content',array('/admin/default/downloadCsv','status'=>'approved')); ?></span>
-    </div>
+    <span class="pull-right">
+        <span><?php echo CHtml::link('Export all CSV',array('/admin/default/downloadCsv','status'=>'all'), array('class'=>'btn download-action')); ?></span>
+        <span><?php echo CHtml::link('Export Approved',array('/admin/default/downloadCsv','status'=>'approved'), array('class'=>'btn download-action')); ?></span>
+    </span>
 
     <span class="clearfix"></span>
 </h1>
