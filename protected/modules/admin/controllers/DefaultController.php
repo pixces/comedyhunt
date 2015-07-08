@@ -6,6 +6,7 @@ class DefaultController extends AdminController
 
     public function actionIndex()
     {
+
         $Criteria            = new CDbCriteria;
         $Criteria->condition = 'is_ugc=:ugc';
         $Criteria->params    = array(':ugc' => 1);
@@ -99,5 +100,58 @@ class DefaultController extends AdminController
             echo json_encode($aResponse);
             exit;
         }
+    }
+
+    /**
+     * Function To Download Csv.
+     * Default Parameter : All .
+     * Conditionl Parameter: "Approved"
+     */
+    public function actionDownloadCsv()
+    {
+
+        $sStatus = Yii::app()->getRequest()->getParam('status', 'all');
+        $sParams = 'is_ugc=1';
+        if ($sStatus == "approved") {
+            $sParams.=' AND status="approved"';
+        }
+
+        $Criteria         = new CDbCriteria(array('condition' => $sParams));
+        $Criteria->order  = 'date_created DESC';
+        $Criteria->select = "username,email,date_created,media_url,title,description,channel_name,status";
+        $Content          = Content::model()->findAll($Criteria);
+
+        // output headers so that the file is downloaded rather than displayed
+        header('Content-Type: text/csv; charset=utf-8');
+        header('Content-Disposition: attachment; filename=content.csv');
+
+        // create a file pointer connected to the output stream
+        $output       = fopen('php://output', 'w');
+        //// output the column headings
+        fputcsv($output, array(
+                                'Name',
+                               'Email Id',
+                               'Date of submission',
+                               'Video Url',
+                               'Video Title',
+                               'Video Description',
+                               'Channel Name',
+                               'Status'
+                            )
+            );
+        $aContentInfo = [];
+        foreach ($Content as $row) {
+            $aContentInfo['username']     = $row->username;
+            $aContentInfo['email']        = $row->email;
+            $aContentInfo['date_created'] = $row->date_created;
+            $aContentInfo['media_url']    = $row->media_url;
+            $aContentInfo['title']        = $row->title;
+            $aContentInfo['description']  = $row->description;
+            $aContentInfo['channel_name'] = $row->channel_name;
+            $aContentInfo['status']       = $row->status;
+            fputcsv($output, $aContentInfo);
+        }
+
+        exit;
     }
 }
