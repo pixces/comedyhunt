@@ -147,8 +147,8 @@ class DefaultController extends AdminController
             $aContentInfo['media_url']    = $row->media_url;
             $aContentInfo['title']        = $row->title;
             $aContentInfo['description']  = $row->description;
-            $aContentInfo['channel_name'] = $row->channel_name;
-            $aContentInfo['status']       = $row->status;
+            $aContentInfo['channel_name'] = $row->channel_name ? $row->channel_name : $row->username;
+            $aContentInfo['status']       = ucwords($row->status);
             fputcsv($output, $aContentInfo);
         }
 
