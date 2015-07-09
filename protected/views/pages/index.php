@@ -83,7 +83,7 @@
 <div class="CH-ContestEntries CH-HomeFaq">
 	<div class="CH-ContestEntriesContent">
 		<div class="CH-ContestEntriesContentIcon"><img src="images/gallery-image-blue.png"/></div>
-		<div class="CH-ContestEntriesContentHead">Contest Entries</div>
+		<div class="CH-ContestEntriesContentHead">Latest Entries</div>
 		<!-- dynamic playlist start -->
 		<?php if ($aVideoList[0]) {
             $objVideo = $aVideoList[0];
