@@ -33,7 +33,7 @@
 					<p>The shortlisted 40 participants will move to the Challenger Round Phase, where they will be given a unique theme or challenge on which to create a funny video - one challenge per week for seven weeks back to back. Each week few participants will be filtered out & the rest will proceed for the next challenge round.</p>
 					<p>At  the end of seven weeks 5 Participants will be declared as the Best Participants  of the Comedy Hunt. The decision of the Jury of Comedy Creators is final and  binding, and not subject to any dispute or challenge.</p>
 					<p class="CH-Head">Finale</p>
-					<p>The  5 Best Participants of the Comedy Hunt will then perform or display their  videos on stage in a Finale Event, along with our jury of Comedy creators, at  Mumbai, in front of a Live audience. One Participant among the 5 Best  Participants will be crowned as the winner, by a by a Jury of Comedy Creators.  The decision of the Jury of Comedy Creators is final and binding, and not  subject to any dispute or challenge.</p>
+					<p>The  5 Best Participants of the Comedy Hunt will then perform or display their  videos on stage in a Finale Event, along with our jury of Comedy creators, at  Mumbai, in front of a Live audience. One Participant among the 5 Best  Participants will be crowned as the winner, by a Jury of Comedy Creators.  The decision of the Jury of Comedy Creators is final and binding, and not  subject to any dispute or challenge.</p>
 					<p class="CH-Head">The Detailed  Rules:</p>
 					<p>The  detailed Rules are as follows:</p>
 					<p class="CH-Head">Overview:</p>
@@ -136,7 +136,7 @@
 
 					  <li>In the event that the Promoters  cannot for any reason obtain the shortlisted contestant&rsquo;s acceptance within  forty eight (48) hours of intimation of same, the Promoters reserve the right  to cancel such shortlisted contestant, at their sole discretion.</li>
 
-					  <li>Acceptance of further terms and conditions  will allow the 60 selected participants to take part in the Challenge Phases,  which includes and is not limited to creation of 7 videos as part of the 7  Challenge Rounds, spread over 7 weeks, back-to-back.</li>
+					  <li>Acceptance of further terms and conditions  will allow the 40 selected participants to take part in the Challenge Phases,  which includes and is not limited to creation of 7 videos as part of the 7  Challenge Rounds, spread over 7 weeks, back-to-back.</li>
 
 					  <li>In the event, a participant is selected  in the further rounds of the Program, they shall state and ensure that they  will provide exclusive services (and not participant in any other audio-visual  program, tv show, radio show, live and/or recorded, on-line content or ground  event) to the Producer/ Channel or any other third party and participate in the  further rounds of the Program, without any compensation of any nature and they  hereby give their irrevocable consent to the same and undertake to execute such  documents, declarations etc. as may be required by the Producer in connection  to the same.</li>
 					</ul>
