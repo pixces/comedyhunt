@@ -3,7 +3,7 @@
     <div class="CH-FaqBG"></div>
     <div class="CH-FaqContent">
         <div class="CH-FaqIcon"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-image.png" /></div>
-        <div class="CH-FaqHead">FAQ Videos</div>
+        <div class="CH-FaqHead">Video Workshops</div>
 
         <!-- dynamic playlist start -->
         <?php $t = 1; foreach($aVideoList as $objVideo) {
@@ -38,7 +38,7 @@
         <!-- dynamic playlist ends -->
 
 		<div class="CH-HomeEmbedList">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/lIsIOsXkID4?list=PLX19kCCkfm1pR0fml9KXZzur6FVU5BiFO" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/lIsIOsXkID4?list=PLX19kCCkfm1qr3YfcML6Xwt0PpYCc6i1N" frameborder="0" allowfullscreen></iframe>
 		</div>
     </div>
 </div>
