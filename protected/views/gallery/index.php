@@ -19,7 +19,7 @@ Gallery Ends Here -->
     <div class="CH-GalleryBG"></div>
     <div class="CH-GalleryContent">
         <div class="CH-GalleryIcon"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-image.png" /></div>
-        <div class="CH-GalleryHead">All videos</div>
+        <div class="CH-GalleryHead">Entries so far...</div>
         <div class="CH-GalleryList">
 		
             <!--div class="scroll-pane">
@@ -31,7 +31,7 @@ Gallery Ends Here -->
 			<!-- dynamic playlist start -->
 			<?php $t = 1; foreach($aVideoList as $objVideo) {
 			?>
-			<div class="CH-FaqList">
+			<div class="">
 				<!-- Needed for the youtube player example 3 -->
 				<div class="youtubeplayer">
 					<div class="yt_holder yt_holder_right">
