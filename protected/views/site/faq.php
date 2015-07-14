@@ -3,7 +3,8 @@
     <div class="CH-FaqBG"></div>
     <div class="CH-FaqContent">
         <div class="CH-FaqIcon"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gallery-image.png" /></div>
-        <div class="CH-FaqHead">Video Workshops</div>
+        <div class="CH-FaqHead">Running a Comedy Channel 101</div>
+		<p style="color:#fff5e9;font-size:18px">AIB, Kanan and Biswa answer all your questions about #findingfunny and YouTube tips & tricks!</p>
 
         <!-- dynamic playlist start -->
         <?php $t = 1; foreach($aVideoList as $objVideo) {
