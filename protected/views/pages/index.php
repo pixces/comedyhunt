@@ -190,6 +190,44 @@
 			</div>
 			
         </div>
+		
+		<div class="CH-VideoCarouselIcon"><img src="images/inspired-videos-icon.png"/></div>
+        <div class="CH-VideoCarouselHead">Need a little inspiration?</div>
+        <p>Our judges all earned their comedy credentials, one video at a time. Watch the masters at work.</p>
+		
+		<!-- dynamic playlist start -->
+		<?php if ($aVideoList[2]) {
+            $objVideo = $aVideoList[2];
+		?>
+		<div class="CH-FaqList">
+			<!-- Needed for the youtube player example 3 -->
+			<div class="youtubeplayer">
+				<div class="yt_holder yt_holder_right">
+					<div id="ytInspiration" class="ytvideo"></div>
+					<!--Up and Down arrow -->
+					<div class="you_up"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/up_arrow.png" alt="+ Slide" title="HIDE" /></div>
+					<div class="you_down"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/down_arrow.png" alt="- Slide" title="SHOW" /></div>
+					<!-- END  -->
+					<div class="youplayer ytplayerright">
+						<ul class="videoyou videoytright scroll-pane">
+							<?php
+							if ( $objVideo->get_videos() !=null ) {
+								foreach ($objVideo->get_videos() as $yKey => $yValue) {
+									echo '<li><p>' . $yValue['title'] . '</p><a class="InspirationThumb" href="http://www.youtube.com/watch?v=' . $yValue['videoid'] . '">' . $yValue['description'] . '</a></li>';
+								}
+							}else{
+								echo '<li>Sorry, no video\'s found</li>';
+							}
+							?>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- END youtube player -->
+		</div>
+		<?php } ?>
+		<!-- dynamic playlist ends -->
+		
         <!--div class="CH-WorkshopDate">
             <p>Want some Comedy coaching? The Comedy Hunt judges will be sharing their smarts with the new generation.
                 Learn some laugh-logic on these dates.</p>
