@@ -129,8 +129,11 @@
     <div class="CH-VideoCarouselBG"></div>
     <div class="CH-VideoCarouselContent">
         <div class="CH-VideoCarouselIcon"><img src="images/inspired-videos-icon.png"/></div>
-        <div class="CH-VideoCarouselHead">Need a little inspiration?</div>
-        <p>Our judges all earned their comedy credentials, one video at a time. Watch the masters at work.</p>
+        <!--div class="CH-VideoCarouselHead">Need a little inspiration?</div>
+        <p>Our judges all earned their comedy credentials, one video at a time. Watch the masters at work.</p-->
+		
+		<div class="CH-VideoCarouselHead">Running a Comedy Channel 101</div>
+        <p>AIB, Kanan and Biswa answer all your questions about #findingfunny and YouTube tips & tricks!</p>
 
         <div class="CH-VideoCarouselBlk no-padding">
             <!--div id="CH-VideoCarousel">
@@ -187,7 +190,7 @@
 			</div>
 			
         </div>
-        <div class="CH-WorkshopDate">
+        <!--div class="CH-WorkshopDate">
             <p>Want some Comedy coaching? The Comedy Hunt judges will be sharing their smarts with the new generation.
                 Learn some laugh-logic on these dates.</p>
 
@@ -213,7 +216,7 @@
 					<span class="CH-Register"><a href="https://docs.google.com/forms/d/1xPQyjneHxgteOdHhutO5zo38Hrq8SvdkshjKQF9s4Pw/viewform" target="_blank">Register</a></span>
 				</div>
             </div>
-        </div>
+        </div-->
 
         <!-- Video Overlay Starts Here
         <div class="CH-VideoOverlay">
