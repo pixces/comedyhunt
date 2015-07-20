@@ -192,8 +192,8 @@
         </div>
 		
 		<div class="CH-VideoCarouselIcon"><img src="images/inspired-videos-icon.png"/></div>
-        <div class="CH-VideoCarouselHead">Need a little inspiration?</div>
-        <p>Our judges all earned their comedy credentials, one video at a time. Watch the masters at work.</p>
+        <div class="CH-VideoCarouselHead">Making Funny - Workshops</div>
+        <p>Our YouTube stars, Kanan Gill, Sahil Shah, Azeem Banatwalla and Karan Talwar, set about inspiring a new breed of comedy creators</p>
 		
 		<!-- dynamic playlist start -->
 		<?php if ($aVideoList[2]) {
